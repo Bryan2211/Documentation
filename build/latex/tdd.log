@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2015.1.13)  14 JAN 2015 17:52
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2015.1.13)  14 JAN 2015 20:51
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -810,21 +810,7 @@ Package: hypcap 2011/02/16 v1.11 Adjusting the anchors of captions (HO)
 
 
 Writing index file tdd.idx
-(./tdd.aux
-
-! Package babel Error: Unknown language `english'. Either you have
-(babel)                misspelled its name, it has not been installed,
-(babel)                or you requested it in a previous run. Fix its name,
-(babel)                install it or just rerun the file, respectively.
-
-See the babel package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.19 \select@language{english}
-                              
-? 
-)
+(./tdd.aux)
 \openout1 = `tdd.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 119.
@@ -928,19 +914,6 @@ LaTeX Font Info:    Font shape `T1/phv/bx/n' in size <17.28> not available
 {/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}] [2
 
 ] (./tdd.toc
-
-! Package babel Error: Unknown language `english'. Either you have
-(babel)                misspelled its name, it has not been installed,
-(babel)                or you requested it in a previous run. Fix its name,
-(babel)                install it or just rerun the file, respectively.
-
-See the babel package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.1 \select@language {english}
-                              
-? 
 LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <10> not available
 (Font)              Font shape `T1/ptm/b/n' tried instead on input line 2.
 )
@@ -953,155 +926,119 @@ LaTeX Font Info:    Font shape `T1/phv/bx/n' in size <10> not available
 (Font)              Font shape `T1/phv/b/n' tried instead on input line 122.
 [1
 
-] [2] [1
+] [2]
+Chapitre 1.
+LaTeX Font Info:    Font shape `T1/phv/bx/n' in size <14.4> not available
+(Font)              Font shape `T1/phv/b/n' tried instead on input line 127.
+LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <14.4> not available
+(Font)              Font shape `T1/ptm/b/n' tried instead on input line 127.
+LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <24.88> not available
+(Font)              Font shape `T1/ptm/b/n' tried instead on input line 127.
+[1
+
 
 ] [2
 
 ]
-Chapitre 1.
-LaTeX Font Info:    Font shape `T1/phv/bx/n' in size <14.4> not available
-(Font)              Font shape `T1/phv/b/n' tried instead on input line 129.
-LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <14.4> not available
-(Font)              Font shape `T1/ptm/b/n' tried instead on input line 129.
-LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <24.88> not available
-(Font)              Font shape `T1/ptm/b/n' tried instead on input line 129.
-[3] [4
-
-]
 Chapitre 2.
-[5] [6]
+[3] [4]
 Chapitre 3.
-[7
+[5
 
-] [8]
+] [6]
 Chapitre 4.
 LaTeX Font Info:    Font shape `T1/phv/bx/n' in size <12> not available
-(Font)              Font shape `T1/phv/b/n' tried instead on input line 279.
+(Font)              Font shape `T1/phv/b/n' tried instead on input line 277.
+<fullscreen.png, id=190, 1026.08344pt x 544.28343pt>
+File: fullscreen.png Graphic file (type png)
+ <use fullscreen.png>
+Package pdftex.def Info: fullscreen.png used on input line 309.
+(pdftex.def)             Requested size: 1026.08093pt x 544.2821pt.
+File: fullscreen.png Graphic file (type png)
 
-LaTeX Warning: File `source/images/fullscreen.png' not found on input line 311.
+<use fullscreen.png>
+Package pdftex.def Info: fullscreen.png used on input line 309.
+(pdftex.def)             Requested size: 469.755pt x 249.17747pt.
+ [7
 
+] <smallscreen.png, id=200, 364.36125pt x 438.13687pt>
+File: smallscreen.png Graphic file (type png)
 
+<use smallscreen.png>
+Package pdftex.def Info: smallscreen.png used on input line 313.
+(pdftex.def)             Requested size: 364.36035pt x 438.13579pt.
+File: smallscreen.png Graphic file (type png)
+ <use smallscreen.png>
+Package pdftex.def Info: smallscreen.png used on input line 313.
+(pdftex.def)             Requested size: 364.36035pt x 438.13579pt.
+ [8 <./fullscreen.png (PNG copy)>]
+[9 <./smallscreen.png (PNG copy)>] <wf.jpg, id=211, 903.375pt x 903.375pt>
+File: wf.jpg Graphic file (type jpg)
 
-! Package pdftex.def Error: File `source/images/fullscreen.png' not found.
-
-See the pdftex.def package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.311 ...udegraphics{source/images/fullscreen.png}
-                                                  
-? 
-LaTeX Font Info:    Try loading font information for T1+pcr on input line 311.
-(/usr/share/texlive/texmf-dist/tex/latex/psnfss/t1pcr.fd
-File: t1pcr.fd 2001/06/04 font definitions for T1/pcr.
-)
-
-LaTeX Warning: File `source/images/fullscreen.png' not found on input line 311.
-
-
-
-! Package pdftex.def Error: File `source/images/fullscreen.png' not found.
-
-See the pdftex.def package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.311 ...udegraphics{source/images/fullscreen.png}
-                                                  
-? 
-
-LaTeX Warning: File `source/images/smallscreen.png' not found on input line 315
-.
-
-
-! Package pdftex.def Error: File `source/images/smallscreen.png' not found.
-
-See the pdftex.def package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.315 ...degraphics{source/images/smallscreen.png}
-                                                  
-? 
-
-LaTeX Warning: File `source/images/smallscreen.png' not found on input line 315
-.
-
-
-! Package pdftex.def Error: File `source/images/smallscreen.png' not found.
-
-See the pdftex.def package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.315 ...degraphics{source/images/smallscreen.png}
-                                                  
-? 
-[9
-
-] [10]
+<use wf.jpg>
+Package pdftex.def Info: wf.jpg used on input line 344.
+(pdftex.def)             Requested size: 903.3728pt x 903.3728pt.
+File: wf.jpg Graphic file (type jpg)
+ <use wf.jpg>
+Package pdftex.def Info: wf.jpg used on input line 344.
+(pdftex.def)             Requested size: 469.755pt x 469.7577pt.
+ [10 <./wf.jpg>]
+<uml.jpg, id=217, 586.19pt x 363.3575pt>
+File: uml.jpg Graphic file (type jpg)
+ <use uml.jpg>
+Package pdftex.def Info: uml.jpg used on input line 372.
+(pdftex.def)             Requested size: 586.18857pt x 363.3566pt.
+File: uml.jpg Graphic file (type jpg)
+ <use uml.jpg>
+Package pdftex.def Info: uml.jpg used on input line 372.
+(pdftex.def)             Requested size: 469.755pt x 291.17982pt.
 LaTeX Font Info:    Font shape `T1/phv/bx/n' in size <9> not available
-(Font)              Font shape `T1/phv/b/n' tried instead on input line 387.
- [11] [12
+(Font)              Font shape `T1/phv/b/n' tried instead on input line 391.
+ [11 <./uml.jpg>] [12
 
 ]
 Chapitre 5.
 [13] [14]
 Chapitre 6.
+LaTeX Font Info:    Try loading font information for T1+pcr on input line 512.
+(/usr/share/texlive/texmf-dist/tex/latex/psnfss/t1pcr.fd
+File: t1pcr.fd 2001/06/04 font definitions for T1/pcr.
+)
 LaTeX Font Info:    Font shape `T1/pcr/bx/n' in size <9> not available
-(Font)              Font shape `T1/pcr/b/n' tried instead on input line 544.
-[15
+(Font)              Font shape `T1/pcr/b/n' tried instead on input line 548.
+ [15
 
-]
-No file tdd.ind.
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 579.
+] (./tdd.ind)
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 583.
+
 [16]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 579.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 583.
  (./tdd.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 579.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 579.
-
-
-Package rerunfilecheck Warning: File `tdd.out' has changed.
-(rerunfilecheck)                Rerun to get outlines right
-(rerunfilecheck)                or use package `bookmark'.
-
-Package rerunfilecheck Info: Checksums for `tdd.out':
-(rerunfilecheck)             Before: A8538AB5C889139BE70A617291F6D9A6;1648
-(rerunfilecheck)             After:  7DE9CC99F2AC9242C63F2FF184B4B252;1686.
-
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
-
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 579.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 583.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 583.
+Package rerunfilecheck Info: File `tdd.out' has not changed.
+(rerunfilecheck)             Checksum: 7DE9CC99F2AC9242C63F2FF184B4B252;1686.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 583.
  ) 
 Here is how much of TeX's memory you used:
- 9643 strings out of 494999
- 134854 string characters out of 6180228
- 231379 words of memory out of 5000000
- 12531 multiletter control sequences out of 15000+600000
- 71387 words of font info for 73 fonts, out of 8000000 for 9000
+ 9654 strings out of 494999
+ 134892 string characters out of 6180228
+ 231036 words of memory out of 5000000
+ 12544 multiletter control sequences out of 15000+600000
+ 70766 words of font info for 71 fonts, out of 8000000 for 9000
  15 hyphenation exceptions out of 8191
- 36i,12n,45p,338b,460s stack positions out of 5000i,500n,10000p,200000b,80000s
-pdfTeX warning (dest): name{section.2.5} has been referenced but does not exi
-st, replaced by a fixed one
-
-pdfTeX warning (dest): name{section.1.2} has been referenced but does not exist
-, replaced by a fixed one
-
-pdfTeX warning (dest): name{section.1.1} has been referenced but does not exist
-, replaced by a fixed one
-
-{/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/share/texlive/
-texmf-dist/fonts/type1/urw/courier/ucrb8a.pfb></usr/share/texlive/texmf-dist/fo
-nts/type1/urw/courier/ucrr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw
-/helvetic/uhvb8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/helvetic/uh
-vbo8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr
-/share/texlive/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/share/texlive/
-texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on tdd.pdf (20 pages, 112999 bytes).
+ 36i,12n,45p,262b,460s stack positions out of 5000i,500n,10000p,200000b,80000s
+{/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/share/texliv
+e/texmf-dist/fonts/type1/urw/courier/ucrb8a.pfb></usr/share/texlive/texmf-dist/
+fonts/type1/urw/courier/ucrr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/u
+rw/helvetic/uhvb8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/helvetic/
+uhvbo8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></u
+sr/share/texlive/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/share/texliv
+e/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
+Output written on tdd.pdf (20 pages, 530599 bytes).
 PDF statistics:
- 292 PDF objects out of 1000 (max. 8388607)
- 255 compressed objects within 3 object streams
- 69 named destinations out of 1000 (max. 500000)
- 213 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 299 PDF objects out of 1000 (max. 8388607)
+ 258 compressed objects within 3 object streams
+ 65 named destinations out of 1000 (max. 500000)
+ 249 words of extra memory for PDF output out of 10000 (max. 10000000)
 
