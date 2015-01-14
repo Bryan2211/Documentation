@@ -56,7 +56,7 @@ Le framework aide à créer des classes et surtout des héritages.
 Classes et héritages
 *********************
 
-Les classes correspondent à un moule dans lequel on met différentes
+Les **classes** correspondent à un moule dans lequel on met différentes
 informations pour créer un objet. Par exemple, pour une voiture, on pourrait
 définir sa couleur, sa marque ou encore son age. Tout ce qu'il reste à faire
 est de donner des valeurs à ces trois propriétés pour "créer" la voiture.
@@ -74,7 +74,7 @@ Diagramme UML
 
 Quand l'on possède de nombreuses classes, il devient indispensable de pouvoir
 voir rapidement quelles relations ces classes entreprennent entre elles. Pour
-ceci, le meilleur moyen de le faire est de créer un diagramme UML. Un diagramme
+ceci, le meilleur moyen de le faire est de créer un **diagramme UML**. Un diagramme
 schématise les objets et indique leurs différentes relations (relation simple
 avec une clé étrangère ou aussi plusieurs-à-plusieurs (ManyToMany)).
 

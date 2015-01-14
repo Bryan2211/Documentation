@@ -39,11 +39,11 @@ l'écran.
 
 Voici un exemple d'adaptation:
 
-.. image:: source/images/fullscreen.png
+.. image:: images/fullscreen.png
 
 Voici à quoi ressemble le dashboard sur un écran d'ordinateur.
 
-.. image:: source/images/smallscreen.png
+.. image:: images/smallscreen.png
 
 Et voici ce que la page devient si l'on zoome ou si l'on réduit la taille de la
 fenêtre.
@@ -74,51 +74,53 @@ repasser dessus.
 Wireframes, ou "scénarios du site"
 ===================================
 
+.. image:: images/wf.jpg
+
 Modèles et diagrammes UML
 ==========================
 
-Modèles User
-**************
+Modèles utilisés
+******************
 
-Les modèles User, c'est-à-dire les modèles qui héritent du modèle Django de base
-User, sont les plus importants dans la conception de mon dashboard. En effet, il
-y a tout d'abord Student, dont les propriétés sont le nom, le prénom et le
-niveau. Ce sont donc les caractéristiques de base d'un utilisateur qui doit
-apprendre.
+Il y a tour d'abord notre classe Teacher, qui constitue bien évidemment le
+point central de notre application. La classe Teacher possède les propriétés
+suivantes: prénom, nom, adresse e-mail et l'école dans laquelle il enseigne.
+Il n'y a pas réellement d'autres propriétés à lui rajouter.
 
-De ce modèle Student hérite une classe Teachers, qui est évidemment le point
-central de notre travail. Etant donné qu'il hérite de Students, il possède
-les mêmes propriétés qu'un élève. Je ne trouve pas nécessaire d'ajouter une
-caractéristique, bien qu'on puisse par exemple ajouter la branche qu'il
-enseigne, même si cela peut paraître superflu sur un site pour apprendre
-les mathématiques.
+Pour qu'il y ait des professeurs, il faut aussi des élèves, c'est pourquoi
+j'ai une classe dénommée Student. Les propriétés ressemblent beaucoup à celles
+de Teacher étant donné que les deux classes correspondent à des classes
+d'utilisateur. Ces propriétés sont: prénom, nom, adresse e-mail, école et
+compétences de l'élève, établies par rapport à certains thèmes accomplis.
 
-Grâce à ces utilisateurs, nous pouvons créer des classes ou groupes, avec le
-modèle Group. Celui-ci possède un nom, un ou plusieurs élèves ou professeurs et
-des exercices assignés en devoir.
-
-Modèles d'exercices ou de cours
-********************************
-
-M'occupant du professeur, je dois aussi pouvoir gérer les exercices, chapitres,
-QCM ou cours qu'il voudra ajouter sur le site.
-
-Partons tout d'abord du modèle Theme, qui possède la propriété name. Grâce à
-cette caractéristique nous pouvons définir la classe Chapter. En effet, quand un
-professeur crée un chapitre, il devrait pouvoir choisir un thème, mais aussi un
-nom, ce qui explique l'entrée name.
-
-A ces chapitres peuvent être associés des exercices, c'est pourquoi il y a le
-modèle Exercise, où il est décrit les utilisateurs, le propriétaire, les
-chapitres dans lequel il appartient, quand il a été écrit ou mis-à-jour,
-son niveau, des indices et des commentaires. Ce modèle est le centre de toutes
-les classes concernant les exercices.
+Finalement, ces deux classes sont réunies dans une classe nommée Group, qui
+pourrait s'apparenter à une classe d'école. En effet, la classe Group possède
+1 à plusieurs professeurs, 1 à plusieurs élèves, un nom, des devoirs, des
+taux de réussites par rapport aux exercices réalisés en général, et une date
+de création.
 
 Diagramme UML
 ***************
 
+.. image:: images/uml.jpg
+
+Ce diagramme UML explique donc les relations entre les différentes pages de mon
+application, comment y accéder, que font les boutons, etc.
+
 Implémentation avec le reste du projet
 =======================================
+
+Comme déjà expliqué, ma partie, le dashboard professeur, servira de lieu de
+référence pour le professeur qui utiliserait le site. En effet, c'est seulement
+depuis cette partie qu'il pourra gérer tout ce qui le concerne.
+
+Certaines fonctionnalités, tel que la création d'exercices ou de chapitres,
+feront appel aux applications de mes compagnons. En effet, le bouton devra aller
+chercher les formulaires correspondant.
+
+Les problèmes que nous pourrions rencontrer lors de la mise en commun de nos
+différentes applications seraient des conflits, mais qui pourraient facilement
+être gérables si on y fait attention en cherchant les erreurs.
 
 .. rubric:: Note de bas de page
 

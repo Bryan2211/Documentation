@@ -82,16 +82,19 @@ Bootstrap comme base pour mon dashboard en utilisant le modèle <em>Charisma</em
 design adaptatifs, qui signifie que la mise en page va s&#8217;adapter à la taille de
 l&#8217;écran.</p>
 <p>Voici un exemple d&#8217;adaptation:</p>
-<img alt="source/images/fullscreen.png" src="source/images/fullscreen.png" />
+<img alt="_images/fullscreen.png" src="_images/fullscreen.png" />
 <p>Voici à quoi ressemble le dashboard sur un écran d&#8217;ordinateur.</p>
-<img alt="source/images/smallscreen.png" src="source/images/smallscreen.png" />
+<img alt="_images/smallscreen.png" src="_images/smallscreen.png" />
 <p>Et voici ce que la page devient si l&#8217;on zoome ou si l&#8217;on réduit la taille de la
 fenêtre.</p>
 </div>
 <div class="section" id="django">
 <h3>Django<a class="headerlink" href="#django" title="Lien permanent vers ce titre">¶</a></h3>
 <p>Django est un framework spécialisé dans Python. C&#8217;est un des framework les plus
-utilisés.</p>
+utilisés. Nous avons choisi Django pour le projet car, travaillant sous Python,
+il est le plus documenté et le plus connu.</p>
+<p>Grâce à Django, nous avons pu gérer des classes et des héritages, des vues et
+des urls.</p>
 </div>
 </div>
 <div class="section" id="application-au-projet">
@@ -107,43 +110,40 @@ repasser dessus.</p>
 </div>
 <div class="section" id="wireframes-ou-scenarios-du-site">
 <h2>Wireframes, ou &#8220;scénarios du site&#8221;<a class="headerlink" href="#wireframes-ou-scenarios-du-site" title="Lien permanent vers ce titre">¶</a></h2>
+<img alt="_images/wf.jpg" src="_images/wf.jpg" />
 </div>
 <div class="section" id="modeles-et-diagrammes-uml">
 <h2>Modèles et diagrammes UML<a class="headerlink" href="#modeles-et-diagrammes-uml" title="Lien permanent vers ce titre">¶</a></h2>
-<div class="section" id="modeles-user">
-<h3>Modèles User<a class="headerlink" href="#modeles-user" title="Lien permanent vers ce titre">¶</a></h3>
-<p>Les modèles User, c&#8217;est-à-dire les modèles qui héritent du modèle Django de base
-User, sont les plus importants dans la conception de mon dashboard. En effet, il
-y a tout d&#8217;abord Student, dont les propriétés sont le nom, le prénom et le
-niveau. Ce sont donc les caractéristiques de base d&#8217;un utilisateur qui doit
-apprendre.</p>
-<p>De ce modèle Student hérite une classe Teachers, qui est évidemment le point
-central de notre travail. Etant donné qu&#8217;il hérite de Students, il possède
-les mêmes propriétés qu&#8217;un élève. Je ne trouve pas nécessaire d&#8217;ajouter une
-caractéristique, bien qu&#8217;on puisse par exemple ajouter la branche qu&#8217;il
-enseigne, même si cela peut paraître superflu sur un site pour apprendre
-les mathématiques.</p>
-<p>Grâce à ces utilisateurs, nous pouvons créer des classes ou groupes, avec le
-modèle Group. Celui-ci possède un nom, un ou plusieurs élèves ou professeurs et
-des exercices assignés en devoir.</p>
+<div class="section" id="modeles-utilises">
+<h3>Modèles utilisés<a class="headerlink" href="#modeles-utilises" title="Lien permanent vers ce titre">¶</a></h3>
+<p>Il y a tour d&#8217;abord notre classe Teacher, qui constitue bien évidemment le
+point central de notre application. La classe Teacher possède les propriétés
+suivantes: prénom, nom, adresse e-mail et l&#8217;école dans laquelle il enseigne.
+Il n&#8217;y a pas réellement d&#8217;autres propriétés à lui rajouter.</p>
+<p>Pour qu&#8217;il y ait des professeurs, il faut aussi des élèves, c&#8217;est pourquoi
+j&#8217;ai une classe dénommée Student. Les propriétés ressemblent beaucoup à celles
+de Teacher étant donné que les deux classes correspondent à des classes
+d&#8217;utilisateur. Ces propriétés sont: prénom, nom, adresse e-mail, école et
+compétences de l&#8217;élève, établies par rapport à certains thèmes accomplis.</p>
+<p>Finalement, ces deux classes sont réunies dans une classe nommée Group, qui
+pourrait s&#8217;apparenter à une classe d&#8217;école. En effet, la classe Group possède
+1 à plusieurs professeurs, 1 à plusieurs élèves, un nom, des devoirs, des
+taux de réussites par rapport aux exercices réalisés en général, et une date
+de création.</p>
 </div>
-<div class="section" id="modeles-d-exercices-ou-de-cours">
-<h3>Modèles d&#8217;exercices ou de cours<a class="headerlink" href="#modeles-d-exercices-ou-de-cours" title="Lien permanent vers ce titre">¶</a></h3>
-<p>M&#8217;occupant du professeur, je dois aussi pouvoir gérer les exercices, chapitres,
-QCM ou cours qu&#8217;il voudra ajouter sur le site.</p>
-<p>Partons tout d&#8217;abord du modèle Theme, qui possède la propriété name. Grâce à
-cette caractéristique nous pouvons définir la classe Chapter. En effet, quand un
-professeur crée un chapitre, il devrait pouvoir choisir un thème, mais aussi un
-nom, ce qui explique l&#8217;entrée name.</p>
-<p>A ces chapitres peuvent être associés des exercices, c&#8217;est pourquoi il y a le
-modèle Exercise, où il est décrit les utilisateurs, le propriétaire, les
-chapitres dans lequel il appartient, quand il a été écrit ou mis-à-jour,
-son niveau, des indices et des commentaires. Ce modèle est le centre de toutes
-les classes concernant les exercices.</p>
+<div class="section" id="diagramme-uml">
+<h3>Diagramme UML<a class="headerlink" href="#diagramme-uml" title="Lien permanent vers ce titre">¶</a></h3>
+<img alt="_images/uml.jpg" src="_images/uml.jpg" />
 </div>
 </div>
 <div class="section" id="implementation-avec-le-reste-du-projet">
 <h2>Implémentation avec le reste du projet<a class="headerlink" href="#implementation-avec-le-reste-du-projet" title="Lien permanent vers ce titre">¶</a></h2>
+<p>Comme déjà expliqué, ma partie, le dashboard professeur, servira de lieu de
+référence pour le professeur qui utiliserait le site. En effet, c&#8217;est seulement
+depuis cette partie qu&#8217;il pourra gérer tout ce qui le concerne.</p>
+<p>Certaines fonctionnalités, tel que la création d&#8217;exercices ou de chapitres,
+feront appel aux applications de mes compagnons. En effet, le bouton devra aller
+chercher les formulaires correspondant.</p>
 <p class="rubric">Note de bas de page</p>
 <table class="docutils footnote" frame="void" id="f1" rules="none">
 <colgroup><col class="label" /><col /></colgroup>
@@ -173,8 +173,8 @@ les classes concernant les exercices.</p>
 <li><a class="reference internal" href="#application-au-projet">Application au projet</a></li>
 <li><a class="reference internal" href="#wireframes-ou-scenarios-du-site">Wireframes, ou &#8220;scénarios du site&#8221;</a></li>
 <li><a class="reference internal" href="#modeles-et-diagrammes-uml">Modèles et diagrammes UML</a><ul>
-<li><a class="reference internal" href="#modeles-user">Modèles User</a></li>
-<li><a class="reference internal" href="#modeles-d-exercices-ou-de-cours">Modèles d&#8217;exercices ou de cours</a></li>
+<li><a class="reference internal" href="#modeles-utilises">Modèles utilisés</a></li>
+<li><a class="reference internal" href="#diagramme-uml">Diagramme UML</a></li>
 </ul>
 </li>
 <li><a class="reference internal" href="#implementation-avec-le-reste-du-projet">Implémentation avec le reste du projet</a></li>
