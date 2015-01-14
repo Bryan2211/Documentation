@@ -1,0 +1,17 @@
+################
+Partie pratique
+################
+
+Application au projet
+======================
+
+
+
+Wireframes, ou "scénarios du site"
+======================================== 
+
+Diagrammes UML
+===============
+
+Implémentation avec le reste du projet
+=======================================

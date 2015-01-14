@@ -1,0 +1,201 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Conception du dashboard professeur à l’aide du développement dirigé par les tests &mdash; documentation Développement dirigé par les tests 0.1</title>
+    
+    <link rel="stylesheet" href="_static/nature.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '0.1',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <script type="text/javascript" src="_static/translations.js"></script>
+    <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <link rel="top" title="documentation Développement dirigé par les tests 0.1" href="index.html" />
+    <link rel="next" title="Fonctionnalités du dashboard" href="dashboard.html" />
+    <link rel="prev" title="&lt;no title&gt;" href="index.html" /> 
+  </head>
+  <body>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="Index général"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="dashboard.html" title="Fonctionnalités du dashboard"
+             accesskey="N">suivant</a> |</li>
+        <li class="right" >
+          <a href="index.html" title="&lt;no title&gt;"
+             accesskey="P">précédent</a> |</li>
+        <li><a href="index.html">documentation Développement dirigé par les tests 0.1</a> &raquo;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <div class="section" id="conception-du-dashboard-professeur-a-laide-du-developpement-dirige-par-les-tests">
+<h1>Conception du dashboard professeur à l’aide du développement dirigé par les tests<a class="headerlink" href="#conception-du-dashboard-professeur-a-laide-du-developpement-dirige-par-les-tests" title="Lien permanent vers ce titre">¶</a></h1>
+<div class="section" id="introduction">
+<h2>Introduction<a class="headerlink" href="#introduction" title="Lien permanent vers ce titre">¶</a></h2>
+<p>Dans ce travail, je vais tout d&#8217;abord documenter mon travail pratique. Ce
+travail consiste en la conception d&#8217;un dashboard pour les professeurs
+utilisant le framework Django tout en essayant de programmer
+avec le développement dirigé par les tests.
+Ce dashboard fera partie d&#8217;un projet plus grand: un site d&#8217;e-learning pour les
+mathématiques.
+Tous les termes spécifiques tels que framework seront expliqués par la suite.</p>
+<p>Cette documentation parlera tout d&#8217;abord de l&#8217;intérêt de ce travail pratique.
+Il y aura aussi le wireframe du dashboard et un diagramme UML expliquant mes
+différents modèles Django. J&#8217;expliquerai par la suite comment j&#8217;ai utilisé
+les différentes technologies pour créer mon application et comment
+je pourrai l&#8217;intégrer au projet final (le site) en essayant de souligner les
+difficultés que je pourrai rencontrer pendant l&#8217;intégration.</p>
+<p>Par la suite, j&#8217;essaierai de résumer les connaissances de bases relatives
+au développement dirigé par les tests. Ceci consistera à expliquer les
+différents termes et à surtout à expliquer comment cela fonctionne et quels
+sont les avantages.</p>
+<p>Finalement, j&#8217;expliquerai comment créer une ébauche de dashboard (créer un
+dashboard complet étant trop long et trop compliqué à tester de par le nombre
+important de boutons et de fonctionnalités) en utilisant ce fameux
+développement dirigé par les tests</p>
+</div>
+<div class="section" id="explications-des-termes-specifiques">
+<h2>Explications des termes spécifiques<a class="headerlink" href="#explications-des-termes-specifiques" title="Lien permanent vers ce titre">¶</a></h2>
+<p>Pour être sûr que tout le monde comprenne de quoi nous allons parler,
+il va nous falloir expliquer le lexique spécifique à nos deux sujets:
+dashboard professeur et développement dirigé par les tests.</p>
+<div class="section" id="framework">
+<h3>Framework<a class="headerlink" href="#framework" title="Lien permanent vers ce titre">¶</a></h3>
+<p>Un <strong>framework</strong>, ou <strong>structure logicielle</strong>, sert de base à un programme.
+En effet, c&#8217;est de par ses structures de base que l&#8217;on peut le plus facilement
+programmer. C&#8217;est donc une grande aide à tout informaticien. Les framework les
+plus connus seraient, par exemple, Django, Bootstrap ou Ruby On Rails.</p>
+<p>Il est important de noter que les frameworks sont souvent spécialisés dans un
+langage informatique très précis. Par exemple, Django utilise Python, Bootstrap
+utilise HTML et CSS et Ruby on Rails utilise Ruby.</p>
+<p>Un framework est en autre très utile pour la programmation orientée objet. Ce
+type de programmation permet d&#8217;établir des liens entre les différents objets.
+Le framework aide à créer des classes et surtout des héritages.</p>
+</div>
+<div class="section" id="classes-et-heritages">
+<h3>Classes et héritages<a class="headerlink" href="#classes-et-heritages" title="Lien permanent vers ce titre">¶</a></h3>
+<p>Les classes correspondent à un moule dans lequel on met différentes
+informations pour créer un objet. Par exemple, pour une voiture, on pourrait
+définir sa couleur, sa marque ou encore son age. Tout ce qu&#8217;il reste à faire
+est de donner des valeurs à ces trois propriétés pour &#8220;créer&#8221; la voiture.</p>
+<p>Le concept d&#8217;héritage n&#8217;est pas beaucoup plus compliqué. En effet, un héritage
+consiste à créer une classe en prenant comme base les caractéristiques d&#8217;une
+autre, ce qui nous permet d&#8217;en rajouter d&#8217;autre. Dans un cas qui nous
+intéresserait plus, un élève possède comme spécificités un nom, un prénom et
+une école. On peut grâce à ça créer une classe Professeur, qui aura les
+mêmes caractéristiques mais à laquelle on pourrait ajouter la branche qu&#8217;il
+enseigne.</p>
+</div>
+<div class="section" id="diagramme-uml">
+<h3>Diagramme UML<a class="headerlink" href="#diagramme-uml" title="Lien permanent vers ce titre">¶</a></h3>
+<p>Quand l&#8217;on possède de nombreuses classes, il devient indispensable de pouvoir
+voir rapidement quelles relations ces classes entreprennent entre elles. Pour
+ceci, le meilleur moyen de le faire est de créer un diagramme UML. Un diagramme
+schématise les objets et indique leurs différentes relations (relation simple
+avec une clé étrangère ou aussi plusieurs-à-plusieurs (ManyToMany)).</p>
+<p>Il existe de nombreux programmes permettant de réaliser des diagrammes UML
+clairs et présentables, comme boUML, argoUML ou Poseidon.</p>
+</div>
+<div class="section" id="wireframe">
+<h3>Wireframe<a class="headerlink" href="#wireframe" title="Lien permanent vers ce titre">¶</a></h3>
+<p>Un <strong>wireframe</strong> est un schéma consistant à mettre en valeur les relations entre les
+différentes pages d&#8217;un site web. Cela explique par exemple ce qu&#8217;il se passe si
+l&#8217;on clique sur tel ou tel bouton. Cela consiste donc à pouvoir voir ou
+exactement l&#8217;on peut aller en manipulant les fonctionnalités du site.</p>
+</div>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="index.html">Table des Matières</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">Conception du dashboard professeur à l’aide du développement dirigé par les tests</a><ul>
+<li><a class="reference internal" href="#introduction">Introduction</a></li>
+<li><a class="reference internal" href="#explications-des-termes-specifiques">Explications des termes spécifiques</a><ul>
+<li><a class="reference internal" href="#framework">Framework</a></li>
+<li><a class="reference internal" href="#classes-et-heritages">Classes et héritages</a></li>
+<li><a class="reference internal" href="#diagramme-uml">Diagramme UML</a></li>
+<li><a class="reference internal" href="#wireframe">Wireframe</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+  <h4>Sujet précédent</h4>
+  <p class="topless"><a href="index.html"
+                        title="Chapitre précédent">&lt;no title&gt;</a></p>
+  <h4>Sujet suivant</h4>
+  <p class="topless"><a href="dashboard.html"
+                        title="Chapitre suivant">Fonctionnalités du dashboard</a></p>
+  <h3>Cette page</h3>
+  <ul class="this-page-menu">
+    <li><a href="_sources/introduction.txt"
+           rel="nofollow">Montrer la source</a></li>
+  </ul>
+<div id="searchbox" style="display: none">
+  <h3>Recherche rapide</h3>
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Saisissez un mot clef ou un nom de module, classe ou fonction.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="Index général"
+             >index</a></li>
+        <li class="right" >
+          <a href="dashboard.html" title="Fonctionnalités du dashboard"
+             >suivant</a> |</li>
+        <li class="right" >
+          <a href="index.html" title="&lt;no title&gt;"
+             >précédent</a> |</li>
+        <li><a href="index.html">documentation Développement dirigé par les tests 0.1</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer">
+        &copy; Copyright 2014, Bryan Oberson.
+      Créé avec <a href="http://sphinx-doc.org/">Sphinx</a> 1.2.3.
+    </div>
+  </body>
+</html>

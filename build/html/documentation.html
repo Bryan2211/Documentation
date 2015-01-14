@@ -1,0 +1,233 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Documentation &mdash; documentation Développement dirigé par les tests 0.1</title>
+    
+    <link rel="stylesheet" href="_static/nature.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '0.1',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <script type="text/javascript" src="_static/translations.js"></script>
+    <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <link rel="top" title="documentation Développement dirigé par les tests 0.1" href="index.html" />
+    <link rel="next" title="Développement dirigé par les tests" href="tdd.html" />
+    <link rel="prev" title="Fonctionnalités du dashboard" href="dashboard.html" /> 
+  </head>
+  <body>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="Index général"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="tdd.html" title="Développement dirigé par les tests"
+             accesskey="N">suivant</a> |</li>
+        <li class="right" >
+          <a href="dashboard.html" title="Fonctionnalités du dashboard"
+             accesskey="P">précédent</a> |</li>
+        <li><a href="index.html">documentation Développement dirigé par les tests 0.1</a> &raquo;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <div class="section" id="documentation">
+<h1>Documentation<a class="headerlink" href="#documentation" title="Lien permanent vers ce titre">¶</a></h1>
+<div class="section" id="differentes-technologies">
+<h2>Différentes technologies<a class="headerlink" href="#differentes-technologies" title="Lien permanent vers ce titre">¶</a></h2>
+<p>Pour créer mon application ( dashboard professeur ), j&#8217;ai fait recourt aux
+technologies suivantes.</p>
+<div class="section" id="html5-hypertext-markup-language">
+<h3>HTML5 (Hypertext Markup Language)<a class="headerlink" href="#html5-hypertext-markup-language" title="Lien permanent vers ce titre">¶</a></h3>
+<p>HTML est la base de toute page web. En effet, c&#8217;est ce qui nous permet
+d&#8217;afficher du texte, des images. Il est principalement utilisé avec CSS (pour la
+mise en page) et JavaScript (pour l&#8217;interactivité des pages).</p>
+<p>J&#8217;ai utilisé HTML5 pour faire le frontal ( plus connu sous le nom front-end ).
+Le frontal correspond à ce que l&#8217;utilisateur voit. Il est opposé au back-end,
+qui est la partie qui travaille derrière mais que l&#8217;utilisateur ne voit pas.</p>
+</div>
+<div class="section" id="css3-cascading-style-sheets">
+<h3>CSS3 (Cascading Style Sheets)<a class="headerlink" href="#css3-cascading-style-sheets" title="Lien permanent vers ce titre">¶</a></h3>
+<p>CSS3 a été utilisé pour mettre en page mon code HTML. Cela a donc aussi
+contribué à la partie front-end de mon application. C&#8217;est CSS qui permet de
+modifier la police du texte, modifier la taille des images, ou encore
+de modifier la couleur du font. CSS permet donc de rendre une page potable
+pour l&#8217;oeil.</p>
+</div>
+<div class="section" id="bootstrap">
+<h3>Bootstrap<a class="headerlink" href="#bootstrap" title="Lien permanent vers ce titre">¶</a></h3>
+<p>Bootstrap est un framework qui contient du code HTML et CSS. J&#8217;ai utilisé
+Bootstrap comme base pour mon dashboard en utilisant le modèle <em>Charisma</em>
+<a class="footnote-reference" href="#f1" id="id1">[1]</a>. L&#8217;avantage de Bootstrap est qu&#8217;il offre des
+design adaptatifs, qui signifie que la mise en page va s&#8217;adapter à la taille de
+l&#8217;écran.</p>
+<p>Voici un exemple d&#8217;adaptation:</p>
+<img alt="source/images/fullscreen.png" src="source/images/fullscreen.png" />
+<p>Voici à quoi ressemble le dashboard sur un écran d&#8217;ordinateur.</p>
+<img alt="source/images/smallscreen.png" src="source/images/smallscreen.png" />
+<p>Et voici ce que la page devient si l&#8217;on zoome ou si l&#8217;on réduit la taille de la
+fenêtre.</p>
+</div>
+<div class="section" id="django">
+<h3>Django<a class="headerlink" href="#django" title="Lien permanent vers ce titre">¶</a></h3>
+<p>Django est un framework spécialisé dans Python. C&#8217;est un des framework les plus
+utilisés.</p>
+</div>
+</div>
+<div class="section" id="application-au-projet">
+<h2>Application au projet<a class="headerlink" href="#application-au-projet" title="Lien permanent vers ce titre">¶</a></h2>
+<p>Dans le projet final, qui, rappelons-le, consistera en un site d&#8217;e-learning pour
+les mathématiques, ma partie pratique sera le dashboard professeur, donc
+l&#8217;endroit ou les professeurs pourront gérer leurs exercices, leurs classes et
+leurs élèves. La raison pour laquelle cette partie du site est si importante
+est que sans un dashboard parfaitement opérationnel, il deviendrait chaotique
+pour les professeurs de gérer leurs différentes responsabilités.</p>
+<p>Toutes les fonctionnalités ayant déjà été expliquées auparavant, je ne vais pas
+repasser dessus.</p>
+</div>
+<div class="section" id="wireframes-ou-scenarios-du-site">
+<h2>Wireframes, ou &#8220;scénarios du site&#8221;<a class="headerlink" href="#wireframes-ou-scenarios-du-site" title="Lien permanent vers ce titre">¶</a></h2>
+</div>
+<div class="section" id="modeles-et-diagrammes-uml">
+<h2>Modèles et diagrammes UML<a class="headerlink" href="#modeles-et-diagrammes-uml" title="Lien permanent vers ce titre">¶</a></h2>
+<div class="section" id="modeles-user">
+<h3>Modèles User<a class="headerlink" href="#modeles-user" title="Lien permanent vers ce titre">¶</a></h3>
+<p>Les modèles User, c&#8217;est-à-dire les modèles qui héritent du modèle Django de base
+User, sont les plus importants dans la conception de mon dashboard. En effet, il
+y a tout d&#8217;abord Student, dont les propriétés sont le nom, le prénom et le
+niveau. Ce sont donc les caractéristiques de base d&#8217;un utilisateur qui doit
+apprendre.</p>
+<p>De ce modèle Student hérite une classe Teachers, qui est évidemment le point
+central de notre travail. Etant donné qu&#8217;il hérite de Students, il possède
+les mêmes propriétés qu&#8217;un élève. Je ne trouve pas nécessaire d&#8217;ajouter une
+caractéristique, bien qu&#8217;on puisse par exemple ajouter la branche qu&#8217;il
+enseigne, même si cela peut paraître superflu sur un site pour apprendre
+les mathématiques.</p>
+<p>Grâce à ces utilisateurs, nous pouvons créer des classes ou groupes, avec le
+modèle Group. Celui-ci possède un nom, un ou plusieurs élèves ou professeurs et
+des exercices assignés en devoir.</p>
+</div>
+<div class="section" id="modeles-d-exercices-ou-de-cours">
+<h3>Modèles d&#8217;exercices ou de cours<a class="headerlink" href="#modeles-d-exercices-ou-de-cours" title="Lien permanent vers ce titre">¶</a></h3>
+<p>M&#8217;occupant du professeur, je dois aussi pouvoir gérer les exercices, chapitres,
+QCM ou cours qu&#8217;il voudra ajouter sur le site.</p>
+<p>Partons tout d&#8217;abord du modèle Theme, qui possède la propriété name. Grâce à
+cette caractéristique nous pouvons définir la classe Chapter. En effet, quand un
+professeur crée un chapitre, il devrait pouvoir choisir un thème, mais aussi un
+nom, ce qui explique l&#8217;entrée name.</p>
+<p>A ces chapitres peuvent être associés des exercices, c&#8217;est pourquoi il y a le
+modèle Exercise, où il est décrit les utilisateurs, le propriétaire, les
+chapitres dans lequel il appartient, quand il a été écrit ou mis-à-jour,
+son niveau, des indices et des commentaires. Ce modèle est le centre de toutes
+les classes concernant les exercices.</p>
+</div>
+</div>
+<div class="section" id="implementation-avec-le-reste-du-projet">
+<h2>Implémentation avec le reste du projet<a class="headerlink" href="#implementation-avec-le-reste-du-projet" title="Lien permanent vers ce titre">¶</a></h2>
+<p class="rubric">Note de bas de page</p>
+<table class="docutils footnote" frame="void" id="f1" rules="none">
+<colgroup><col class="label" /><col /></colgroup>
+<tbody valign="top">
+<tr><td class="label"><a class="fn-backref" href="#id1">[1]</a></td><td><a class="reference external" href="http://usman.it/free-responsive-admin-template/">http://usman.it/free-responsive-admin-template/</a></td></tr>
+</tbody>
+</table>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="index.html">Table des Matières</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">Documentation</a><ul>
+<li><a class="reference internal" href="#differentes-technologies">Différentes technologies</a><ul>
+<li><a class="reference internal" href="#html5-hypertext-markup-language">HTML5 (Hypertext Markup Language)</a></li>
+<li><a class="reference internal" href="#css3-cascading-style-sheets">CSS3 (Cascading Style Sheets)</a></li>
+<li><a class="reference internal" href="#bootstrap">Bootstrap</a></li>
+<li><a class="reference internal" href="#django">Django</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#application-au-projet">Application au projet</a></li>
+<li><a class="reference internal" href="#wireframes-ou-scenarios-du-site">Wireframes, ou &#8220;scénarios du site&#8221;</a></li>
+<li><a class="reference internal" href="#modeles-et-diagrammes-uml">Modèles et diagrammes UML</a><ul>
+<li><a class="reference internal" href="#modeles-user">Modèles User</a></li>
+<li><a class="reference internal" href="#modeles-d-exercices-ou-de-cours">Modèles d&#8217;exercices ou de cours</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#implementation-avec-le-reste-du-projet">Implémentation avec le reste du projet</a></li>
+</ul>
+</li>
+</ul>
+
+  <h4>Sujet précédent</h4>
+  <p class="topless"><a href="dashboard.html"
+                        title="Chapitre précédent">Fonctionnalités du dashboard</a></p>
+  <h4>Sujet suivant</h4>
+  <p class="topless"><a href="tdd.html"
+                        title="Chapitre suivant">Développement dirigé par les tests</a></p>
+  <h3>Cette page</h3>
+  <ul class="this-page-menu">
+    <li><a href="_sources/documentation.txt"
+           rel="nofollow">Montrer la source</a></li>
+  </ul>
+<div id="searchbox" style="display: none">
+  <h3>Recherche rapide</h3>
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Saisissez un mot clef ou un nom de module, classe ou fonction.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="Index général"
+             >index</a></li>
+        <li class="right" >
+          <a href="tdd.html" title="Développement dirigé par les tests"
+             >suivant</a> |</li>
+        <li class="right" >
+          <a href="dashboard.html" title="Fonctionnalités du dashboard"
+             >précédent</a> |</li>
+        <li><a href="index.html">documentation Développement dirigé par les tests 0.1</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer">
+        &copy; Copyright 2014, Bryan Oberson.
+      Créé avec <a href="http://sphinx-doc.org/">Sphinx</a> 1.2.3.
+    </div>
+  </body>
+</html>
