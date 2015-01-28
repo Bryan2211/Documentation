@@ -49,37 +49,46 @@
             
   <div class="section" id="debuter-un-projet">
 <h1>Débuter un projet<a class="headerlink" href="#debuter-un-projet" title="Lien permanent vers ce titre">¶</a></h1>
-<p>Pour comprendre grâce à la pratique, nous allons au cours de ce travail établir un dashboard permettant à un
-professeur de gérer des classes et des exercices sur un site d&#8217;e-learning pour les mathématiques grâce à Django, un framework fonctionnant avec Python.</p>
+<p>Pour comprendre grâce à la pratique, nous allons au cours de ce travail établir
+un dashboard permettant à un professeur de gérer des classes et des exercices
+sur un site d&#8217;e-learning pour les mathématiques grâce à Django, un framework
+fonctionnant avec Python.</p>
 <div class="section" id="elements-requis">
 <h2>Eléments requis<a class="headerlink" href="#elements-requis" title="Lien permanent vers ce titre">¶</a></h2>
-<p>Pour pouvoir parfaitement suivre ce guide, il nous faudra les éléments suivants afin de réaliser les tests:</p>
+<p>Pour pouvoir parfaitement suivre ce guide, il nous faudra les éléments suivants
+afin de réaliser les tests:</p>
 <ul>
-<li><p class="first"><strong>Django 1.7:</strong> en effet, il va vous falloir django, car c&#8217;est le framework que l&#8217;on va utiliser. Pour le télécharger,
-il suffit de taper la commande suivante avec pip:</p>
+<li><p class="first"><strong>Django 1.7:</strong> en effet, il va vous falloir django, car c&#8217;est le framework
+que l&#8217;on va utiliser. Pour le télécharger, il suffit de taper la commande
+suivante avec pip:</p>
 <div class="highlight-python"><div class="highlight"><pre>sudo pip3 install django==1.7
 </pre></div>
 </div>
 <p>Si vous utilisez Windows, vous pouvez enlever <em>sudo</em>.</p>
 </li>
-<li><p class="first"><strong>Selenium:</strong> Selenium est un outil permettant de gérer les navigateurs avec des commandes. Ceci nous sera utile pour les
-tests fonctionnels (ce terme sera expliqué plus tard). Encore une fois, il est possible de le télécharger grâce à pip:</p>
+<li><p class="first"><strong>Selenium:</strong> Selenium est un outil permettant de gérer les navigateurs
+avec des commandes. Ceci nous sera utile pour les tests fonctionnels (ce
+terme sera expliqué plus tard). Encore une fois, il est possible de le
+télécharger grâce à pip:</p>
 <div class="highlight-python"><div class="highlight"><pre>sudo pip3 install --upgrade selenium
 </pre></div>
 </div>
 <p>Encore une fois, le <em>sudo</em> n&#8217;est pas nécessaire sur Windows.</p>
-<p>Note: il est important de toujours utiliser la dernière version de Selenium. En effet, une version dépassée peut facilement se comporter de
-façon non désirée. <a class="footnote-reference" href="#f1" id="id1">[1]</a></p>
+<p>Note: il est important de toujours utiliser la dernière version de Selenium.
+En effet, une version dépassée peut facilement se comporter de façon non
+désirée. <a class="footnote-reference" href="#f1" id="id1">[1]</a></p>
 </li>
 </ul>
 <p>Une fois les éléments nécessaires installés, vous pouvez passer à la suite.</p>
 </div>
 <div class="section" id="premier-test">
 <h2>Premier test<a class="headerlink" href="#premier-test" title="Lien permanent vers ce titre">¶</a></h2>
-<p>Le principe de base du Test Driven Development est d&#8217;écrire un test avant même de coder ce que le test doit vérifier. Pour notre exemple,
-on devrait vérifier qu&#8217;il y ait le plus basique des éléments sur notre site: Django. On va donc créer un test fonctionnel pour voir s&#8217;il y a bien
-le titre de Django sur la page d&#8217;accueil. Le test fonctionnel permet de nous assurer que notre site fonctionne et possède
-la fonctionnalité la plus optimale qu&#8217;il soit.</p>
+<p>Le principe de base du Test Driven Development est d&#8217;écrire un test avant même
+de coder ce que le test doit vérifier. Pour notre exemple, on devrait vérifier
+qu&#8217;il y ait le plus basique des éléments sur notre site: Django. On va donc
+créer un test fonctionnel pour voir s&#8217;il y a bien le titre de Django sur la page
+d&#8217;accueil. Le test fonctionnel permet de nous assurer que notre site fonctionne
+et possède la fonctionnalité la plus optimale qu&#8217;il soit.</p>
 <p>Commençons donc par écrire ce code:</p>
 <div class="highlight-python"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1
 2
@@ -98,18 +107,24 @@ la fonctionnalité la plus optimale qu&#8217;il soit.</p>
 <span class="n">browser</span><span class="o">.</span><span class="n">quit</span><span class="p">()</span>
 </pre></div>
 </td></tr></table></div>
-<p>Regardons une par une les lignes qui pourrait poser des problèmes de compréhensions:</p>
+<p>Regardons une par une les lignes qui pourrait poser des problèmes de
+compréhensions:</p>
 <ol class="arabic simple">
-<li>Nous permet d&#8217;importer webdriver qui nous sera utile pour gérer les navigateurs web (dans ce cas, Firefox), nous permettant de les ouvrir,
+<li>Nous permet d&#8217;importer webdriver qui nous sera utile pour gérer les
+navigateurs web (dans ce cas, Firefox), nous permettant de les ouvrir,
 d&#8217;aller à une URL ou de les fermer.</li>
 </ol>
 <ol class="arabic simple" start="6">
-<li>Va basiquement nous dire si la page que l&#8217;on vient de charger (<a class="reference external" href="http://localhost:8000">http://localhost:8000</a>) contient le mot &#8220;Django&#8221; dans le titre.</li>
+<li>Va basiquement nous dire si la page que l&#8217;on vient de charger
+(<a class="reference external" href="http://localhost:8000">http://localhost:8000</a>) contient le mot &#8220;Django&#8221; dans le titre.</li>
 </ol>
-<p>Comme on peut s&#8217;y attendre, du moins si on se rappelle du but d&#8217;un test, le test ne marchera pas. En effet, comme dit précédemment,
-les tests sont faits pour évaluer quelque chose que l&#8217;on n&#8217;a pas encore fait, et pour nous aider à les faire le plus simplement possible.</p>
-<p><strong>Quand on test, il ne faut pas avoir les tests qui échouent comme quelque chose de mal. Dans certains cas ( comme celui-ci),
-ces tests sont attendus et recevoir un</strong> <em>False</em> <strong>à la fin est donc un bon signe: notre test marche!</strong></p>
+<p>Comme on peut s&#8217;y attendre, du moins si on se rappelle du but d&#8217;un test, le test
+ne marchera pas. En effet, comme dit précédemment, les tests sont faits pour
+évaluer quelque chose que l&#8217;on n&#8217;a pas encore fait, et pour nous aider à les
+faire le plus simplement possible.</p>
+<p><strong>Quand on test, il ne faut pas avoir les tests qui échouent comme quelque chose
+de mal. Dans certains cas ( comme celui-ci), ces tests sont attendus et recevoir
+un</strong> <em>False</em> <strong>à la fin est donc un bon signe: notre test marche!</strong></p>
 <p class="rubric">Note de bas de page</p>
 <table class="docutils footnote" frame="void" id="f1" rules="none">
 <colgroup><col class="label" /><col /></colgroup>
