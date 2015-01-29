@@ -1,6 +1,6 @@
-###################################
+########################################
 Développement dirigé par les tests
-###################################
+########################################
 
 Le développement dirigé par les tests, grossièrement traduit de l'anglais Test 
 Driven Development, est une technique de programmation utilisée par beaucoup de 
@@ -48,7 +48,7 @@ vérifier que le code est le plus propre et le plus simple possible.
 
 Voici un exemple:
 
-**Test unitaire**
+**Test unitaire** A rajouter un jour
 
 Le cycle du développement dirigé par les tests
 ===============================================
@@ -96,6 +96,8 @@ Il est clair que, sur un travail de petite taille, tout coder n'aurait pas
 Dans le cas d'un travail d'une certaine consistance, ce n'est pas pareil.
 C'est uniquement en testant que l'on peut être sûr de son code, car cela
 signifie que notre code est valide, et devrait le rester.
+
+
     
 
     
