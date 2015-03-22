@@ -3,10 +3,13 @@
    You can adapt this file completely to your liking, but it should at least
    contain the root `toctree` directive.
 
+##########################################################################
+Conception du dashboard professeur et développement dirigé par les tests
+##########################################################################
+
 .. toctree::
    :maxdepth: 2
    
-   introduction
    dashboard
    documentation
    tdd
