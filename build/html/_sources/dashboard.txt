@@ -14,7 +14,7 @@ dans le menu de gauche. Cette action fera apparaître le formulaire de création
 de groupe.
 
 ..  figure:: images/Newclass.jpg
-    :width: 70%
+    :width: 60%
     :align: center
     
     Formulaire de création de groupe
@@ -40,7 +40,7 @@ Il peut tout d'abord rajouter les élèves ou professeurs qu'il souhaite en
 entrant leur nom d'utilisateur dans le champ à disposition.
 
 ..  figure:: images/class.jpg
-    :width: 70%
+    :width: 60%
     :align: center
     
     Page d'administration d'un groupe
@@ -49,7 +49,7 @@ Si le nom d'utilisateur rentré correspond bien à un étudiant ou à un profess
 cet utilisateur sera rajouté dans la liste des membres.
 
 ..  figure:: images/classAjouterMembres.jpg
-    :width: 70%
+    :width: 60%
     :align: center
     
     Ce à quoi ressemble la page une fois que des membres ont été rajoutés
@@ -60,7 +60,7 @@ professeur et qu'il a été ajouté aux étudiants), le site renvoiera un messag
 d'erreur.
 
 ..  figure:: images/classAjouterMembresEchec.jpg
-    :width: 70%
+    :width: 60%
     :align: center
     
     Message d'erreur retourné si l'utilisateur n'est pas valable
@@ -80,7 +80,7 @@ Pour assigner un devoir, il suffit de savoir l'id de l'exercice, quiz ou cours,
 et de préciser grâce au menu à choix de quel type de devoir il s'agit.
 
 ..  figure:: images/classDevoir.jpg
-    :width: 70%
+    :width: 60%
     :align: center
     
     Différents champs à compléter pour assigner un devoir
@@ -97,7 +97,7 @@ Dans le menu de gauche, il y a un bouton nommé Exercices. C'est depuis cette
 page que le professeur pourra voir ses exercices, ses quiz et ses cours.
 
 ..  figure:: images/exercices.jpg
-    :width: 70%
+    :width: 60%
     :align: center
     
     Ce à quoi ressemble la page Exercices
@@ -120,7 +120,7 @@ Peu importe sur quelle page il se trouve, le professeur peut accéder à un menu
 déroulant en haut à droite de cette page.
 
 ..  figure:: images/menuDeroulant.jpg
-    :width: 70%
+    :width: 60%
     :align: center
     
     Apparence du menu déroulant
@@ -132,7 +132,7 @@ Pour le modifier, le professeur n'a qu'à remplir les deux champs et à valider.
 Si tout a été rentré correctement, le mot de passe sera correctement modifié.
 
 ..  figure:: images/passwordSuccess.jpg
-    :width: 70%
+    :width: 60%
     :align: center
     
     Message pour confirmer que le changement de mot de passe a correctement eu
@@ -141,7 +141,7 @@ Si tout a été rentré correctement, le mot de passe sera correctement modifié
 Au contraire, s'il y a une erreur, un message d'erreur sera retourné.
 
 ..  figure:: images/passwordFail.jpg
-    :width: 70%
+    :width: 60%
     :align: center
     
     Message d'erreur retourné si les champs n'ont pas correctement été remplis
