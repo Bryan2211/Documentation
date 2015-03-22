@@ -84,6 +84,12 @@ Une fois que ces 4 étapes ont été effectuées, il ne reste évidemment qu'à
 recommencer avec une autre fonctionnalité de l'application, jusqu'à
 que celle-ci soit finie.
 
+..  figure:: images/TDD.jpg
+    :width: 70%
+    :align: center
+    
+    Schéma résumant les 4 étapes du Développement dirigé par les tests
+
 Gain de temps?
 ===============
 
