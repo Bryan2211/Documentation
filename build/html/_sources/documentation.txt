@@ -43,7 +43,8 @@ Voici un exemple d'adaptation:
 
 Voici à quoi ressemble le dashboard sur un écran d'ordinateur.
 
-.. image:: images/smallscreen.png
+..  figure:: images/smallscreen.png
+    :width: 30%
 
 Et voici ce que la page devient si l'on zoome ou si l'on réduit la taille de la
 fenêtre.

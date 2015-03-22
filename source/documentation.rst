@@ -39,11 +39,10 @@ l'écran.
 
 Voici un exemple d'adaptation:
 
-.. image:: images/fullscreen.png
 
 Voici à quoi ressemble le dashboard sur un écran d'ordinateur.
 
-.. image:: images/smallscreen.png
+
 
 Et voici ce que la page devient si l'on zoome ou si l'on réduit la taille de la
 fenêtre.
@@ -100,7 +99,6 @@ repasser dessus.
 Wireframes, ou "scénarios du site"
 ===================================
 
-.. image:: images/wf.jpg
 
 Modèles et diagrammes UML
 ==========================
@@ -128,7 +126,6 @@ de création.
 Diagramme UML
 ***************
 
-.. image:: images/uml.jpg
 
 Ce diagramme UML explique donc les relations entre les différentes pages de mon
 application, comment y accéder, que font les boutons, etc.

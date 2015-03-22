@@ -2,53 +2,146 @@
 Fonctionnalités du dashboard
 #############################
 
-Accueil
-========
+Ajouter un groupe
+===================
 
-Dans l'accueil, le professeur a la possibilité de voir les statistiques 
-hebdomadaires mais aussi de voir quelle classe a le mieux réussi ses exercices
-au cours de la semaine. Cette page n'est pas la plus importante et sert simplement
-de vue générale pour le professeur.
+La fonctionnalité de base de ce dashboard est la création de groupe. En créant
+un groupe, le professeur sera par la suite capable de le gérer en gérant les
+membres qui s'y trouvent mais aussi en y assignant des devoirs.
 
-Exercices
-==========
+Pour créer un groupe, il suffit de se rendre sur Nouveau groupe, tout en bas
+dans le menu de gauche. Cette action fera apparaître le formulaire de création
+de groupe.
 
-Dans l'onglet Exercices, le professeur pour tout d'abord voir très rapidement
-l'état de ses différents exercices et chapitres, comme la date d'ajout,
-le nombre de fois qu'il a été réalisé, et même voir selon les classes qui l'a
-fait ou pas fait. Ceci est très utile si l'on veut suivre ses élèves assidument
+..  figure:: images/Newclass.jpg
+    :width: 70%
+    :align: center
+    
+    Formulaire de création de groupe
+    
+La seule exigence présente lors de la création d'un groupe est le nom. Une fois
+le groupe créé, l'utilisateur actuel est automatiquement défini en tant que
+professeur pour le groupe.
 
-Il pourra aussi y trouver des boutons qui lui permettront directement d'arriver
-sur les formulaires de création d'exercices et de chapitres.
+Le groupe précédemment créé sera désormais affiché en permanence dans le menu
+de gauche du professeur, ce qui lui permet d'accéder à ses informations.
 
-Classes
-========
 
-C'est dans l'onglet Classes que le professeur pourra réaliser le plus grand
-nombre de tâches. 
-
-Tout d'abord, il lui sera possible de voir quels élèves appartiennent à cette
-classe, mais aussi quel professeur(s) en est en charge, et leur date d'ajout. 
-Il pourra aussi ajouter des élèves et des professeurs mais aussi les supprimer.
-
-Il pourra aussi voir quels devoirs ont été assignés à la classe, la date
-d'assignation, le nombres de fois qu'il a été fait ou pas fait et finalement
-le taux de réussite, c'est-à-dire combien de bonnes réponses ont été données par
-rapport aux nombres de mauvaises réponses. Ceci peut être utile pour voir
-si une classe à des problèmes avec tel ou tel exercice ou thème en général.
-
-Nouvelle classe
+Gérer un groupe
 ================
 
-C'est sur cette page qu'un professeur va pouvoir créer une nouvelle page. Pour
-ceci, il lui suffira d'entrer le nom de la classe et de rajouter les élèves
-en dessous. le bouton **+** permet de valider l'élève précédemment inscrit
-et le rajouter dans une liste en dessous. Il ne reste qu'à valider la classe
-qui se rajoutera dans le menu à gauche.
+Gérer les membres du groupe
+***********************************
 
-Compte
-=======
+Depuis cette page, le professeur peut gérer les membres qui sont actuellement
+enregistrés dans le groupe.
 
-C'est depuis ce menu qu'il est possible d'atteindre son dashboard, mais aussi
-de voir les informations relatives au compte. C'est aussi de par ce menu
-déroulant qu'il peut se déconnecter.
+Il peut tout d'abord rajouter les élèves ou professeurs qu'il souhaite en
+entrant leur nom d'utilisateur dans le champ à disposition.
+
+..  figure:: images/class.jpg
+    :width: 70%
+    :align: center
+    
+    Page d'administration d'un groupe
+    
+Si le nom d'utilisateur rentré correspond bien à un étudiant ou à un professeur,
+cet utilisateur sera rajouté dans la liste des membres.
+
+..  figure:: images/classAjouterMembres.jpg
+    :width: 70%
+    :align: center
+    
+    Ce à quoi ressemble la page une fois que des membres ont été rajoutés
+    
+Au contraire, si aucun utilisateur n'a été trouvé ou si l'utilisateur ne
+correspond pas au rôle qu'il lui est donné (par exemple si c'est un
+professeur et qu'il a été ajouté aux étudiants), le site renvoiera un message
+d'erreur.
+
+..  figure:: images/classAjouterMembresEchec.jpg
+    :width: 70%
+    :align: center
+    
+    Message d'erreur retourné si l'utilisateur n'est pas valable
+    
+Une fois ajouté, un membre peut facilement être retiré du groupe grâce au bouton
+Retirer qui se trouve à côté de son nom.
+
+Gérer un devoir
+*****************
+
+Un professeur peut bien évidemment donner des devoirs à son groupe.
+
+Un devoir peut-être un exercice, un quiz ou un cours, tous les trois
+pouvant avoir été créé par un autre utilisateur.
+
+Pour assigner un devoir, il suffit de savoir l'id de l'exercice, quiz ou cours,
+et de préciser grâce au menu à choix de quel type de devoir il s'agit.
+
+..  figure:: images/classDevoir.jpg
+    :width: 70%
+    :align: center
+    
+    Différents champs à compléter pour assigner un devoir
+    
+Comme pour les fonctionnalités précédentes, si aucun exercice, quiz ou cours
+n'a pu être associé à l'id entrée, un message d'erreur sera renvoyé.
+
+Un devoir peut être à tout moment retiré grâce au bouton Retirer à sa droite.
+
+Voir ses exercices
+===================
+
+Dans le menu de gauche, il y a un bouton nommé Exercices. C'est depuis cette
+page que le professeur pourra voir ses exercices, ses quiz et ses cours.
+
+..  figure:: images/exercices.jpg
+    :width: 70%
+    :align: center
+    
+    Ce à quoi ressemble la page Exercices
+    
+Pour chaque activité que le professeur aura créé, il pourra voir le titre qu'il
+lui a donné, la date à laquelle il l'a créé et l'id qui lui sera utile s'il veut
+l'assigner en tant que devoir à un de ses groupes.
+
+Il peut bien évidemment supprimer une activité en utilisant le bouton Supprimer
+se trouvant dans la dernière colonne du tableau.
+
+Si le professeur souhaite créer une nouvelle activité, il n'a qu'à utiliser le
+bouton Créer en haut du tableau qui le redirigera directement au formulaire de
+création.
+
+Changer de mot de passe
+=========================
+
+Peu importe sur quelle page il se trouve, le professeur peut accéder à un menu
+déroulant en haut à droite de cette page.
+
+..  figure:: images/menuDeroulant.jpg
+    :width: 70%
+    :align: center
+    
+    Apparence du menu déroulant
+    
+Dashboard amène le professeur sur l'accueil de son dashboard, Déconnexion le
+déconnecte et Profil l'amène sur un formulaire de changement de mot de passe.
+
+Pour le modifier, le professeur n'a qu'à remplir les deux champs et à valider.
+Si tout a été rentré correctement, le mot de passe sera correctement modifié.
+
+..  figure:: images/passwordSuccess.jpg
+    :width: 70%
+    :align: center
+    
+    Message pour confirmer que le changement de mot de passe a correctement eu
+    lieu
+    
+Au contraire, s'il y a une erreur, un message d'erreur sera retourné.
+
+..  figure:: images/passwordFail.jpg
+    :width: 70%
+    :align: center
+    
+    Message d'erreur retourné si les champs n'ont pas correctement été remplis
