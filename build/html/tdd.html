@@ -54,22 +54,22 @@
   <div class="section" id="developpement-dirige-par-les-tests">
 <h1>Développement dirigé par les tests<a class="headerlink" href="#developpement-dirige-par-les-tests" title="Lien permanent vers ce titre">¶</a></h1>
 <p>Le développement dirigé par les tests, grossièrement traduit de l&#8217;anglais Test
-Driven Development, est une technique de programmation utilisée par beaucoup de
+Driven Development, est une technique de développement utilisée par beaucoup de
 programmeurs.</p>
 <p>En effet, c&#8217;est grâce à cette technique que l&#8217;on peut le mieux s&#8217;assurer de la
 fonctionnalité du site et de la simplicité du code. Dans un travail de longue
 haleine, cette méthode devient nécessaire pour ne pas être redondant dans son
 code et pour le rendre le plus clair possible.</p>
 <p>Dans cette première partie, nous allons nous intéresser au côté théorique de ce
-type de programmation avant de se lancer dans un réel projet.</p>
+type de développement avant de se lancer dans un réel projet.</p>
 <p>Le développement dirigé par les tests est composé de deux tests importants et
 bien différents.</p>
-<div class="section" id="le-test-fonctionnel">
-<h2>Le test fonctionnel<a class="headerlink" href="#le-test-fonctionnel" title="Lien permanent vers ce titre">¶</a></h2>
+<div class="section" id="les-tests-fonctionnels">
+<h2>Les tests fonctionnels<a class="headerlink" href="#les-tests-fonctionnels" title="Lien permanent vers ce titre">¶</a></h2>
 <p>Le test fonctionnel, comme son nom l&#8217;indique, cherche à tester la fonctionnalité
 du site. Plus précisément, il se met du côté de l&#8217;utilisateur du site. Il va par
 exemple vérifier que les titres et les textes apparaissent, mais il va aussi
-regarder si les différents boutons ou champs de textes marchent.</p>
+regarder si les différents boutons ou champs de textes fonctionnent.</p>
 <p>Voici un exemple de test fonctionnel:</p>
 <p><strong>Mettre un test fonctionnel plus tard</strong></p>
 <p>Nous pouvons déjà voir que les commentaires sont énormément présents dans ce
@@ -78,14 +78,13 @@ exactement ce que l&#8217;on teste. Dans cet exemple, nous avons le professeur
 Jean-Paul qui entend parler d&#8217;un site pour apprendre les mathématiques où il y a
 un dashboard qui lui permet de gérer son travail. Il va donc essayer
 tous les boutons et toutes les fonctionnalités.</p>
-<p>Evidemment, cela peut paraître obsolète, mais ça vous aide à vous y retrouver.</p>
 </div>
-<div class="section" id="le-test-unitaire">
-<h2>Le test unitaire<a class="headerlink" href="#le-test-unitaire" title="Lien permanent vers ce titre">¶</a></h2>
+<div class="section" id="les-tests-unitaires">
+<h2>Les tests unitaires<a class="headerlink" href="#les-tests-unitaires" title="Lien permanent vers ce titre">¶</a></h2>
 <p>Le test unitaire, lui, se base plus sur le point de vue du programmateur. Si on
-aurait pu considérer le test fonctionnel comme un test externe, le test unitaire
-lui serait le test interne. Ce qu&#8217;il test ne sera jamais vu, car il permet de
-vérifier que le code est le plus propre et le plus simple possible.</p>
+pouvait considérer le test fonctionnel comme un test externe, le test unitaire,
+lui, serait le test interne. Ce qu&#8217;il teste ne sera jamais vu, car il permet de
+vérifier que le code fonctionne comme prévu.</p>
 <p>Voici un exemple:</p>
 <p><strong>Test unitaire</strong> A rajouter un jour</p>
 </div>
@@ -98,26 +97,28 @@ tente de suivre un certain cycle:</p>
 n&#8217;importe quelle ligne de code. En effet, l&#8217;idée du Test Driven Development
 est d&#8217;être sûr qu&#8217;un test échoue avant d&#8217;écrire notre code. Le test peut
 être fonctionnel ou unitaire, cela dépendant de la partie de votre
-application que vous souhaitez développer. Vous allez évidemment recevoir
-un message disant que votre test a échoué, mais c&#8217;est normal étant
-donné que vous n&#8217;avez rien codé. Cela consiste donc à essayer un
-programme encore non-existant.</li>
+application que l&#8217;on souhaite développer. Le test va évidemment retourner
+un message négatif, mais c&#8217;est normal étant donné que rien n&#8217;a été codé
+concernant la fonctionnalité testée.</li>
 <li>Ensuite seulement, le but est d&#8217;écrire un minimum de code possible
-pour que le test précédemment lancé fonctionne. Il faut seulement s&#8217;occuper
-de ce que le test cherchait à essayer, pas plus, pas moins.</li>
-<li>Une fois que vous pensez avoir accompli ce que le test de la première étape
-vous disait avoir raté, vous pouvez relancer ce test. Si le résultat
-est positif, vous pouvez passer à l&#8217;étape suivante. Dans le cas contraire,
-il va vous falloir refaire l&#8217;étape 2 et 3 jusqu&#8217;à ce que le test soit
-positif.</li>
-<li>L&#8217;étape finale: il va falloir réécrire et réstructurer le code précédent
-histoire qu&#8217;il soit plus agréable à l&#8217;oeil et le rendre plus lisible.
-Il faut faire très attention durant cette étape à ne rien rajouter ou
-enlever. Le code doit garder le même résultat.</li>
+pour que le test précédemment lancé fonctionne. Il faut donc réussir
+à ce que le test, une fois relancé, retourne un résultat positif. Il faut
+faire attention à ne pas développer une fonctionnalité qui n&#8217;est pas dans
+le test</li>
+<li>Une fois le code écrit, on peut relancer ce test. Si le résultat
+est positif, on peut passer à l&#8217;étape suivante. Dans le cas contraire,
+il faudra refaire les étapes 2 et 3 jusqu&#8217;à ce que le test fonctionne.</li>
+<li>Finalement, il ne reste qu&#8217;à restructurer le code précédemment écrit pour
+qu&#8217;il soit plus lisible. Il faut faire très attention durant cette étape à
+ne rien ajouter ou enlever. Le code doit garder le même résultat.</li>
 </ol>
-<p>Une fois que ces 4 étapes ont été effectuées, il ne reste évidemment qu&#8217;à
+<p>Une fois que ces 4 étapes ont été effectuées, il ne reste qu&#8217;à
 recommencer avec une autre fonctionnalité de l&#8217;application, jusqu&#8217;à
 que celle-ci soit finie.</p>
+<div class="figure align-center">
+<a class="reference internal image-reference" href="_images/TDD.png"><img alt="_images/TDD.png" src="_images/TDD.png" style="width: 50%;" /></a>
+<p class="caption">Schéma résumant les 4 étapes du Développement dirigé par les tests</p>
+</div>
 </div>
 <div class="section" id="gain-de-temps">
 <h2>Gain de temps?<a class="headerlink" href="#gain-de-temps" title="Lien permanent vers ce titre">¶</a></h2>
@@ -128,7 +129,7 @@ de temps pour le programmeur.</p>
 énormément de sens, car tout peut être facilement essayable par soi-même.
 Dans le cas d&#8217;un travail d&#8217;une certaine consistance, ce n&#8217;est pas pareil.
 C&#8217;est uniquement en testant que l&#8217;on peut être sûr de son code, car cela
-signifie que notre code est valide, et devrait le rester.</p>
+signifie qu&#8217;il est valide et devrait le rester.</p>
 </div>
 </div>
 
@@ -141,8 +142,8 @@ signifie que notre code est valide, et devrait le rester.</p>
   <h3><a href="index.html">Table des Matières</a></h3>
   <ul>
 <li><a class="reference internal" href="#">Développement dirigé par les tests</a><ul>
-<li><a class="reference internal" href="#le-test-fonctionnel">Le test fonctionnel</a></li>
-<li><a class="reference internal" href="#le-test-unitaire">Le test unitaire</a></li>
+<li><a class="reference internal" href="#les-tests-fonctionnels">Les tests fonctionnels</a></li>
+<li><a class="reference internal" href="#les-tests-unitaires">Les tests unitaires</a></li>
 <li><a class="reference internal" href="#le-cycle-du-developpement-dirige-par-les-tests">Le cycle du développement dirigé par les tests</a></li>
 <li><a class="reference internal" href="#gain-de-temps">Gain de temps?</a></li>
 </ul>
