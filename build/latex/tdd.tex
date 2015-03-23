@@ -14,7 +14,7 @@
 
 
 \title{Documentation: dashboard professeur et développement dirigé par les tests}
-\date{22 March 2015}
+\date{23 March 2015}
 \release{0.1}
 \author{Bryan Oberson}
 \newcommand{\sphinxlogo}{}
@@ -124,95 +124,8 @@
 
 
 
-\chapter{Introduction}
-\label{introduction:introduction}\label{introduction:conception-du-dashboard-professeur-a-laide-du-developpement-dirige-par-les-tests}\label{introduction::doc}
-Dans ce travail, je vais tout d'abord documenter mon travail pratique. Ce
-travail consiste en la conception d'un dashboard pour les professeurs
-utilisant le framework Django tout en essayant de programmer
-avec le développement dirigé par les tests.
-Ce dashboard fera partie d'un projet plus grand: un site d'e-learning pour les
-mathématiques.
-Tous les termes spécifiques tels que framework seront expliqués par la suite.
-
-Cette documentation parlera tout d'abord de l'intérêt de ce travail pratique.
-Il y aura aussi le wireframe du dashboard et un diagramme UML expliquant mes
-différents modèles Django. J'expliquerai par la suite comment j'ai utilisé
-les différentes technologies pour créer mon application et comment
-je pourrai l'intégrer au projet final (le site) en essayant de souligner les
-difficultés que je pourrai rencontrer pendant l'intégration.
-
-Par la suite, j'essaierai de résumer les connaissances de bases relatives
-au développement dirigé par les tests. Ceci consistera à expliquer les
-différents termes et à surtout à expliquer comment cela fonctionne et quels
-sont les avantages.
-
-Finalement, j'expliquerai comment créer une ébauche de dashboard (créer un
-dashboard complet étant trop long et trop compliqué à tester de par le nombre
-important de boutons et de fonctionnalités) en utilisant ce fameux
-développement dirigé par les tests
-
-
-\chapter{Explications des termes spécifiques}
-\label{introduction:explications-des-termes-specifiques}
-Pour être sûr que tout le monde comprenne de quoi nous allons parler,
-il va nous falloir expliquer le lexique spécifique à nos deux sujets:
-dashboard professeur et développement dirigé par les tests.
-
-
-\section{Framework}
-\label{introduction:framework}
-Un \textbf{framework}, ou \textbf{structure logicielle}, sert de base à un programme.
-En effet, c'est de par ses structures de base que l'on peut le plus facilement
-programmer. C'est donc une grande aide à tout informaticien. Les framework les
-plus connus seraient, par exemple, Django, Bootstrap ou Ruby On Rails.
-
-Il est important de noter que les frameworks sont souvent spécialisés dans un
-langage informatique très précis. Par exemple, Django utilise Python, Bootstrap
-utilise HTML et CSS et Ruby on Rails utilise Ruby.
-
-Un framework est en autre très utile pour la programmation orientée objet. Ce
-type de programmation permet d'établir des liens entre les différents objets.
-Le framework aide à créer des classes et surtout des héritages.
-
-
-\section{Classes et héritages}
-\label{introduction:classes-et-heritages}
-Les \textbf{classes} correspondent à un moule dans lequel on met différentes
-informations pour créer un objet. Par exemple, pour une voiture, on pourrait
-définir sa couleur, sa marque ou encore son age. Tout ce qu'il reste à faire
-est de donner des valeurs à ces trois propriétés pour ``créer'' la voiture.
-
-Le concept d'héritage n'est pas beaucoup plus compliqué. En effet, un héritage
-consiste à créer une classe en prenant comme base les caractéristiques d'une
-autre, ce qui nous permet d'en rajouter d'autre. Dans un cas qui nous
-intéresserait plus, un élève possède comme spécificités un nom, un prénom et
-une école. On peut grâce à ça créer une classe Professeur, qui aura les
-mêmes caractéristiques mais à laquelle on pourrait ajouter la branche qu'il
-enseigne.
-
-
-\section{Diagramme UML}
-\label{introduction:diagramme-uml}
-Quand l'on possède de nombreuses classes, il devient indispensable de pouvoir
-voir rapidement quelles relations ces classes entreprennent entre elles. Pour
-ceci, le meilleur moyen de le faire est de créer un \textbf{diagramme UML}. Un diagramme
-schématise les objets et indique leurs différentes relations (relation simple
-avec une clé étrangère ou aussi plusieurs-à-plusieurs (ManyToMany)).
-
-Il existe de nombreux programmes permettant de réaliser des diagrammes UML
-clairs et présentables, comme boUML, argoUML ou Poseidon.
-
-
-\section{Wireframe}
-\label{introduction:wireframe}
-Un \textbf{wireframe} est un schéma consistant à mettre en valeur les relations entre les
-différentes pages d'un site web. Cela explique par exemple ce qu'il se passe si
-l'on clique sur tel ou tel bouton. Cela consiste donc à pouvoir voir ou
-exactement l'on peut aller en manipulant les fonctionnalités du site.
-
-
 \chapter{Fonctionnalités du dashboard}
-\label{dashboard:fonctionnalites-du-dashboard}\label{dashboard::doc}
+\label{dashboard:fonctionnalites-du-dashboard}\label{dashboard::doc}\label{dashboard:conception-du-dashboard-professeur-et-developpement-dirige-par-les-tests}
 
 \section{Ajouter un groupe}
 \label{dashboard:ajouter-un-groupe}
@@ -227,7 +140,7 @@ de groupe.
 \centering
 \capstart
 
-\includegraphics[width=0.700\linewidth]{Newclass.jpg}
+\includegraphics[width=0.600\linewidth]{Newclass.jpg}
 \caption{Formulaire de création de groupe}\end{figure}
 
 La seule exigence présente lors de la création d'un groupe est le nom. Une fois
@@ -252,7 +165,7 @@ entrant leur nom d'utilisateur dans le champ à disposition.
 \centering
 \capstart
 
-\includegraphics[width=0.700\linewidth]{class.jpg}
+\includegraphics[width=0.600\linewidth]{class.jpg}
 \caption{Page d'administration d'un groupe}\end{figure}
 
 Si le nom d'utilisateur rentré correspond bien à un étudiant ou à un professeur,
@@ -261,7 +174,7 @@ cet utilisateur sera rajouté dans la liste des membres.
 \centering
 \capstart
 
-\includegraphics[width=0.700\linewidth]{classAjouterMembres.jpg}
+\includegraphics[width=0.600\linewidth]{classAjouterMembres.jpg}
 \caption{Ce à quoi ressemble la page une fois que des membres ont été rajoutés}\end{figure}
 
 Au contraire, si aucun utilisateur n'a été trouvé ou si l'utilisateur ne
@@ -272,7 +185,7 @@ d'erreur.
 \centering
 \capstart
 
-\includegraphics[width=0.700\linewidth]{classAjouterMembresEchec.jpg}
+\includegraphics[width=0.600\linewidth]{classAjouterMembresEchec.jpg}
 \caption{Message d'erreur retourné si l'utilisateur n'est pas valable}\end{figure}
 
 Une fois ajouté, un membre peut facilement être retiré du groupe grâce au bouton
@@ -292,7 +205,7 @@ et de préciser grâce au menu à choix de quel type de devoir il s'agit.
 \centering
 \capstart
 
-\includegraphics[width=0.700\linewidth]{classDevoir.jpg}
+\includegraphics[width=0.600\linewidth]{classDevoir.jpg}
 \caption{Différents champs à compléter pour assigner un devoir}\end{figure}
 
 Comme pour les fonctionnalités précédentes, si aucun exercice, quiz ou cours
@@ -309,7 +222,7 @@ page que le professeur pourra voir ses exercices, ses quiz et ses cours.
 \centering
 \capstart
 
-\includegraphics[width=0.700\linewidth]{exercices.jpg}
+\includegraphics[width=0.600\linewidth]{exercices.jpg}
 \caption{Ce à quoi ressemble la page Exercices}\end{figure}
 
 Pour chaque activité que le professeur aura créé, il pourra voir le titre qu'il
@@ -332,7 +245,7 @@ déroulant en haut à droite de cette page.
 \centering
 \capstart
 
-\includegraphics[width=0.700\linewidth]{menuDeroulant.jpg}
+\includegraphics[width=0.600\linewidth]{menuDeroulant.jpg}
 \caption{Apparence du menu déroulant}\end{figure}
 
 Dashboard amène le professeur sur l'accueil de son dashboard, Déconnexion le
@@ -344,7 +257,7 @@ Si tout a été rentré correctement, le mot de passe sera correctement modifié
 \centering
 \capstart
 
-\includegraphics[width=0.700\linewidth]{passwordSuccess.jpg}
+\includegraphics[width=0.600\linewidth]{passwordSuccess.jpg}
 \caption{Message pour confirmer que le changement de mot de passe a correctement eu
 lieu}\end{figure}
 
@@ -353,158 +266,620 @@ Au contraire, s'il y a une erreur, un message d'erreur sera retourné.
 \centering
 \capstart
 
-\includegraphics[width=0.700\linewidth]{passwordFail.jpg}
+\includegraphics[width=0.600\linewidth]{passwordFail.jpg}
 \caption{Message d'erreur retourné si les champs n'ont pas correctement été remplis}\end{figure}
 
 
-\chapter{Documentation}
-\label{documentation:documentation}\label{documentation::doc}
+\chapter{Guide du développeur}
+\label{documentation:guide-du-developpeur}\label{documentation::doc}
 
-\section{Différentes technologies}
-\label{documentation:differentes-technologies}
-Pour créer mon application ( dashboard professeur ), j'ai fait recourt aux
-technologies suivantes.
+\section{Utilité des différents fichiers de mon projet}
+\label{documentation:utilite-des-differents-fichiers-de-mon-projet}
 
+\subsection{Dossier \texttt{static}}
+\label{documentation:dossier-static}
+Le dossier static est utilisé pour garder tous les fichiers tel que les images,
+les fichiers CSS ou les fichiers Javascript.
+Dans cette application, il contient les dossiers suivants:
+\begin{itemize}
+\item {} 
+\code{bower\_components}: ce dossier contient tous les éléments du front-end
+qui possèdent des dépendances, comme les fichiers \code{bootstrap} ou des
+fichiers de base pour \code{jquery}.
 
-\subsection{HTML5 (Hypertext Markup Language)}
-\label{documentation:html5-hypertext-markup-language}
-HTML est la base de toute page web. En effet, c'est ce qui nous permet
-d'afficher du texte, des images. Il est principalement utilisé avec CSS (pour la
-mise en page) et JavaScript (pour l'interactivité des pages).
+\item {} 
+\code{css}: dans ce dossier se trouvent tous les fichiers css qui sont
+nécessaires pour le design du site.
 
-J'ai utilisé HTML5 pour faire le frontal ( plus connu sous le nom front-end ).
-Le frontal correspond à ce que l'utilisateur voit. Il est opposé au back-end,
-qui est la partie qui travaille derrière mais que l'utilisateur ne voit pas.
+\item {} 
+\code{fonts}: le dossier \code{fonts} de l'application dashboard contient toutes
+les informations relatives aux petits signes (\code{glyphicons}) qui sont
+utilisés dans le dashboard, comme le + devant «Nouveau groupe».
 
-
-\subsection{CSS3 (Cascading Style Sheets)}
-\label{documentation:css3-cascading-style-sheets}
-CSS3 a été utilisé pour mettre en page mon code HTML. Cela a donc aussi
-contribué à la partie front-end de mon application. C'est CSS qui permet de
-modifier la police du texte, modifier la taille des images, ou encore
-de modifier la couleur du font. CSS permet donc de rendre une page potable
-pour l'oeil.
-
-
-\subsection{Bootstrap}
-\label{documentation:bootstrap}
-Bootstrap est un framework qui contient du code HTML et CSS. J'ai utilisé
-Bootstrap comme base pour mon dashboard en utilisant le modèle \emph{Charisma}
-\footnote{
-\href{http://usman.it/free-responsive-admin-template/}{http://usman.it/free-responsive-admin-template/}
-}. L'avantage de Bootstrap est qu'il offre des
-design adaptatifs, qui signifie que la mise en page va s'adapter à la taille de
-l'écran.
-
-Voici un exemple d'adaptation:
-
-Voici à quoi ressemble le dashboard sur un écran d'ordinateur.
-
-Et voici ce que la page devient si l'on zoome ou si l'on réduit la taille de la
-fenêtre.
+\end{itemize}
 
 
-\subsection{Django}
-\label{documentation:django}
-Django est un framework spécialisé dans Python. C'est un des framework les plus
-utilisés. Nous avons choisi Django pour le projet car, travaillant sous Python,
-il est le plus documenté et le plus connu.
-
-Grâce à Django, nous avons pu gérer des classes et des héritages, des vues et
-des urls.
+\subsection{Dossier \texttt{templates}}
+\label{documentation:dossier-templates}
+Dans le dossier \code{templates} se trouvent tous les fichiers \code{html} qui sont
+utilisés dans l'application et retournés par les différentes vues.
 
 
-\subsection{Git et Github}
-\label{documentation:git-et-github}
-J'ai utilisé Git et Github pour garder une trace de l'avancement de mon travail
-et pouvoir rattraper toute erreur qui, dans le passé, m'aurait échappé et
-referait surface plus tard.
+\subsection{Fichiers propres à l'application}
+\label{documentation:fichiers-propres-a-l-application}
+Les applications Django possèdent les fichiers de base suivants:
+\begin{itemize}
+\item {} 
+\code{models.py} qui est utilisé pour créer les différents modèles et leur
+attribuer des champs
 
-Grâce à Git, j'ai donc pu créer des commit, qui sont
-des entrées permettant au développeur de faire des sauvegardes et de voir à quel
-moment il a modifié certains éléments selon la légende qu'il a mit au commit.
-J'ai aussi pu aller chercher et remettre des informations sur le répositoire
-sur le site Github. En effet, il garde les copies des fichiers, ce qui permet
-de pouvoir les récupérer depuis n'importe quelle machine.
+\item {} 
+\code{admin.py} est utilisé pour signaler à Django quels sont les modèles qui
+doivent apparaître dans l'application admin. Une fois qu'ils y apparaissent,
+il est possible de créer, modifier ou supprimer n'importe quel object depuis
+cette application.application
 
+\item {} 
+Le fichier \code{forms.py} est celui dans lequel on peut entrer les différents
+formulaires dont l'on a besoin pour l'application.
 
-\subsection{Cloud9}
-\label{documentation:cloud9}
-Enfin, j'ai utilisé Cloud9, un site qui permet de programmer sur un serveur
-se trouvant autre part, et de pouvoir y accéder depuis n'importe quelle machine.
+\item {} 
+C'est dans \code{views.py} que l'on peut stocker des variables nécessaires
+dans certains templates, mais aussi réaliser certaines actions comme la
+suppression d'un objet. A la fin d'une vue, on retourne souvent un fichiers
+\code{html} ou on redirige vers une autre vue.
 
-La raison pour laquelle j'ai finalement favorisé la programmation sur Cloud9
-plutôt que la programmation locale est le fait que, étant donné que je profite
-de programmer quand j'ai du temps et que je n'ai pas forcément une de mes
-machines, je peux le faire depuis l'ordinateur de quelque d'autre sans devoir
-télécharger multiples fichiers.
+\item {} 
+Le fichier \code{urls.py} contient les informations concernant les différentes
+urls accessibles par l'utilisateur et quelles vues sont censées être
+utilisées.
 
-
-\section{Application au projet}
-\label{documentation:application-au-projet}
-Dans le projet final, qui, rappelons-le, consistera en un site d'e-learning pour
-les mathématiques, ma partie pratique sera le dashboard professeur, donc
-l'endroit ou les professeurs pourront gérer leurs exercices, leurs classes et
-leurs élèves. La raison pour laquelle cette partie du site est si importante
-est que sans un dashboard parfaitement opérationnel, il deviendrait chaotique
-pour les professeurs de gérer leurs différentes responsabilités.
-
-Toutes les fonctionnalités ayant déjà été expliquées auparavant, je ne vais pas
-repasser dessus.
+\end{itemize}
 
 
-\section{Wireframes, ou ``scénarios du site''}
-\label{documentation:wireframes-ou-scenarios-du-site}
+\subsection{Fichiers uniques de Django}
+\label{documentation:fichiers-uniques-de-django}
+On peut modifier le fichier \code{settings.py} afin de définir la zone temporelle
+dans laquelle on se trouve, mais aussi les applications qu'un projet doit
+gérer ou encore l'emplacement du fichier \code{static}. Il sert donc de
+configuration de base pour un projet.
 
-\section{Modèles et diagrammes UML}
-\label{documentation:modeles-et-diagrammes-uml}
+Il y a aussi un autre fichiers \code{urls.py} qui, lui, est très utile si l'on doit
+s'occuper de plusieurs applications à la fois. En effet, on peut définir le
+début de l'url et rediriger vers un autre fichier \code{urls.py}.
 
-\subsection{Modèles utilisés}
-\label{documentation:modeles-utilises}
-Il y a tout d'abord notre classe Teacher, qui constitue bien évidemment le
-point central de notre application. La classe Teacher possède les propriétés
-suivantes: prénom, nom, adresse e-mail et l'école dans laquelle il enseigne.
-Il n'y a pas réellement d'autres propriétés à lui rajouter.
 
-Pour qu'il y ait des professeurs, il faut aussi des élèves, c'est pourquoi
-j'ai une classe dénommée Student. Les propriétés ressemblent beaucoup à celles
-de Teacher étant donné que les deux classes correspondent à des classes
-d'utilisateur. Ces propriétés sont: prénom, nom, adresse e-mail, école et
-compétences de l'élève, établies par rapport à certains thèmes accomplis.
+\section{Modèles}
+\label{documentation:modeles}
 
-Finalement, ces deux classes sont réunies dans une classe nommée Group, qui
-pourrait s'apparenter à une classe d'école. En effet, la classe Group possède
-1 à plusieurs professeurs, 1 à plusieurs élèves, un nom, des devoirs, des
-taux de réussites par rapport aux exercices réalisés en général, et une date
-de création.
+\subsection{Modèles utilisés pour le dashboard}
+\label{documentation:modeles-utilises-pour-le-dashboard}
+\begin{Verbatim}[commandchars=\\\{\},numbers=left,firstnumber=1,stepnumber=1]
+\PYG{k+kn}{from} \PYG{n+nn}{django.db} \PYG{k+kn}{import} \PYG{n}{models}
+\PYG{k+kn}{from} \PYG{n+nn}{django.contrib.auth.models} \PYG{k+kn}{import} \PYG{n}{User}
+
+
+\PYG{c}{\PYGZsh{}Profile de base découlant de User}
+
+\PYG{k}{class} \PYG{n+nc}{BaseProfile}\PYG{p}{(}\PYG{n}{models}\PYG{o}{.}\PYG{n}{Model}\PYG{p}{)}\PYG{p}{:}
+    \PYG{n}{user} \PYG{o}{=} \PYG{n}{models}\PYG{o}{.}\PYG{n}{OneToOneField}\PYG{p}{(}\PYG{n}{User}\PYG{p}{)} \PYG{c}{\PYGZsh{}Donne les attributs de User à BaseProfile}
+    \PYG{n}{avatar} \PYG{o}{=} \PYG{n}{models}\PYG{o}{.}\PYG{n}{ImageField}\PYG{p}{(}\PYG{n}{null}\PYG{o}{=}\PYG{n+nb+bp}{True}\PYG{p}{,} \PYG{n}{blank}\PYG{o}{=}\PYG{n+nb+bp}{True}\PYG{p}{,} \PYG{n}{upload\PYGZus{}to}\PYG{o}{=}\PYG{l+s}{\PYGZdq{}}\PYG{l+s}{avatars/}\PYG{l+s}{\PYGZdq{}}\PYG{p}{)}
+        
+    \PYG{k}{class} \PYG{n+nc}{Meta}\PYG{p}{:}
+        \PYG{n}{abstract} \PYG{o}{=} \PYG{n+nb+bp}{True}
+
+
+\PYG{c}{\PYGZsh{}Les deux modèles héritent de BaseProfile et donc de User}
+
+\PYG{k}{class} \PYG{n+nc}{Teacher}\PYG{p}{(}\PYG{n}{BaseProfile}\PYG{p}{)}\PYG{p}{:}
+
+    \PYG{k}{def} \PYG{n+nf}{\PYGZus{}\PYGZus{}str\PYGZus{}\PYGZus{}}\PYG{p}{(}\PYG{n+nb+bp}{self}\PYG{p}{)}\PYG{p}{:}
+        \PYG{k}{return} \PYG{l+s}{\PYGZdq{}}\PYG{l+s}{Professeur \PYGZob{}0\PYGZcb{}}\PYG{l+s}{\PYGZdq{}}\PYG{o}{.}\PYG{n}{format}\PYG{p}{(}\PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{user}\PYG{o}{.}\PYG{n}{username}\PYG{p}{)}
+
+\PYG{k}{class} \PYG{n+nc}{Student}\PYG{p}{(}\PYG{n}{BaseProfile}\PYG{p}{)}\PYG{p}{:}
+
+    \PYG{k}{def} \PYG{n+nf}{\PYGZus{}\PYGZus{}str\PYGZus{}\PYGZus{}}\PYG{p}{(}\PYG{n+nb+bp}{self}\PYG{p}{)}\PYG{p}{:}
+        \PYG{k}{return} \PYG{l+s}{\PYGZdq{}}\PYG{l+s}{Etudiant \PYGZob{}0\PYGZcb{}}\PYG{l+s}{\PYGZdq{}}\PYG{o}{.}\PYG{n}{format}\PYG{p}{(}\PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{user}\PYG{o}{.}\PYG{n}{username}\PYG{p}{)}
+        
+
+\PYG{c}{\PYGZsh{}}
+\PYG{c}{\PYGZsh{} Modèle de Keran pour les cours}
+\PYG{c}{\PYGZsh{}}
+
+\PYG{k}{class} \PYG{n+nc}{Course}\PYG{p}{(}\PYG{n}{models}\PYG{o}{.}\PYG{n}{Model}\PYG{p}{)}\PYG{p}{:}
+    \PYG{n}{title} \PYG{o}{=} \PYG{n}{models}\PYG{o}{.}\PYG{n}{CharField}\PYG{p}{(}\PYG{n}{max\PYGZus{}length}\PYG{o}{=}\PYG{l+m+mi}{30}\PYG{p}{,} \PYG{n}{unique}\PYG{o}{=}\PYG{n+nb+bp}{True}\PYG{p}{)}
+    \PYG{n}{description} \PYG{o}{=} \PYG{n}{models}\PYG{o}{.}\PYG{n}{TextField}\PYG{p}{(}\PYG{p}{)}
+    \PYG{n}{difficulty} \PYG{o}{=} \PYG{n}{models}\PYG{o}{.}\PYG{n}{IntegerField}\PYG{p}{(}\PYG{p}{)}
+    \PYG{n}{published} \PYG{o}{=} \PYG{n}{models}\PYG{o}{.}\PYG{n}{BooleanField}\PYG{p}{(}\PYG{n}{default}\PYG{o}{=}\PYG{n+nb+bp}{False}\PYG{p}{)}
+    
+    \PYG{n}{author} \PYG{o}{=} \PYG{n}{models}\PYG{o}{.}\PYG{n}{ForeignKey}\PYG{p}{(}\PYG{n}{Teacher}\PYG{p}{)}
+    \PYG{c}{\PYGZsh{}chapter = models.ForeignKey(\PYGZsq{}teachers.Chapter\PYGZsq{}, related\PYGZus{}name=\PYGZdq{}courses\PYGZdq{})}
+    \PYG{n}{favorites} \PYG{o}{=} \PYG{n}{models}\PYG{o}{.}\PYG{n}{ManyToManyField}\PYG{p}{(}\PYG{n}{User}\PYG{p}{,} \PYG{n}{related\PYGZus{}name}\PYG{o}{=}\PYG{l+s}{\PYGZdq{}}\PYG{l+s}{favorite\PYGZus{}courses}\PYG{l+s}{\PYGZdq{}}\PYG{p}{,} \PYG{n}{blank}\PYG{o}{=}\PYG{n+nb+bp}{True}\PYG{p}{,} \PYG{n}{null}\PYG{o}{=}\PYG{n+nb+bp}{True}\PYG{p}{)}
+    \PYG{c}{\PYGZsh{} videos = models.ManyToManyField(Video)}
+    \PYG{c}{\PYGZsh{} images = models.ManyToManyField(Image)}
+    \PYG{c}{\PYGZsh{} definitions = models.ManyToManyField(Definition)}
+    
+    \PYG{n}{created\PYGZus{}at} \PYG{o}{=} \PYG{n}{models}\PYG{o}{.}\PYG{n}{DateTimeField}\PYG{p}{(}\PYG{n}{auto\PYGZus{}now\PYGZus{}add}\PYG{o}{=}\PYG{n+nb+bp}{True}\PYG{p}{)}
+    \PYG{n}{updated\PYGZus{}at} \PYG{o}{=} \PYG{n}{models}\PYG{o}{.}\PYG{n}{DateTimeField}\PYG{p}{(}\PYG{n}{auto\PYGZus{}now}\PYG{o}{=}\PYG{n+nb+bp}{True}\PYG{p}{)}
+
+    \PYG{k}{def} \PYG{n+nf}{\PYGZus{}\PYGZus{}str\PYGZus{}\PYGZus{}}\PYG{p}{(}\PYG{n+nb+bp}{self}\PYG{p}{)}\PYG{p}{:}
+      \PYG{k}{return} \PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{title}
+      
+\PYG{c}{\PYGZsh{}}
+\PYG{c}{\PYGZsh{} Modèle de Florian pour les exercices}
+\PYG{c}{\PYGZsh{}}
+
+\PYG{k}{class} \PYG{n+nc}{Exercise}\PYG{p}{(}\PYG{n}{models}\PYG{o}{.}\PYG{n}{Model}\PYG{p}{)}\PYG{p}{:}
+    
+    \PYG{n}{owner} \PYG{o}{=} \PYG{n}{models}\PYG{o}{.}\PYG{n}{ForeignKey}\PYG{p}{(}\PYG{n}{Teacher}\PYG{p}{)}  \PYG{c}{\PYGZsh{} créateur de l\PYGZsq{}exercice   }
+    \PYG{n}{created\PYGZus{}on} \PYG{o}{=} \PYG{n}{models}\PYG{o}{.}\PYG{n}{DateTimeField}\PYG{p}{(}\PYG{n}{auto\PYGZus{}now\PYGZus{}add}\PYG{o}{=}\PYG{n+nb+bp}{True}\PYG{p}{)} \PYG{c}{\PYGZsh{} Date de création}
+    \PYG{n}{updated\PYGZus{}on} \PYG{o}{=} \PYG{n}{models}\PYG{o}{.}\PYG{n}{DateTimeField}\PYG{p}{(}\PYG{n}{auto\PYGZus{}now}\PYG{o}{=}\PYG{n+nb+bp}{True}\PYG{p}{)}
+    \PYG{n}{title} \PYG{o}{=} \PYG{n}{models}\PYG{o}{.}\PYG{n}{CharField}\PYG{p}{(}\PYG{n}{max\PYGZus{}length}\PYG{o}{=}\PYG{l+m+mi}{30}\PYG{p}{)} \PYG{c}{\PYGZsh{} C\PYGZsq{}est le titre de l\PYGZsq{}exercice ( factorisation ou développement)}
+    \PYG{n}{equation} \PYG{o}{=} \PYG{n}{models}\PYG{o}{.}\PYG{n}{CharField}\PYG{p}{(}\PYG{n}{max\PYGZus{}length}\PYG{o}{=}\PYG{l+m+mi}{50}\PYG{p}{)} \PYG{c}{\PYGZsh{} C\PYGZsq{}est l\PYGZsq{}équation entrée par le professeur}
+    \PYG{n}{grade} \PYG{o}{=} \PYG{n}{models}\PYG{o}{.}\PYG{n}{CharField}\PYG{p}{(}\PYG{n}{max\PYGZus{}length}\PYG{o}{=}\PYG{l+m+mi}{60}\PYG{p}{)} \PYG{c}{\PYGZsh{} donnée une note de difficulté à l\PYGZsq{}exercice}
+    \PYG{n}{correction} \PYG{o}{=} \PYG{n}{models}\PYG{o}{.}\PYG{n}{CharField}\PYG{p}{(}\PYG{n}{max\PYGZus{}length} \PYG{o}{=} \PYG{l+m+mi}{200}\PYG{p}{)} \PYG{c}{\PYGZsh{} Ceci est le corrigé de l\PYGZsq{}exercice ( obligatoire )}
+    \PYG{k}{def} \PYG{n+nf}{\PYGZus{}\PYGZus{}str\PYGZus{}\PYGZus{}}\PYG{p}{(}\PYG{n+nb+bp}{self}\PYG{p}{)}\PYG{p}{:}
+        \PYG{k}{return} \PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{title}
+        
+\PYG{c}{\PYGZsh{}}
+\PYG{c}{\PYGZsh{} Modèle de Benoit pour les quiz}
+\PYG{c}{\PYGZsh{}}
+
+\PYG{k}{class} \PYG{n+nc}{Quiz}\PYG{p}{(}\PYG{n}{models}\PYG{o}{.}\PYG{n}{Model}\PYG{p}{)}\PYG{p}{:} \PYG{c}{\PYGZsh{}Infos générales sur le quiz}
+    \PYG{n}{title} \PYG{o}{=} \PYG{n}{models}\PYG{o}{.}\PYG{n}{CharField}\PYG{p}{(}\PYG{n}{max\PYGZus{}length}\PYG{o}{=}\PYG{l+m+mi}{100}\PYG{p}{)}
+    \PYG{n}{creation\PYGZus{}date} \PYG{o}{=} \PYG{n}{models}\PYG{o}{.}\PYG{n}{DateTimeField}\PYG{p}{(}\PYG{n}{auto\PYGZus{}now\PYGZus{}add}\PYG{o}{=}\PYG{n+nb+bp}{True}\PYG{p}{)}
+    \PYG{n}{code} \PYG{o}{=} \PYG{n}{models}\PYG{o}{.}\PYG{n}{CharField}\PYG{p}{(}\PYG{n}{max\PYGZus{}length}\PYG{o}{=}\PYG{l+m+mi}{1000}\PYG{p}{)} \PYG{c}{\PYGZsh{}Format texte du quiz}
+    \PYG{n}{author} \PYG{o}{=} \PYG{n}{models}\PYG{o}{.}\PYG{n}{ForeignKey}\PYG{p}{(}\PYG{n}{Teacher}\PYG{p}{)}
+    \PYG{c}{\PYGZsh{}id\PYGZus{}chapter = models.ForeignKey(\PYGZsq{}teachers.Chapter\PYGZsq{})}
+    
+    \PYG{k}{def} \PYG{n+nf}{\PYGZus{}\PYGZus{}str\PYGZus{}\PYGZus{}}\PYG{p}{(}\PYG{n+nb+bp}{self}\PYG{p}{)}\PYG{p}{:}
+        \PYG{k}{return} \PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{title}
+        
+        
+        
+
+\PYG{c}{\PYGZsh{}Modèle pour les groupes}
+\PYG{k}{class} \PYG{n+nc}{Group}\PYG{p}{(}\PYG{n}{models}\PYG{o}{.}\PYG{n}{Model}\PYG{p}{)}\PYG{p}{:}
+    \PYG{n}{name} \PYG{o}{=} \PYG{n}{models}\PYG{o}{.}\PYG{n}{CharField}\PYG{p}{(}\PYG{n}{max\PYGZus{}length}\PYG{o}{=}\PYG{l+m+mi}{30}\PYG{p}{)}
+    \PYG{n}{teacher} \PYG{o}{=} \PYG{n}{models}\PYG{o}{.}\PYG{n}{ManyToManyField}\PYG{p}{(}\PYG{n}{Teacher}\PYG{p}{,} \PYG{n}{through}\PYG{o}{=}\PYG{l+s}{\PYGZsq{}}\PYG{l+s}{GroupMembers}\PYG{l+s}{\PYGZsq{}}\PYG{p}{)}
+    \PYG{n}{student} \PYG{o}{=} \PYG{n}{models}\PYG{o}{.}\PYG{n}{ManyToManyField}\PYG{p}{(}\PYG{n}{Student}\PYG{p}{,} \PYG{n}{through} \PYG{o}{=} \PYG{l+s}{\PYGZsq{}}\PYG{l+s}{GroupMembers}\PYG{l+s}{\PYGZsq{}}\PYG{p}{)}
+    \PYG{n}{homeworkExercise} \PYG{o}{=} \PYG{n}{models}\PYG{o}{.}\PYG{n}{ManyToManyField}\PYG{p}{(}\PYG{n}{Exercise}\PYG{p}{,} \PYG{n}{through} \PYG{o}{=} \PYG{l+s}{\PYGZsq{}}\PYG{l+s}{AssignHomework}\PYG{l+s}{\PYGZsq{}}\PYG{p}{)} \PYG{c}{\PYGZsh{}uniquement les devoirs exercices}
+    \PYG{n}{homeworkCourse} \PYG{o}{=} \PYG{n}{models}\PYG{o}{.}\PYG{n}{ManyToManyField}\PYG{p}{(}\PYG{n}{Course}\PYG{p}{,} \PYG{n}{through} \PYG{o}{=} \PYG{l+s}{\PYGZsq{}}\PYG{l+s}{AssignHomework}\PYG{l+s}{\PYGZsq{}}\PYG{p}{)} \PYG{c}{\PYGZsh{}uniquement les devoirs quiz}
+    \PYG{n}{homeworkQuiz} \PYG{o}{=} \PYG{n}{models}\PYG{o}{.}\PYG{n}{ManyToManyField}\PYG{p}{(}\PYG{n}{Quiz}\PYG{p}{,} \PYG{n}{through} \PYG{o}{=} \PYG{l+s}{\PYGZsq{}}\PYG{l+s}{AssignHomework}\PYG{l+s}{\PYGZsq{}}\PYG{p}{)} \PYG{c}{\PYGZsh{}uniquement les devoirs cours}
+    \PYG{n}{created\PYGZus{}on} \PYG{o}{=} \PYG{n}{models}\PYG{o}{.}\PYG{n}{DateTimeField}\PYG{p}{(}\PYG{n}{auto\PYGZus{}now}\PYG{o}{=}\PYG{n+nb+bp}{True}\PYG{p}{)}
+    
+    \PYG{k}{def} \PYG{n+nf}{\PYGZus{}\PYGZus{}str\PYGZus{}\PYGZus{}}\PYG{p}{(}\PYG{n+nb+bp}{self}\PYG{p}{)}\PYG{p}{:}
+        \PYG{k}{return}\PYG{l+s}{\PYGZdq{}}\PYG{l+s}{Classe \PYGZob{}0\PYGZcb{}}\PYG{l+s}{\PYGZdq{}}\PYG{o}{.}\PYG{n}{format}\PYG{p}{(}\PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{name}\PYG{p}{)}
+
+
+\PYG{c}{\PYGZsh{}Table intermédiaire pour affecter un membre à un groupe}
+
+\PYG{k}{class} \PYG{n+nc}{GroupMembers}\PYG{p}{(}\PYG{n}{models}\PYG{o}{.}\PYG{n}{Model}\PYG{p}{)}\PYG{p}{:}
+    \PYG{n}{teacher} \PYG{o}{=} \PYG{n}{models}\PYG{o}{.}\PYG{n}{ForeignKey}\PYG{p}{(}\PYG{n}{Teacher}\PYG{p}{,} \PYG{n}{null} \PYG{o}{=} \PYG{n+nb+bp}{True}\PYG{p}{)}
+    \PYG{n}{student} \PYG{o}{=} \PYG{n}{models}\PYG{o}{.}\PYG{n}{ForeignKey}\PYG{p}{(}\PYG{n}{Student}\PYG{p}{,} \PYG{n}{null} \PYG{o}{=} \PYG{n+nb+bp}{True}\PYG{p}{)}
+    \PYG{n}{group} \PYG{o}{=} \PYG{n}{models}\PYG{o}{.}\PYG{n}{ForeignKey}\PYG{p}{(}\PYG{n}{Group}\PYG{p}{)}
+    \PYG{n}{added\PYGZus{}on} \PYG{o}{=} \PYG{n}{models}\PYG{o}{.}\PYG{n}{DateTimeField}\PYG{p}{(}\PYG{n}{auto\PYGZus{}now}\PYG{o}{=}\PYG{n+nb+bp}{True}\PYG{p}{)}
+    
+\PYG{c}{\PYGZsh{}Table intermédiaire pour assigner un devoir à un groupe    }
+    
+\PYG{k}{class} \PYG{n+nc}{AssignHomework}\PYG{p}{(}\PYG{n}{models}\PYG{o}{.}\PYG{n}{Model}\PYG{p}{)}\PYG{p}{:}
+    \PYG{n}{group} \PYG{o}{=} \PYG{n}{models}\PYG{o}{.}\PYG{n}{ForeignKey}\PYG{p}{(}\PYG{n}{Group}\PYG{p}{)}
+    \PYG{n}{exercise} \PYG{o}{=} \PYG{n}{models}\PYG{o}{.}\PYG{n}{ForeignKey}\PYG{p}{(}\PYG{n}{Exercise}\PYG{p}{,} \PYG{n}{null} \PYG{o}{=} \PYG{n+nb+bp}{True}\PYG{p}{)}
+    \PYG{n}{quiz} \PYG{o}{=} \PYG{n}{models}\PYG{o}{.}\PYG{n}{ForeignKey}\PYG{p}{(}\PYG{n}{Quiz}\PYG{p}{,} \PYG{n}{null} \PYG{o}{=} \PYG{n+nb+bp}{True}\PYG{p}{)}
+    \PYG{n}{course} \PYG{o}{=} \PYG{n}{models}\PYG{o}{.}\PYG{n}{ForeignKey}\PYG{p}{(}\PYG{n}{Course}\PYG{p}{,} \PYG{n}{null} \PYG{o}{=} \PYG{n+nb+bp}{True}\PYG{p}{)}
+    \PYG{n}{assigned\PYGZus{}on} \PYG{o}{=} \PYG{n}{models}\PYG{o}{.}\PYG{n}{DateTimeField}\PYG{p}{(}\PYG{n}{auto\PYGZus{}now}\PYG{o}{=}\PYG{n+nb+bp}{True}\PYG{p}{)}
+\end{Verbatim}
+
+Il y a tout d'abord le modèle \code{BaseProfile} qui découle de \code{User} et qui,
+comme son nom l'indique, va servir de profil de base pour le modèle \code{Teacher}
+et \code{Student}.
+
+L'utilisateur Django possède de base les caractéristiques suivantes \footnote{
+«django.contrib.auth»,
+consulté le 23.03.2015,
+\href{https://docs.djangoproject.com/en/1.7/ref/contrib/auth/}{https://docs.djangoproject.com/en/1.7/ref/contrib/auth/}
+}:
+\begin{itemize}
+\item {} 
+\code{username}: nom d'utilisateur
+
+\item {} 
+\code{first\_name}: prénom
+
+\item {} 
+\code{last\_name}: nom
+
+\item {} 
+\code{email}
+
+\item {} 
+\code{password}: mot de passe
+
+\item {} 
+\code{group}: les relations avec le modèle \code{Group} de Django
+
+\item {} 
+\code{user\_permissions}: les relations avec le modèle \code{Permission} de Django
+
+\item {} 
+\code{is\_staff}: si l'utilisateur peut accéder l'application admin
+
+\item {} 
+\code{is\_active}: définit si l'utilisateur doit être considéré comme actif ou
+non
+
+\item {} 
+\code{is\_superuser}: définit si l'utilisateur à tous les droits
+
+\item {} 
+\code{last\_login}: dernière connexion de l'utilisateur
+
+\item {} 
+\code{date\_joined}: date de création de l'utilisateur
+
+\end{itemize}
+
+Car un professeur a besoin de voir ses exercices, quiz et cours, et devra les
+assigner en tant que devoirs à un groupe, les modèles Exercise, Quiz et Course
+ont tous les trois été apportés.
+
+Il y a ensuite le modèle \code{Group}, qui n'est pas le même que celui implémenté
+de base avec Django, car c'est celui qui a été utilisé pour les groupes d'un
+professeur. Les membres sont ajoutés par le biais du modèle \code{Groupmembers}
+qui sert de table intermédiaire entre \code{Student} ainsi que \code{Teacher} et
+\code{Group}. Le modèle \code{AssignHomework}, qui est aussi une table intermédiaire,
+sert à l'affectation de devoirs entre \code{Exercise}, \code{Quiz}, \code{Course} et
+\code{Group}.
 
 
 \subsection{Diagramme UML}
 \label{documentation:diagramme-uml}
-Ce diagramme UML explique donc les relations entre les différentes pages de mon
-application, comment y accéder, que font les boutons, etc.
+
+\section{Vues}
+\label{documentation:vues}
+\begin{Verbatim}[commandchars=\\\{\},numbers=left,firstnumber=1,stepnumber=1]
+\PYG{k+kn}{from} \PYG{n+nn}{django.shortcuts} \PYG{k+kn}{import} \PYG{n}{render}\PYG{p}{,} \PYG{n}{redirect}
+\PYG{k+kn}{from} \PYG{n+nn}{django.contrib.auth} \PYG{k+kn}{import} \PYG{n}{authenticate}\PYG{p}{,} \PYG{n}{login}\PYG{p}{,} \PYG{n}{logout}
+\PYG{k+kn}{from} \PYG{n+nn}{dashboard.forms} \PYG{k+kn}{import} \PYG{n}{NewGroupForm}\PYG{p}{,} \PYG{n}{NewStudentForm}\PYG{p}{,} \PYG{n}{NewTeacherForm}\PYG{p}{,} \PYG{n}{AddHomeworkForm}\PYG{p}{,} \PYG{n}{NewPasswordForm}
+\PYG{k+kn}{from} \PYG{n+nn}{django.core.urlresolvers} \PYG{k+kn}{import} \PYG{n}{reverse}
+\PYG{k+kn}{from} \PYG{n+nn}{common.models} \PYG{k+kn}{import} \PYG{n}{Group}\PYG{p}{,} \PYG{n}{Teacher}\PYG{p}{,} \PYG{n}{GroupMembers}\PYG{p}{,} \PYG{n}{Student}\PYG{p}{,} \PYG{n}{AssignHomework}\PYG{p}{,} \PYG{n}{Exercise}\PYG{p}{,} \PYG{n}{Quiz}\PYG{p}{,} \PYG{n}{Course}
+\PYG{k+kn}{from} \PYG{n+nn}{django.contrib.auth.models} \PYG{k+kn}{import} \PYG{n}{User}
+\PYG{k+kn}{from} \PYG{n+nn}{django.http} \PYG{k+kn}{import} \PYG{n}{HttpResponse}
+
+\PYG{c}{\PYGZsh{}Accueil du dashboard}
+\PYG{k}{def} \PYG{n+nf}{home}\PYG{p}{(}\PYG{n}{request}\PYG{p}{)}\PYG{p}{:}
+    \PYG{n}{voyelle} \PYG{o}{=} \PYG{l+s}{\PYGZsq{}}\PYG{l+s}{aeiouyàäâéèëêîïíìôöõòûüùúAEIOUY}\PYG{l+s}{\PYGZsq{}} \PYG{c}{\PYGZsh{}Pour déterminer si le template affiche De ou D\PYGZsq{}}
+    \PYG{n}{user} \PYG{o}{=} \PYG{n}{Teacher}\PYG{o}{.}\PYG{n}{objects}\PYG{o}{.}\PYG{n}{get}\PYG{p}{(}\PYG{n}{user} \PYG{o}{=} \PYG{n}{request}\PYG{o}{.}\PYG{n}{user}\PYG{p}{)}
+    \PYG{n}{firstLetter} \PYG{o}{=} \PYG{n}{request}\PYG{o}{.}\PYG{n}{user}\PYG{o}{.}\PYG{n}{username}\PYG{p}{[}\PYG{l+m+mi}{0}\PYG{p}{]}\PYG{c}{\PYGZsh{}Idem}
+    \PYG{k}{return} \PYG{n}{render}\PYG{p}{(}\PYG{n}{request}\PYG{p}{,} \PYG{l+s}{\PYGZsq{}}\PYG{l+s}{dashboard/templates/dashboard/index.html}\PYG{l+s}{\PYGZsq{}}\PYG{p}{,} \PYG{n+nb}{locals}\PYG{p}{(}\PYG{p}{)}\PYG{p}{)}
+
+\PYG{c}{\PYGZsh{}Exercices, quiz et cours}
+\PYG{k}{def} \PYG{n+nf}{exercises}\PYG{p}{(}\PYG{n}{request}\PYG{p}{)}\PYG{p}{:}
+    \PYG{n}{user} \PYG{o}{=} \PYG{n}{Teacher}\PYG{o}{.}\PYG{n}{objects}\PYG{o}{.}\PYG{n}{get}\PYG{p}{(}\PYG{n}{user} \PYG{o}{=} \PYG{n}{request}\PYG{o}{.}\PYG{n}{user}\PYG{p}{)}
+    \PYG{k}{return} \PYG{n}{render}\PYG{p}{(}\PYG{n}{request}\PYG{p}{,} \PYG{l+s}{\PYGZsq{}}\PYG{l+s}{dashboard/templates/dashboard/exercises.html}\PYG{l+s}{\PYGZsq{}}\PYG{p}{,} \PYG{n+nb}{locals}\PYG{p}{(}\PYG{p}{)}\PYG{p}{)}
+
+\PYG{c}{\PYGZsh{}Création de groupe}
+\PYG{k}{def} \PYG{n+nf}{newgroup}\PYG{p}{(}\PYG{n}{request}\PYG{p}{)}\PYG{p}{:}
+    \PYG{n}{success} \PYG{o}{=} \PYG{n+nb+bp}{False}
+    \PYG{n}{user} \PYG{o}{=} \PYG{n}{Teacher}\PYG{o}{.}\PYG{n}{objects}\PYG{o}{.}\PYG{n}{get}\PYG{p}{(}\PYG{n}{user} \PYG{o}{=} \PYG{n}{request}\PYG{o}{.}\PYG{n}{user}\PYG{p}{)}
+    \PYG{k}{if} \PYG{n}{request}\PYG{o}{.}\PYG{n}{method} \PYG{o}{==} \PYG{l+s}{\PYGZdq{}}\PYG{l+s}{POST}\PYG{l+s}{\PYGZdq{}}\PYG{p}{:}
+        \PYG{n}{form} \PYG{o}{=} \PYG{n}{NewGroupForm}\PYG{p}{(}\PYG{n}{request}\PYG{o}{.}\PYG{n}{POST}\PYG{p}{)}
+        \PYG{k}{if} \PYG{n}{form}\PYG{o}{.}\PYG{n}{is\PYGZus{}valid}\PYG{p}{(}\PYG{p}{)}\PYG{p}{:}
+            \PYG{n}{group\PYGZus{}name} \PYG{o}{=} \PYG{n}{form}\PYG{o}{.}\PYG{n}{cleaned\PYGZus{}data}\PYG{p}{[}\PYG{l+s}{\PYGZdq{}}\PYG{l+s}{group\PYGZus{}name}\PYG{l+s}{\PYGZdq{}}\PYG{p}{]}
+            
+            \PYG{n}{newGroup} \PYG{o}{=} \PYG{n}{Group}\PYG{o}{.}\PYG{n}{objects}\PYG{o}{.}\PYG{n}{create}\PYG{p}{(}\PYG{n}{name} \PYG{o}{=} \PYG{n}{group\PYGZus{}name}\PYG{p}{)}
+            \PYG{n}{newGroup}\PYG{o}{.}\PYG{n}{save}\PYG{p}{(}\PYG{p}{)}
+            \PYG{n}{teacherToGroup} \PYG{o}{=} \PYG{n}{GroupMembers}\PYG{p}{(}\PYG{n}{teacher} \PYG{o}{=} \PYG{n}{user}\PYG{p}{,} \PYG{n}{group} \PYG{o}{=} \PYG{n}{newGroup}\PYG{p}{)} \PYG{c}{\PYGZsh{}Lie le Teacher et le groupe à travers la table intermédiaire}
+            \PYG{n}{teacherToGroup}\PYG{o}{.}\PYG{n}{save}\PYG{p}{(}\PYG{p}{)}
+            \PYG{n}{success} \PYG{o}{=} \PYG{n+nb+bp}{True} \PYG{c}{\PYGZsh{}Pour retourner le message de confirmation}
+    \PYG{k}{else}\PYG{p}{:}
+        \PYG{n}{form} \PYG{o}{=} \PYG{n}{NewGroupForm}\PYG{p}{(}\PYG{p}{)}
+    \PYG{k}{return} \PYG{n}{render}\PYG{p}{(}\PYG{n}{request}\PYG{p}{,} \PYG{l+s}{\PYGZdq{}}\PYG{l+s}{dashboard/templates/dashboard/newclass.html}\PYG{l+s}{\PYGZdq{}}\PYG{p}{,} \PYG{n+nb}{locals}\PYG{p}{(}\PYG{p}{)}\PYG{p}{)}
+
+\PYG{c}{\PYGZsh{}Changement de mot de passe}
+\PYG{k}{def} \PYG{n+nf}{profil}\PYG{p}{(}\PYG{n}{request}\PYG{p}{)}\PYG{p}{:}
+    \PYG{n}{user} \PYG{o}{=} \PYG{n}{Teacher}\PYG{o}{.}\PYG{n}{objects}\PYG{o}{.}\PYG{n}{get}\PYG{p}{(}\PYG{n}{user} \PYG{o}{=} \PYG{n}{request}\PYG{o}{.}\PYG{n}{user}\PYG{p}{)}
+    \PYG{n}{success} \PYG{o}{=} \PYG{l+s}{\PYGZsq{}}\PYG{l+s}{\PYGZsq{}}
+    \PYG{k}{if} \PYG{n}{request}\PYG{o}{.}\PYG{n}{method} \PYG{o}{==} \PYG{l+s}{\PYGZdq{}}\PYG{l+s}{POST}\PYG{l+s}{\PYGZdq{}}\PYG{p}{:}
+        \PYG{n}{userProfile} \PYG{o}{=} \PYG{n}{request}\PYG{o}{.}\PYG{n}{user}
+        \PYG{n}{form} \PYG{o}{=} \PYG{n}{NewPasswordForm}\PYG{p}{(}\PYG{n}{request}\PYG{o}{.}\PYG{n}{POST}\PYG{p}{)}
+        \PYG{k}{if} \PYG{n}{form}\PYG{o}{.}\PYG{n}{is\PYGZus{}valid}\PYG{p}{(}\PYG{p}{)}\PYG{p}{:}
+            \PYG{n}{password} \PYG{o}{=} \PYG{n}{form}\PYG{o}{.}\PYG{n}{cleaned\PYGZus{}data}\PYG{p}{[}\PYG{l+s}{\PYGZdq{}}\PYG{l+s}{password}\PYG{l+s}{\PYGZdq{}}\PYG{p}{]}
+            \PYG{n}{passwordConfirm} \PYG{o}{=} \PYG{n}{form}\PYG{o}{.}\PYG{n}{cleaned\PYGZus{}data}\PYG{p}{[}\PYG{l+s}{\PYGZdq{}}\PYG{l+s}{passwordConfirm}\PYG{l+s}{\PYGZdq{}}\PYG{p}{]}
+            \PYG{k}{if} \PYG{n}{password} \PYG{o}{!=} \PYG{n}{passwordConfirm}\PYG{p}{:}
+                \PYG{n}{success} \PYG{o}{=} \PYG{n+nb+bp}{False} \PYG{c}{\PYGZsh{}Message d\PYGZsq{}erreur}
+            \PYG{k}{else}\PYG{p}{:}
+                \PYG{n}{success} \PYG{o}{=} \PYG{n+nb+bp}{True} \PYG{c}{\PYGZsh{}Message de confirmation}
+                \PYG{n}{u} \PYG{o}{=} \PYG{n}{request}\PYG{o}{.}\PYG{n}{user}
+                \PYG{n}{u}\PYG{o}{.}\PYG{n}{set\PYGZus{}password}\PYG{p}{(}\PYG{n}{password}\PYG{p}{)}
+                \PYG{n}{u}\PYG{o}{.}\PYG{n}{save}\PYG{p}{(}\PYG{p}{)}
+    \PYG{k}{else}\PYG{p}{:}
+        \PYG{n}{form} \PYG{o}{=} \PYG{n}{NewPasswordForm}\PYG{p}{(}\PYG{p}{)}
+    \PYG{k}{return} \PYG{n}{render}\PYG{p}{(}\PYG{n}{request}\PYG{p}{,} \PYG{l+s}{\PYGZsq{}}\PYG{l+s}{dashboard/templates/dashboard/profile.html}\PYG{l+s}{\PYGZsq{}}\PYG{p}{,} \PYG{n+nb}{locals}\PYG{p}{(}\PYG{p}{)}\PYG{p}{)}
+    
+\PYG{k}{def} \PYG{n+nf}{group}\PYG{p}{(}\PYG{n}{request}\PYG{p}{,} \PYG{n}{group\PYGZus{}id}\PYG{p}{)}\PYG{p}{:}
+    \PYG{n}{user} \PYG{o}{=} \PYG{n}{Teacher}\PYG{o}{.}\PYG{n}{objects}\PYG{o}{.}\PYG{n}{get}\PYG{p}{(}\PYG{n}{user} \PYG{o}{=} \PYG{n}{request}\PYG{o}{.}\PYG{n}{user}\PYG{p}{)}
+    \PYG{n}{group} \PYG{o}{=} \PYG{n}{Group}\PYG{o}{.}\PYG{n}{objects}\PYG{o}{.}\PYG{n}{get}\PYG{p}{(}\PYG{n+nb}{id} \PYG{o}{=} \PYG{n}{group\PYGZus{}id}\PYG{p}{)}
+    
+    \PYG{n}{studentList} \PYG{o}{=} \PYG{n}{group}\PYG{o}{.}\PYG{n}{student}\PYG{o}{.}\PYG{n}{all}\PYG{p}{(}\PYG{p}{)}
+    \PYG{n}{teacherList} \PYG{o}{=} \PYG{n}{group}\PYG{o}{.}\PYG{n}{teacher}\PYG{o}{.}\PYG{n}{all}\PYG{p}{(}\PYG{p}{)}
+    \PYG{n}{homeworkExList} \PYG{o}{=} \PYG{n}{group}\PYG{o}{.}\PYG{n}{homeworkExercise}\PYG{o}{.}\PYG{n}{all}\PYG{p}{(}\PYG{p}{)}\PYG{c}{\PYGZsh{}}
+    \PYG{n}{homeworkQuList} \PYG{o}{=} \PYG{n}{group}\PYG{o}{.}\PYG{n}{homeworkQuiz}\PYG{o}{.}\PYG{n}{all}\PYG{p}{(}\PYG{p}{)}    \PYG{c}{\PYGZsh{} Pour avoir la liste des devoirs selon les genres d\PYGZsq{}activités}
+    \PYG{n}{homeworkCoList} \PYG{o}{=} \PYG{n}{group}\PYG{o}{.}\PYG{n}{homeworkCourse}\PYG{o}{.}\PYG{n}{all}\PYG{p}{(}\PYG{p}{)}  \PYG{c}{\PYGZsh{}}
+
+    \PYG{n}{deleteConfirmation} \PYG{o}{=} \PYG{n+nb+bp}{False} \PYG{c}{\PYGZsh{}Pour supprimer une classe}
+    
+    \PYG{k}{if} \PYG{n}{request}\PYG{o}{.}\PYG{n}{method} \PYG{o}{==} \PYG{l+s}{\PYGZdq{}}\PYG{l+s}{POST}\PYG{l+s}{\PYGZdq{}}\PYG{p}{:}
+        
+        \PYG{c}{\PYGZsh{}Ajouter un professeur au groupe}
+        \PYG{k}{if} \PYG{l+s}{\PYGZsq{}}\PYG{l+s}{addTeacher}\PYG{l+s}{\PYGZsq{}} \PYG{o+ow}{in} \PYG{n}{request}\PYG{o}{.}\PYG{n}{POST}\PYG{p}{:}
+            \PYG{n}{erreurTeacher} \PYG{o}{=} \PYG{n+nb+bp}{False}
+            \PYG{n}{formTeacher} \PYG{o}{=} \PYG{n}{NewTeacherForm}\PYG{p}{(}\PYG{n}{request}\PYG{o}{.}\PYG{n}{POST}\PYG{p}{)}
+            \PYG{k}{if} \PYG{n}{formTeacher}\PYG{o}{.}\PYG{n}{is\PYGZus{}valid}\PYG{p}{(}\PYG{p}{)}\PYG{p}{:}
+                \PYG{n}{newTeacher} \PYG{o}{=} \PYG{n}{formTeacher}\PYG{o}{.}\PYG{n}{cleaned\PYGZus{}data}\PYG{p}{[}\PYG{l+s}{\PYGZdq{}}\PYG{l+s}{nickname}\PYG{l+s}{\PYGZdq{}}\PYG{p}{]}
+                \PYG{k}{try}\PYG{p}{:}
+                    \PYG{k}{try}\PYG{p}{:}
+                        \PYG{n}{teacherUser} \PYG{o}{=} \PYG{n}{User}\PYG{o}{.}\PYG{n}{objects}\PYG{o}{.}\PYG{n}{get}\PYG{p}{(}\PYG{n}{username} \PYG{o}{=} \PYG{n}{newTeacher}\PYG{p}{)}
+                        \PYG{n}{teacher} \PYG{o}{=} \PYG{n}{Teacher}\PYG{o}{.}\PYG{n}{objects}\PYG{o}{.}\PYG{n}{get}\PYG{p}{(}\PYG{n}{user} \PYG{o}{=} \PYG{n}{teacherUser}\PYG{p}{)}
+                        \PYG{n}{newTeacherToGroup} \PYG{o}{=} \PYG{n}{GroupMembers}\PYG{p}{(}\PYG{n}{teacher} \PYG{o}{=} \PYG{n}{teacher}\PYG{p}{,} \PYG{n}{group} \PYG{o}{=} \PYG{n}{group}\PYG{p}{)}
+                        \PYG{n}{newTeacherToGroup}\PYG{o}{.}\PYG{n}{save}\PYG{p}{(}\PYG{p}{)}
+                    \PYG{k}{except} \PYG{n}{User}\PYG{o}{.}\PYG{n}{DoesNotExist}\PYG{p}{:}
+                        \PYG{n}{erreurTeacher} \PYG{o}{=} \PYG{n+nb+bp}{True} \PYG{c}{\PYGZsh{}Message d\PYGZsq{}erreur}
+                \PYG{k}{except} \PYG{n}{Teacher}\PYG{o}{.}\PYG{n}{DoesNotExist}\PYG{p}{:}
+                    \PYG{n}{erreurTeacher} \PYG{o}{=} \PYG{n+nb+bp}{True} \PYG{c}{\PYGZsh{}Idem}
+                    
+        \PYG{c}{\PYGZsh{}Ajouter un élève au groupe       }
+        \PYG{k}{elif} \PYG{l+s}{\PYGZsq{}}\PYG{l+s}{addStudent}\PYG{l+s}{\PYGZsq{}} \PYG{o+ow}{in} \PYG{n}{request}\PYG{o}{.}\PYG{n}{POST}\PYG{p}{:}
+            \PYG{n}{formStudent} \PYG{o}{=} \PYG{n}{NewStudentForm}\PYG{p}{(}\PYG{n}{request}\PYG{o}{.}\PYG{n}{POST}\PYG{p}{)}
+            \PYG{n}{erreurStudent} \PYG{o}{=} \PYG{n+nb+bp}{False}
+            \PYG{k}{if} \PYG{n}{formStudent}\PYG{o}{.}\PYG{n}{is\PYGZus{}valid}\PYG{p}{(}\PYG{p}{)}\PYG{p}{:}
+                \PYG{k}{try}\PYG{p}{:}
+                    \PYG{k}{try}\PYG{p}{:}
+                        \PYG{n}{newStudent} \PYG{o}{=} \PYG{n}{formStudent}\PYG{o}{.}\PYG{n}{cleaned\PYGZus{}data}\PYG{p}{[}\PYG{l+s}{\PYGZdq{}}\PYG{l+s}{nickname}\PYG{l+s}{\PYGZdq{}}\PYG{p}{]}
+                        \PYG{n}{studentUser} \PYG{o}{=} \PYG{n}{User}\PYG{o}{.}\PYG{n}{objects}\PYG{o}{.}\PYG{n}{get}\PYG{p}{(}\PYG{n}{username} \PYG{o}{=} \PYG{n}{newStudent}\PYG{p}{)}
+                        \PYG{n}{student} \PYG{o}{=} \PYG{n}{Student}\PYG{o}{.}\PYG{n}{objects}\PYG{o}{.}\PYG{n}{get}\PYG{p}{(}\PYG{n}{user} \PYG{o}{=} \PYG{n}{studentUser}\PYG{p}{)}
+                        \PYG{n}{newStudentToGroup} \PYG{o}{=} \PYG{n}{GroupMembers}\PYG{p}{(}\PYG{n}{student} \PYG{o}{=} \PYG{n}{student}\PYG{p}{,} \PYG{n}{group} \PYG{o}{=} \PYG{n}{group}\PYG{p}{)}
+                        \PYG{n}{newStudentToGroup}\PYG{o}{.}\PYG{n}{save}\PYG{p}{(}\PYG{p}{)}
+                    \PYG{k}{except} \PYG{n}{User}\PYG{o}{.}\PYG{n}{DoesNotExist}\PYG{p}{:}
+                        \PYG{n}{erreurStudent} \PYG{o}{=} \PYG{n+nb+bp}{True} \PYG{c}{\PYGZsh{}Message d\PYGZsq{}erreur}
+                \PYG{k}{except} \PYG{n}{Student}\PYG{o}{.}\PYG{n}{DoesNotExist}\PYG{p}{:}
+                    \PYG{n}{erreurStudent} \PYG{o}{=} \PYG{n+nb+bp}{True} \PYG{c}{\PYGZsh{}Idem}
+                    
+                    
+        \PYG{c}{\PYGZsh{}Assigner un devoir}
+        \PYG{k}{elif} \PYG{l+s}{\PYGZsq{}}\PYG{l+s}{assignHomework}\PYG{l+s}{\PYGZsq{}} \PYG{o+ow}{in} \PYG{n}{request}\PYG{o}{.}\PYG{n}{POST}\PYG{p}{:}
+            \PYG{n}{formHomework} \PYG{o}{=} \PYG{n}{AddHomeworkForm}\PYG{p}{(}\PYG{n}{request}\PYG{o}{.}\PYG{n}{POST}\PYG{p}{)}
+            \PYG{n}{erreur} \PYG{o}{=} \PYG{n+nb+bp}{False}
+            \PYG{k}{if} \PYG{n}{formHomework}\PYG{o}{.}\PYG{n}{is\PYGZus{}valid}\PYG{p}{(}\PYG{p}{)}\PYG{p}{:}
+                \PYG{n}{homeworkid} \PYG{o}{=} \PYG{n}{formHomework}\PYG{o}{.}\PYG{n}{cleaned\PYGZus{}data}\PYG{p}{[}\PYG{l+s}{\PYGZdq{}}\PYG{l+s}{homeworkid}\PYG{l+s}{\PYGZdq{}}\PYG{p}{]}
+                \PYG{n}{genre} \PYG{o}{=} \PYG{n}{formHomework}\PYG{o}{.}\PYG{n}{cleaned\PYGZus{}data}\PYG{p}{[}\PYG{l+s}{\PYGZdq{}}\PYG{l+s}{genre}\PYG{l+s}{\PYGZdq{}}\PYG{p}{]}
+                
+                \PYG{c}{\PYGZsh{}Cherche l\PYGZsq{}activité selon le genre choisi}
+                \PYG{k}{if} \PYG{n}{genre} \PYG{o}{==} \PYG{l+s}{\PYGZdq{}}\PYG{l+s}{exercise}\PYG{l+s}{\PYGZdq{}}\PYG{p}{:}
+                    \PYG{k}{try}\PYG{p}{:}
+                        \PYG{n}{exercise} \PYG{o}{=} \PYG{n}{Exercise}\PYG{o}{.}\PYG{n}{objects}\PYG{o}{.}\PYG{n}{get}\PYG{p}{(}\PYG{n+nb}{id} \PYG{o}{=} \PYG{n}{homeworkid}\PYG{p}{)}
+                        \PYG{n}{newHomework} \PYG{o}{=} \PYG{n}{AssignHomework}\PYG{p}{(}\PYG{n}{exercise} \PYG{o}{=} \PYG{n}{exercise}\PYG{p}{,} \PYG{n}{group} \PYG{o}{=} \PYG{n}{group}\PYG{p}{)}
+                        \PYG{n}{newHomework}\PYG{o}{.}\PYG{n}{save}\PYG{p}{(}\PYG{p}{)}
+                    \PYG{k}{except} \PYG{n}{Exercise}\PYG{o}{.}\PYG{n}{DoesNotExist}\PYG{p}{:}
+                        \PYG{n}{erreur} \PYG{o}{=} \PYG{n+nb+bp}{True} \PYG{c}{\PYGZsh{}Message d\PYGZsq{}erreur}
+                
+                \PYG{k}{if} \PYG{n}{genre} \PYG{o}{==} \PYG{l+s}{\PYGZdq{}}\PYG{l+s}{quiz}\PYG{l+s}{\PYGZdq{}}\PYG{p}{:}
+                    \PYG{k}{try}\PYG{p}{:}
+                        \PYG{n}{quiz} \PYG{o}{=} \PYG{n}{Quiz}\PYG{o}{.}\PYG{n}{objects}\PYG{o}{.}\PYG{n}{get}\PYG{p}{(}\PYG{n+nb}{id} \PYG{o}{=} \PYG{n}{homeworkid}\PYG{p}{)}
+                        \PYG{n}{newHomework} \PYG{o}{=} \PYG{n}{AssignHomework}\PYG{p}{(}\PYG{n}{quiz} \PYG{o}{=} \PYG{n}{quiz}\PYG{p}{,} \PYG{n}{group} \PYG{o}{=} \PYG{n}{group}\PYG{p}{)}
+                        \PYG{n}{newHomework}\PYG{o}{.}\PYG{n}{save}\PYG{p}{(}\PYG{p}{)}
+                    \PYG{k}{except} \PYG{n}{Quiz}\PYG{o}{.}\PYG{n}{DoesNotExist}\PYG{p}{:}
+                        \PYG{n}{erreur} \PYG{o}{=} \PYG{n+nb+bp}{True} \PYG{c}{\PYGZsh{}Idem}
+                
+                \PYG{k}{if} \PYG{n}{genre} \PYG{o}{==} \PYG{l+s}{\PYGZdq{}}\PYG{l+s}{course}\PYG{l+s}{\PYGZdq{}}\PYG{p}{:}
+                    \PYG{k}{try}\PYG{p}{:}
+                        \PYG{n}{cours} \PYG{o}{=} \PYG{n}{Course}\PYG{o}{.}\PYG{n}{objects}\PYG{o}{.}\PYG{n}{get}\PYG{p}{(}\PYG{n+nb}{id} \PYG{o}{=} \PYG{n}{homeworkid}\PYG{p}{)}
+                        \PYG{n}{newHomework} \PYG{o}{=} \PYG{n}{AssignHomework}\PYG{p}{(}\PYG{n}{course} \PYG{o}{=} \PYG{n}{cours}\PYG{p}{,} \PYG{n}{group} \PYG{o}{=} \PYG{n}{group}\PYG{p}{)}
+                        \PYG{n}{newHomework}\PYG{o}{.}\PYG{n}{save}\PYG{p}{(}\PYG{p}{)}
+                    \PYG{k}{except} \PYG{n}{Course}\PYG{o}{.}\PYG{n}{DoesNotExist}\PYG{p}{:}
+                        \PYG{n}{erreur} \PYG{o}{=} \PYG{n+nb+bp}{True} \PYG{c}{\PYGZsh{}Idem}
+        \PYG{k}{elif} \PYG{l+s}{\PYGZsq{}}\PYG{l+s}{deleteClass}\PYG{l+s}{\PYGZsq{}} \PYG{o+ow}{in} \PYG{n}{request}\PYG{o}{.}\PYG{n}{POST}\PYG{p}{:}
+            \PYG{n}{deleteConfirmation} \PYG{o}{=} \PYG{n+nb+bp}{True} \PYG{c}{\PYGZsh{}Fait apparaître le deuxième bouton de confirmation}
+        
+        \PYG{c}{\PYGZsh{}Supprime la classe}
+        \PYG{k}{elif} \PYG{l+s}{\PYGZsq{}}\PYG{l+s}{deleteClassConfirm}\PYG{l+s}{\PYGZsq{}} \PYG{o+ow}{in} \PYG{n}{request}\PYG{o}{.}\PYG{n}{POST}\PYG{p}{:}
+            \PYG{n}{group} \PYG{o}{=} \PYG{n}{Group}\PYG{o}{.}\PYG{n}{objects}\PYG{o}{.}\PYG{n}{get}\PYG{p}{(}\PYG{n+nb}{id} \PYG{o}{=} \PYG{n}{group\PYGZus{}id}\PYG{p}{)}
+            \PYG{n}{group}\PYG{o}{.}\PYG{n}{delete}\PYG{p}{(}\PYG{p}{)}
+            \PYG{k}{return} \PYG{n}{redirect}\PYG{p}{(}\PYG{l+s}{\PYGZsq{}}\PYG{l+s}{home}\PYG{l+s}{\PYGZsq{}}\PYG{p}{)}
+            
+        
+        \PYG{n}{formStudent} \PYG{o}{=} \PYG{n}{NewStudentForm}\PYG{p}{(}\PYG{p}{)}
+        \PYG{n}{formTeacher} \PYG{o}{=} \PYG{n}{NewTeacherForm}\PYG{p}{(}\PYG{p}{)}
+        \PYG{n}{formHomework} \PYG{o}{=} \PYG{n}{AddHomeworkForm}\PYG{p}{(}\PYG{p}{)}
+                    
+    \PYG{k}{else}\PYG{p}{:}
+        \PYG{n}{formStudent} \PYG{o}{=} \PYG{n}{NewStudentForm}\PYG{p}{(}\PYG{p}{)}
+        \PYG{n}{formTeacher} \PYG{o}{=} \PYG{n}{NewTeacherForm}\PYG{p}{(}\PYG{p}{)}
+        \PYG{n}{formHomework} \PYG{o}{=} \PYG{n}{AddHomeworkForm}\PYG{p}{(}\PYG{p}{)}
+    \PYG{k}{return} \PYG{n}{render}\PYG{p}{(}\PYG{n}{request}\PYG{p}{,} \PYG{l+s}{\PYGZsq{}}\PYG{l+s}{dashboard/templates/dashboard/classe.html}\PYG{l+s}{\PYGZsq{}}\PYG{p}{,} \PYG{n+nb}{locals}\PYG{p}{(}\PYG{p}{)}\PYG{p}{)}
+
+\PYG{c}{\PYGZsh{}Retirer d\PYGZsq{}un groupe}
+\PYG{k}{def} \PYG{n+nf}{deleteFromGroup}\PYG{p}{(}\PYG{n}{request}\PYG{p}{,} \PYG{n}{member\PYGZus{}id}\PYG{p}{,} \PYG{n}{group\PYGZus{}id}\PYG{p}{)}\PYG{p}{:}
+    \PYG{k}{if} \PYG{n}{request}\PYG{o}{.}\PYG{n}{method} \PYG{o}{==} \PYG{l+s}{\PYGZdq{}}\PYG{l+s}{POST}\PYG{l+s}{\PYGZdq{}}\PYG{p}{:}
+        
+        \PYG{c}{\PYGZsh{}Selon élève ou professeur}
+        \PYG{k}{if} \PYG{l+s}{\PYGZsq{}}\PYG{l+s}{deleteStudent}\PYG{l+s}{\PYGZsq{}} \PYG{o+ow}{in} \PYG{n}{request}\PYG{o}{.}\PYG{n}{POST}\PYG{p}{:}
+        
+            \PYG{n}{student} \PYG{o}{=} \PYG{n}{Student}\PYG{o}{.}\PYG{n}{objects}\PYG{o}{.}\PYG{n}{get}\PYG{p}{(}\PYG{n+nb}{id} \PYG{o}{=} \PYG{n}{member\PYGZus{}id}\PYG{p}{)}
+            \PYG{n}{group} \PYG{o}{=} \PYG{n}{Group}\PYG{o}{.}\PYG{n}{objects}\PYG{o}{.}\PYG{n}{get}\PYG{p}{(}\PYG{n+nb}{id} \PYG{o}{=} \PYG{n}{group\PYGZus{}id}\PYG{p}{)}
+            \PYG{n}{studentToGroup} \PYG{o}{=} \PYG{n}{GroupMembers}\PYG{o}{.}\PYG{n}{objects}\PYG{o}{.}\PYG{n}{get}\PYG{p}{(}\PYG{n}{student} \PYG{o}{=} \PYG{n}{student}\PYG{p}{,} \PYG{n}{group} \PYG{o}{=} \PYG{n}{group}\PYG{p}{)}
+            \PYG{n}{studentToGroup}\PYG{o}{.}\PYG{n}{delete}\PYG{p}{(}\PYG{p}{)}
+            
+
+        \PYG{k}{elif} \PYG{l+s}{\PYGZsq{}}\PYG{l+s}{deleteTeacher}\PYG{l+s}{\PYGZsq{}} \PYG{o+ow}{in} \PYG{n}{request}\PYG{o}{.}\PYG{n}{POST}\PYG{p}{:}
+            \PYG{n}{teacher} \PYG{o}{=} \PYG{n}{Teacher}\PYG{o}{.}\PYG{n}{objects}\PYG{o}{.}\PYG{n}{get}\PYG{p}{(}\PYG{n+nb}{id} \PYG{o}{=} \PYG{n}{member\PYGZus{}id}\PYG{p}{)}
+            \PYG{n}{group} \PYG{o}{=} \PYG{n}{Group}\PYG{o}{.}\PYG{n}{objects}\PYG{o}{.}\PYG{n}{get}\PYG{p}{(}\PYG{n+nb}{id} \PYG{o}{=} \PYG{n}{group\PYGZus{}id}\PYG{p}{)}
+            \PYG{n}{teacherToGroup} \PYG{o}{=} \PYG{n}{GroupMembers}\PYG{o}{.}\PYG{n}{objects}\PYG{o}{.}\PYG{n}{get}\PYG{p}{(}\PYG{n}{teacher} \PYG{o}{=} \PYG{n}{teacher}\PYG{p}{,} \PYG{n}{group} \PYG{o}{=} \PYG{n}{group}\PYG{p}{)}
+            \PYG{n}{teacherToGroup}\PYG{o}{.}\PYG{n}{delete}\PYG{p}{(}\PYG{p}{)}
+            
+    \PYG{k}{return} \PYG{n}{redirect}\PYG{p}{(}\PYG{l+s}{\PYGZsq{}}\PYG{l+s}{group\PYGZus{}view}\PYG{l+s}{\PYGZsq{}}\PYG{p}{,} \PYG{n}{group\PYGZus{}id} \PYG{o}{=} \PYG{n}{group\PYGZus{}id}\PYG{p}{)}
+
+\PYG{c}{\PYGZsh{}Supprimer une activité}
+\PYG{k}{def} \PYG{n+nf}{deleteActivity}\PYG{p}{(}\PYG{n}{request}\PYG{p}{,} \PYG{n}{activity\PYGZus{}id}\PYG{p}{)}\PYG{p}{:}
+    \PYG{k}{if} \PYG{n}{request}\PYG{o}{.}\PYG{n}{method} \PYG{o}{==} \PYG{l+s}{\PYGZdq{}}\PYG{l+s}{POST}\PYG{l+s}{\PYGZdq{}}\PYG{p}{:}
+        
+        \PYG{c}{\PYGZsh{}Selon exercice, quiz ou cours}
+        \PYG{k}{if} \PYG{l+s}{\PYGZsq{}}\PYG{l+s}{deleteExercise}\PYG{l+s}{\PYGZsq{}} \PYG{o+ow}{in} \PYG{n}{request}\PYG{o}{.}\PYG{n}{POST}\PYG{p}{:}
+            \PYG{n}{exercise} \PYG{o}{=} \PYG{n}{Exercise}\PYG{o}{.}\PYG{n}{objects}\PYG{o}{.}\PYG{n}{get}\PYG{p}{(}\PYG{n+nb}{id} \PYG{o}{=} \PYG{n}{activity\PYGZus{}id}\PYG{p}{)}
+            \PYG{n}{exercise}\PYG{o}{.}\PYG{n}{delete}\PYG{p}{(}\PYG{p}{)}
+        \PYG{k}{if} \PYG{l+s}{\PYGZsq{}}\PYG{l+s}{deleteQuiz}\PYG{l+s}{\PYGZsq{}} \PYG{o+ow}{in} \PYG{n}{request}\PYG{o}{.}\PYG{n}{POST}\PYG{p}{:}
+            \PYG{n}{quiz} \PYG{o}{=} \PYG{n}{Quiz}\PYG{o}{.}\PYG{n}{objects}\PYG{o}{.}\PYG{n}{get}\PYG{p}{(}\PYG{n+nb}{id} \PYG{o}{=} \PYG{n}{activity\PYGZus{}id}\PYG{p}{)}
+            \PYG{n}{quiz}\PYG{o}{.}\PYG{n}{delete}\PYG{p}{(}\PYG{p}{)}
+        \PYG{k}{if} \PYG{l+s}{\PYGZsq{}}\PYG{l+s}{deleteCourse}\PYG{l+s}{\PYGZsq{}} \PYG{o+ow}{in} \PYG{n}{request}\PYG{o}{.}\PYG{n}{POST}\PYG{p}{:}
+            \PYG{n}{course} \PYG{o}{=} \PYG{n}{Course}\PYG{o}{.}\PYG{n}{objects}\PYG{o}{.}\PYG{n}{get}\PYG{p}{(}\PYG{n+nb}{id} \PYG{o}{=} \PYG{n}{activity\PYGZus{}id}\PYG{p}{)}
+            \PYG{n}{course}\PYG{o}{.}\PYG{n}{delete}\PYG{p}{(}\PYG{p}{)}
+    \PYG{k}{return} \PYG{n}{redirect}\PYG{p}{(}\PYG{l+s}{\PYGZsq{}}\PYG{l+s}{exercises}\PYG{l+s}{\PYGZsq{}}\PYG{p}{)}
+
+\PYG{c}{\PYGZsh{}Retirer un devoir   }
+\PYG{k}{def} \PYG{n+nf}{deleteHomework}\PYG{p}{(}\PYG{n}{request}\PYG{p}{,} \PYG{n}{group\PYGZus{}id}\PYG{p}{,} \PYG{n}{homework\PYGZus{}id}\PYG{p}{)}\PYG{p}{:}
+    \PYG{k}{if} \PYG{n}{request}\PYG{o}{.}\PYG{n}{method} \PYG{o}{==} \PYG{l+s}{\PYGZdq{}}\PYG{l+s}{POST}\PYG{l+s}{\PYGZdq{}}\PYG{p}{:}
+        
+        \PYG{c}{\PYGZsh{}Selon exercice, quiz ou cours}
+        \PYG{k}{if} \PYG{l+s}{\PYGZsq{}}\PYG{l+s}{deleteHomeworkEx}\PYG{l+s}{\PYGZsq{}} \PYG{o+ow}{in} \PYG{n}{request}\PYG{o}{.}\PYG{n}{POST}\PYG{p}{:}
+            \PYG{n}{exercise} \PYG{o}{=} \PYG{n}{Exercise}\PYG{o}{.}\PYG{n}{objects}\PYG{o}{.}\PYG{n}{filter}\PYG{p}{(}\PYG{n+nb}{id} \PYG{o}{=} \PYG{n}{homework\PYGZus{}id}\PYG{p}{)}
+            \PYG{n}{exercise} \PYG{o}{=} \PYG{n}{exercise}\PYG{p}{[}\PYG{l+m+mi}{0}\PYG{p}{]}
+            \PYG{n}{group} \PYG{o}{=} \PYG{n}{Group}\PYG{o}{.}\PYG{n}{objects}\PYG{o}{.}\PYG{n}{get}\PYG{p}{(}\PYG{n+nb}{id} \PYG{o}{=} \PYG{n}{group\PYGZus{}id}\PYG{p}{)}
+            \PYG{n}{assignedHomework} \PYG{o}{=} \PYG{n}{AssignHomework}\PYG{o}{.}\PYG{n}{objects}\PYG{o}{.}\PYG{n}{filter}\PYG{p}{(}\PYG{n}{group} \PYG{o}{=} \PYG{n}{group}\PYG{p}{,} \PYG{n}{exercise} \PYG{o}{=} \PYG{n}{exercise}\PYG{p}{)}
+            \PYG{n}{assignedHomework} \PYG{o}{=} \PYG{n}{assignedHomework}\PYG{p}{[}\PYG{l+m+mi}{0}\PYG{p}{]}
+            \PYG{n}{assignedHomework}\PYG{o}{.}\PYG{n}{delete}\PYG{p}{(}\PYG{p}{)}
+        \PYG{k}{if} \PYG{l+s}{\PYGZsq{}}\PYG{l+s}{deleteHomeworkQu}\PYG{l+s}{\PYGZsq{}} \PYG{o+ow}{in} \PYG{n}{request}\PYG{o}{.}\PYG{n}{POST}\PYG{p}{:}
+            \PYG{n}{quiz} \PYG{o}{=} \PYG{n}{Quiz}\PYG{o}{.}\PYG{n}{objects}\PYG{o}{.}\PYG{n}{filter}\PYG{p}{(}\PYG{n+nb}{id} \PYG{o}{=} \PYG{n}{homework\PYGZus{}id}\PYG{p}{)}
+            \PYG{n}{quiz} \PYG{o}{=} \PYG{n}{quiz}\PYG{p}{[}\PYG{l+m+mi}{0}\PYG{p}{]}
+            \PYG{n}{group} \PYG{o}{=} \PYG{n}{Group}\PYG{o}{.}\PYG{n}{objects}\PYG{o}{.}\PYG{n}{get}\PYG{p}{(}\PYG{n+nb}{id} \PYG{o}{=} \PYG{n}{group\PYGZus{}id}\PYG{p}{)}
+            \PYG{n}{assignedHomework} \PYG{o}{=} \PYG{n}{AssignHomework}\PYG{o}{.}\PYG{n}{objects}\PYG{o}{.}\PYG{n}{filter}\PYG{p}{(}\PYG{n}{group} \PYG{o}{=} \PYG{n}{group}\PYG{p}{,} \PYG{n}{quiz} \PYG{o}{=} \PYG{n}{quiz}\PYG{p}{)}
+            \PYG{n}{assignedHomework} \PYG{o}{=} \PYG{n}{assignedHomework}\PYG{p}{[}\PYG{l+m+mi}{0}\PYG{p}{]}
+            \PYG{n}{assignedHomework}\PYG{o}{.}\PYG{n}{delete}\PYG{p}{(}\PYG{p}{)}
+        \PYG{k}{if} \PYG{l+s}{\PYGZsq{}}\PYG{l+s}{deleteHomeworkCo}\PYG{l+s}{\PYGZsq{}} \PYG{o+ow}{in} \PYG{n}{request}\PYG{o}{.}\PYG{n}{POST}\PYG{p}{:}
+            \PYG{n}{course} \PYG{o}{=} \PYG{n}{Course}\PYG{o}{.}\PYG{n}{objects}\PYG{o}{.}\PYG{n}{filter}\PYG{p}{(}\PYG{n+nb}{id} \PYG{o}{=} \PYG{n}{homework\PYGZus{}id}\PYG{p}{)}
+            \PYG{n}{course} \PYG{o}{=} \PYG{n}{course}\PYG{p}{[}\PYG{l+m+mi}{0}\PYG{p}{]}
+            \PYG{n}{group} \PYG{o}{=} \PYG{n}{Group}\PYG{o}{.}\PYG{n}{objects}\PYG{o}{.}\PYG{n}{get}\PYG{p}{(}\PYG{n+nb}{id} \PYG{o}{=} \PYG{n}{group\PYGZus{}id}\PYG{p}{)}
+            \PYG{n}{assignedHomework} \PYG{o}{=} \PYG{n}{AssignHomework}\PYG{o}{.}\PYG{n}{objects}\PYG{o}{.}\PYG{n}{filter}\PYG{p}{(}\PYG{n}{group} \PYG{o}{=} \PYG{n}{group}\PYG{p}{,} \PYG{n}{course} \PYG{o}{=} \PYG{n}{course}\PYG{p}{)}
+            \PYG{n}{assignedHomework} \PYG{o}{=} \PYG{n}{assignedHomework}\PYG{p}{[}\PYG{l+m+mi}{0}\PYG{p}{]}
+            \PYG{n}{assignedHomework}\PYG{o}{.}\PYG{n}{delete}\PYG{p}{(}\PYG{p}{)}
+    \PYG{k}{return} \PYG{n}{redirect}\PYG{p}{(}\PYG{l+s}{\PYGZsq{}}\PYG{l+s}{group\PYGZus{}view}\PYG{l+s}{\PYGZsq{}}\PYG{p}{,} \PYG{n}{group\PYGZus{}id} \PYG{o}{=} \PYG{n}{group\PYGZus{}id}\PYG{p}{)}
+\end{Verbatim}
+
+Toutes les vues vont devoir chercher le professeur correspondant à
+l'utilisateur actuellement connecté. Cela permettra à chaque fois d'aller
+chercher les données correspondantes.
+
+La vue \code{home} sert uniquement à distinguer la première lettre du nom
+d'utilisateur pour qu'apparaisse dans le template «de» ou «d'».
+
+La vue \code{exercises}, elle, ne cherche rien de plus. L'utilisateur nous
+permettra d'accéder aux exercices, quiz et cours qui lui sont associés mais
+tout ceci est directement recherché dans le template.
+
+C'est grâce à la vue \code{newgroup} qu'un professeur peut créer un groupe. S'il
+veut créer un groupe, la vue se contentera de créer un groupe associé au nom
+et de créer un lien entre le professeur et le groupe grâce à la table
+intermédiaire \code{GroupMembers}. La variable \code{success} a pour utilité
+d'afficher un message de confirmation dans le template \code{newclass.html} une
+fois le groupe correctement créé.
+
+La vue \code{profil} est celle utilisée pour le changement de mot de passe. Elle
+compare les deux mots de passe entrés. Si les deux mots de passe correspondent,
+le mot de passe est attribué à l'utilisateur et, grâce au template
+\code{profile.html} et à la variable \code{success}, un message est retourné pour
+confirmer le changement. Dans le cas contraire, un message d'erreur est
+retourné.
+
+La vue \code{groupe}, elle, est composée de plusieurs actions qui dépendent de la
+forme qui a été remplie.
+\begin{itemize}
+\item {} 
+Il y a tout d'abord \code{addTeacher} qui, quand l'utilisateur entre le nom
+d'utilisateur d'un autre professeur pour l'ajouter dans un groupe existant,
+va créer un object \code{GroupMembers} entre ce professeur et le groupe actuel
+pour qu'il fasse parti de ce groupe. Il se passe la même chose pour
+\code{addStudent} si le même utilisateur décide d'ajouter un élève.
+
+\item {} 
+Pour assigner un devoir à un groupe, la vue va utiliser \code{assignHomework}
+qui, selon le genre d'activité et l'id qui ont été sélectionnés par
+l'utilisateur, va chercher l'activité et créer un objet \code{AssignHomework}
+qui va lier l'exercice, le quiz ou le cours au groupe.
+
+\item {} 
+Pour supprimer un groupe, il y a d'abord l'utilisation de \code{deleteClass}
+qui va uniquement servir à l'apparition d'un deuxième bouton qui activera
+\code{deleteClassConfirm}, qui supprimera le groupe et donc tous les objets
+\code{AssignHomework} et \code{GroupMembers} dont il était le groupe.
+
+\end{itemize}
+
+Cette vue va par la suite retourner le template \code{classe.html} avec les
+variables définies au début qui apparaîtront sur la page.
+
+Finalement, quelques vues ont été réalisées pour des actions plus complexes.
+Par exemple, \code{deleteFromGroup} avait besoin de deux variables, \code{member\_id}
+et \code{group\_id}. Cette vue a donc été liée à une url nécessitant ces deux
+variables. La vue \code{deleteFromGroup}, composée de \code{deleteStudent} et
+\code{deleteTeacher}, servent à retirer les membres d'un groupe en supprimant
+l'objet \code{GroupMembers} qui les liait. La vue \code{deleteActivity}, qui est elle
+composée de \code{deleteExercise}, \code{deleteQuiz} et \code{deleteCourse} sert à
+supprimer une activité depuis son dashboard. Enfin, \code{deleteHomework} permet
+au professeur de retirer un devoir précédemment assigné selon le type d'activité
+auquel il correspond.
 
 
-\section{Implémentation avec le reste du projet}
-\label{documentation:implementation-avec-le-reste-du-projet}
-Comme déjà expliqué, ma partie, le dashboard professeur, servira de lieu de
-référence pour le professeur qui utiliserait le site. En effet, c'est seulement
-depuis cette partie qu'il pourra gérer tout ce qui le concerne.
+\section{Urls}
+\label{documentation:urls}
+\begin{Verbatim}[commandchars=\\\{\},numbers=left,firstnumber=1,stepnumber=1]
+\PYG{k+kn}{from} \PYG{n+nn}{django.conf.urls} \PYG{k+kn}{import} \PYG{n}{patterns}\PYG{p}{,} \PYG{n}{include}\PYG{p}{,} \PYG{n}{url}
+\PYG{k+kn}{from} \PYG{n+nn}{django.contrib} \PYG{k+kn}{import} \PYG{n}{admin}
+\PYG{k+kn}{from} \PYG{n+nn}{dashboard.views} \PYG{k+kn}{import} \PYG{o}{*}
 
-Certaines fonctionnalités, tel que la création d'exercices ou de chapitres,
-feront appel aux applications de mes compagnons. En effet, le bouton devra aller
-chercher les formulaires correspondant.
 
-Les problèmes que nous pourrions rencontrer lors de la mise en commun de nos
-différentes applications seraient des conflits, mais qui pourraient facilement
-être gérables si on y fait attention en cherchant les erreurs.
+\PYG{n}{urlpatterns} \PYG{o}{=} \PYG{n}{patterns}\PYG{p}{(}\PYG{l+s}{\PYGZsq{}}\PYG{l+s}{teachers.views}\PYG{l+s}{\PYGZsq{}}\PYG{p}{,}
+    \PYG{n}{url}\PYG{p}{(}\PYG{l+s}{r\PYGZsq{}}\PYG{l+s}{\PYGZca{}home/\PYGZdl{}}\PYG{l+s}{\PYGZsq{}}\PYG{p}{,} \PYG{n}{home}\PYG{p}{,} \PYG{n}{name}\PYG{o}{=}\PYG{l+s}{\PYGZsq{}}\PYG{l+s}{home}\PYG{l+s}{\PYGZsq{}}\PYG{p}{)}\PYG{p}{,}
+    \PYG{n}{url}\PYG{p}{(}\PYG{l+s}{r\PYGZsq{}}\PYG{l+s}{\PYGZca{}classe/(?P\PYGZlt{}group\PYGZus{}id\PYGZgt{}}\PYG{l+s}{\PYGZbs{}}\PYG{l+s}{d+)/\PYGZdl{}}\PYG{l+s}{\PYGZsq{}}\PYG{p}{,} \PYG{n}{group}\PYG{p}{,} \PYG{n}{name}\PYG{o}{=}\PYG{l+s}{\PYGZsq{}}\PYG{l+s}{group\PYGZus{}view}\PYG{l+s}{\PYGZsq{}}\PYG{p}{)}\PYG{p}{,}
+    \PYG{n}{url}\PYG{p}{(}\PYG{l+s}{r\PYGZsq{}}\PYG{l+s}{\PYGZca{}exercices/\PYGZdl{}}\PYG{l+s}{\PYGZsq{}}\PYG{p}{,} \PYG{n}{exercises}\PYG{p}{,} \PYG{n}{name}\PYG{o}{=}\PYG{l+s}{\PYGZsq{}}\PYG{l+s}{exercises}\PYG{l+s}{\PYGZsq{}}\PYG{p}{)}\PYG{p}{,}
+    \PYG{n}{url}\PYG{p}{(}\PYG{l+s}{r\PYGZsq{}}\PYG{l+s}{\PYGZca{}nouveau\PYGZus{}groupe/\PYGZdl{}}\PYG{l+s}{\PYGZsq{}}\PYG{p}{,} \PYG{n}{newgroup}\PYG{p}{,} \PYG{n}{name}\PYG{o}{=}\PYG{l+s}{\PYGZsq{}}\PYG{l+s}{newgroup}\PYG{l+s}{\PYGZsq{}}\PYG{p}{)}\PYG{p}{,}
+    \PYG{n}{url}\PYG{p}{(}\PYG{l+s}{r\PYGZsq{}}\PYG{l+s}{\PYGZca{}profil/\PYGZdl{}}\PYG{l+s}{\PYGZsq{}}\PYG{p}{,} \PYG{n}{profil}\PYG{p}{,} \PYG{n}{name} \PYG{o}{=} \PYG{l+s}{\PYGZsq{}}\PYG{l+s}{profil}\PYG{l+s}{\PYGZsq{}}\PYG{p}{)}\PYG{p}{,}
+    \PYG{c}{\PYGZsh{}Pour retirer d\PYGZsq{}un groupe}
+    \PYG{n}{url}\PYG{p}{(}\PYG{l+s}{r\PYGZsq{}}\PYG{l+s}{\PYGZca{}enlever\PYGZus{}groupe/(?P\PYGZlt{}group\PYGZus{}id\PYGZgt{}}\PYG{l+s}{\PYGZbs{}}\PYG{l+s}{d+)/(?P\PYGZlt{}member\PYGZus{}id\PYGZgt{}}\PYG{l+s}{\PYGZbs{}}\PYG{l+s}{d+)/\PYGZdl{}}\PYG{l+s}{\PYGZsq{}}\PYG{p}{,} \PYG{n}{deleteFromGroup}\PYG{p}{,} \PYG{n}{name} \PYG{o}{=} \PYG{l+s}{\PYGZdq{}}\PYG{l+s}{deleteFromGroup}\PYG{l+s}{\PYGZdq{}}\PYG{p}{)}\PYG{p}{,}
+    \PYG{c}{\PYGZsh{}Pour supprimer une activité}
+    \PYG{n}{url}\PYG{p}{(}\PYG{l+s}{r\PYGZsq{}}\PYG{l+s}{\PYGZca{}enlever\PYGZus{}activité/(?P\PYGZlt{}activity\PYGZus{}id\PYGZgt{}}\PYG{l+s}{\PYGZbs{}}\PYG{l+s}{d+)/\PYGZdl{}}\PYG{l+s}{\PYGZsq{}}\PYG{p}{,} \PYG{n}{deleteActivity}\PYG{p}{,} \PYG{n}{name} \PYG{o}{=} \PYG{l+s}{\PYGZdq{}}\PYG{l+s}{deleteActivity}\PYG{l+s}{\PYGZdq{}}\PYG{p}{)}\PYG{p}{,}
+    \PYG{c}{\PYGZsh{}Pour retirer un devoir}
+    \PYG{n}{url}\PYG{p}{(}\PYG{l+s}{r\PYGZsq{}}\PYG{l+s}{\PYGZca{}enlever\PYGZus{}devoir/(?P\PYGZlt{}group\PYGZus{}id\PYGZgt{}}\PYG{l+s}{\PYGZbs{}}\PYG{l+s}{d+)/(?P\PYGZlt{}homework\PYGZus{}id\PYGZgt{}}\PYG{l+s}{\PYGZbs{}}\PYG{l+s}{d+)/\PYGZdl{}}\PYG{l+s}{\PYGZsq{}}\PYG{p}{,} \PYG{n}{deleteHomework}\PYG{p}{,} \PYG{n}{name} \PYG{o}{=} \PYG{l+s}{\PYGZdq{}}\PYG{l+s}{deleteHomework}\PYG{l+s}{\PYGZdq{}}\PYG{p}{)}\PYG{p}{,}
+\PYG{p}{)}
+\end{Verbatim}
+
+Les urls \code{home}, \code{group\_view}, \code{exercises}, \code{newgroup} et \code{profil}
+redirigent simplement aux vues du même nom.
+
+Les urls \code{deleteFromGroup}, \code{deleteActivity} et \code{deleteHomework}, elles,
+sont reliées aux vues du même nom qui permettent certaines actions dépendantes
+de variables très précises. Pour réaliser ceci, j'ai créé des formes dans mes
+templates redirigeant à ces urls et possédant les variables nécessaires afin
+que mon programme puisse aller chercher les objets souhaités et permettre, par
+exemple, la suppression d'une activité.
+
+
+\section{Navigation}
+\label{documentation:navigation}\begin{figure}[htbp]
+\centering
+\capstart
+
+\includegraphics[width=0.600\linewidth]{navigation.jpg}
+\caption{Schéma de navigation du site}\end{figure}
+
+Il est important de noter que le menu déroulant ainsi que les pages Exercices,
+Nouveau groupe et la page d'une classe peuvent être atteintes depuis n'importe
+quelle page du dashboard.
 \paragraph{Note de bas de page}
 
 
 \chapter{Développement dirigé par les tests}
 \label{tdd::doc}\label{tdd:developpement-dirige-par-les-tests}
 Le développement dirigé par les tests, grossièrement traduit de l'anglais Test
-Driven Development, est une technique de programmation utilisée par beaucoup de
+Driven Development, est une technique de développement utilisée par beaucoup de
 programmeurs.
 
 En effet, c'est grâce à cette technique que l'on peut le mieux s'assurer de la
@@ -513,18 +888,18 @@ haleine, cette méthode devient nécessaire pour ne pas être redondant dans son
 code et pour le rendre le plus clair possible.
 
 Dans cette première partie, nous allons nous intéresser au côté théorique de ce
-type de programmation avant de se lancer dans un réel projet.
+type de développement avant de se lancer dans un réel projet.
 
 Le développement dirigé par les tests est composé de deux tests importants et
 bien différents.
 
 
-\section{Le test fonctionnel}
-\label{tdd:le-test-fonctionnel}
+\section{Les tests fonctionnels}
+\label{tdd:les-tests-fonctionnels}
 Le test fonctionnel, comme son nom l'indique, cherche à tester la fonctionnalité
 du site. Plus précisément, il se met du côté de l'utilisateur du site. Il va par
 exemple vérifier que les titres et les textes apparaissent, mais il va aussi
-regarder si les différents boutons ou champs de textes marchent.
+regarder si les différents boutons ou champs de textes fonctionnent.
 
 Voici un exemple de test fonctionnel:
 
@@ -537,15 +912,13 @@ Jean-Paul qui entend parler d'un site pour apprendre les mathématiques où il y
 un dashboard qui lui permet de gérer son travail. Il va donc essayer
 tous les boutons et toutes les fonctionnalités.
 
-Evidemment, cela peut paraître obsolète, mais ça vous aide à vous y retrouver.
 
-
-\section{Le test unitaire}
-\label{tdd:le-test-unitaire}
+\section{Les tests unitaires}
+\label{tdd:les-tests-unitaires}
 Le test unitaire, lui, se base plus sur le point de vue du programmateur. Si on
-aurait pu considérer le test fonctionnel comme un test externe, le test unitaire
-lui serait le test interne. Ce qu'il test ne sera jamais vu, car il permet de
-vérifier que le code est le plus propre et le plus simple possible.
+pouvait considérer le test fonctionnel comme un test externe, le test unitaire,
+lui, serait le test interne. Ce qu'il teste ne sera jamais vu, car il permet de
+vérifier que le code fonctionne comme prévu.
 
 Voici un exemple:
 
@@ -562,34 +935,38 @@ Tout d'abord, il est \textbf{impératif} d'écrire un test avant même d'écrire
 n'importe quelle ligne de code. En effet, l'idée du Test Driven Development
 est d'être sûr qu'un test échoue avant d'écrire notre code. Le test peut
 être fonctionnel ou unitaire, cela dépendant de la partie de votre
-application que vous souhaitez développer. Vous allez évidemment recevoir
-un message disant que votre test a échoué, mais c'est normal étant
-donné que vous n'avez rien codé. Cela consiste donc à essayer un
-programme encore non-existant.
+application que l'on souhaite développer. Le test va évidemment retourner
+un message négatif, mais c'est normal étant donné que rien n'a été codé
+concernant la fonctionnalité testée.
 
 \item {} 
 Ensuite seulement, le but est d'écrire un minimum de code possible
-pour que le test précédemment lancé fonctionne. Il faut seulement s'occuper
-de ce que le test cherchait à essayer, pas plus, pas moins.
+pour que le test précédemment lancé fonctionne. Il faut donc réussir
+à ce que le test, une fois relancé, retourne un résultat positif. Il faut
+faire attention à ne pas développer une fonctionnalité qui n'est pas dans
+le test
 
 \item {} 
-Une fois que vous pensez avoir accompli ce que le test de la première étape
-vous disait avoir raté, vous pouvez relancer ce test. Si le résultat
-est positif, vous pouvez passer à l'étape suivante. Dans le cas contraire,
-il va vous falloir refaire l'étape 2 et 3 jusqu'à ce que le test soit
-positif.
+Une fois le code écrit, on peut relancer ce test. Si le résultat
+est positif, on peut passer à l'étape suivante. Dans le cas contraire,
+il faudra refaire les étapes 2 et 3 jusqu'à ce que le test fonctionne.
 
 \item {} 
-L'étape finale: il va falloir réécrire et réstructurer le code précédent
-histoire qu'il soit plus agréable à l'oeil et le rendre plus lisible.
-Il faut faire très attention durant cette étape à ne rien rajouter ou
-enlever. Le code doit garder le même résultat.
+Finalement, il ne reste qu'à restructurer le code précédemment écrit pour
+qu'il soit plus lisible. Il faut faire très attention durant cette étape à
+ne rien ajouter ou enlever. Le code doit garder le même résultat.
 
 \end{enumerate}
 
-Une fois que ces 4 étapes ont été effectuées, il ne reste évidemment qu'à
+Une fois que ces 4 étapes ont été effectuées, il ne reste qu'à
 recommencer avec une autre fonctionnalité de l'application, jusqu'à
 que celle-ci soit finie.
+\begin{figure}[htbp]
+\centering
+\capstart
+
+\includegraphics[width=0.500\linewidth]{TDD.png}
+\caption{Schéma résumant les 4 étapes du Développement dirigé par les tests}\end{figure}
 
 
 \section{Gain de temps?}
@@ -602,7 +979,7 @@ Il est clair que, sur un travail de petite taille, tout coder n'aurait pas
 énormément de sens, car tout peut être facilement essayable par soi-même.
 Dans le cas d'un travail d'une certaine consistance, ce n'est pas pareil.
 C'est uniquement en testant que l'on peut être sûr de son code, car cela
-signifie que notre code est valide, et devrait le rester.
+signifie qu'il est valide et devrait le rester.
 
 
 \chapter{Débuter un projet}
@@ -644,7 +1021,8 @@ Encore une fois, le \emph{sudo} n'est pas nécessaire sur Windows.
 Note: il est important de toujours utiliser la dernière version de Selenium.
 En effet, une version dépassée peut facilement se comporter de façon non
 désirée. \footnote{
-Inspiré de Test Driven Development With Python de Harry J.W. Percival
+PERCIVAL, Harry J.W., «Test Driven Development With Python», publié
+le 19 juin 2014
 }
 
 \end{itemize}
