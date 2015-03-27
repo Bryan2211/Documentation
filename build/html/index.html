@@ -6,7 +6,7 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-    <title>Conception du dashboard professeur et développement dirigé par les tests &mdash; documentation Développement dirigé par les tests 0.1</title>
+    <title>Développement du tableau de bord professeur &mdash; documentation Développement du tableau de bord professeur 0.1</title>
     
     <link rel="stylesheet" href="_static/nature.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
@@ -25,8 +25,8 @@
     <script type="text/javascript" src="_static/doctools.js"></script>
     <script type="text/javascript" src="_static/translations.js"></script>
     <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
-    <link rel="top" title="documentation Développement dirigé par les tests 0.1" href="#" />
-    <link rel="next" title="Fonctionnalités du dashboard" href="dashboard.html" /> 
+    <link rel="top" title="documentation Développement du tableau de bord professeur 0.1" href="#" />
+    <link rel="next" title="Introduction" href="intro.html" /> 
   </head>
   <body>
     <div class="related">
@@ -36,9 +36,9 @@
           <a href="genindex.html" title="Index général"
              accesskey="I">index</a></li>
         <li class="right" >
-          <a href="dashboard.html" title="Fonctionnalités du dashboard"
+          <a href="intro.html" title="Introduction"
              accesskey="N">suivant</a> |</li>
-        <li><a href="#">documentation Développement dirigé par les tests 0.1</a> &raquo;</li> 
+        <li><a href="#">documentation Développement du tableau de bord professeur 0.1</a> &raquo;</li> 
       </ul>
     </div>  
 
@@ -47,11 +47,12 @@
         <div class="bodywrapper">
           <div class="body">
             
-  <div class="section" id="conception-du-dashboard-professeur-et-developpement-dirige-par-les-tests">
-<h1>Conception du dashboard professeur et développement dirigé par les tests<a class="headerlink" href="#conception-du-dashboard-professeur-et-developpement-dirige-par-les-tests" title="Lien permanent vers ce titre">¶</a></h1>
+  <div class="section" id="developpement-du-tableau-de-bord-professeur">
+<h1>Développement du tableau de bord professeur<a class="headerlink" href="#developpement-du-tableau-de-bord-professeur" title="Lien permanent vers ce titre">¶</a></h1>
 <div class="toctree-wrapper compound">
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="dashboard.html">Fonctionnalités du dashboard</a><ul>
+<li class="toctree-l1"><a class="reference internal" href="intro.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="dashboard.html">Fonctionnalités du tableau de bord</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="dashboard.html#ajouter-un-groupe">Ajouter un groupe</a></li>
 <li class="toctree-l2"><a class="reference internal" href="dashboard.html#gerer-un-groupe">Gérer un groupe</a></li>
 <li class="toctree-l2"><a class="reference internal" href="dashboard.html#voir-ses-exercices">Voir ses exercices</a></li>
@@ -59,26 +60,38 @@
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="documentation.html">Guide du développeur</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="documentation.html#utilite-des-differents-fichiers-de-mon-projet">Utilité des différents fichiers de mon projet</a></li>
+<li class="toctree-l2"><a class="reference internal" href="documentation.html#demarrer-django-dans-un-workspace-cloud9">Démarrer Django dans un workspace Cloud9</a></li>
+<li class="toctree-l2"><a class="reference internal" href="documentation.html#navigation">Navigation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="documentation.html#use-cases">Use Cases</a></li>
+<li class="toctree-l2"><a class="reference internal" href="documentation.html#dossier-static">Dossier <tt class="docutils literal"><span class="pre">static</span></tt></a></li>
+<li class="toctree-l2"><a class="reference internal" href="documentation.html#gabarits">Gabarits</a></li>
+<li class="toctree-l2"><a class="reference internal" href="documentation.html#fichiers-importants">Fichiers importants</a></li>
 <li class="toctree-l2"><a class="reference internal" href="documentation.html#modeles">Modèles</a></li>
 <li class="toctree-l2"><a class="reference internal" href="documentation.html#vues">Vues</a></li>
 <li class="toctree-l2"><a class="reference internal" href="documentation.html#urls">Urls</a></li>
-<li class="toctree-l2"><a class="reference internal" href="documentation.html#navigation">Navigation</a></li>
-<li class="toctree-l2"><a class="reference internal" href="documentation.html#demarrer-django-dans-un-workspace-cloud9">Démarrer Django dans un workspace Cloud9</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="tdd.html">Développement dirigé par les tests</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="tdd.html#les-tests-fonctionnels">Les tests fonctionnels</a></li>
 <li class="toctree-l2"><a class="reference internal" href="tdd.html#les-tests-unitaires">Les tests unitaires</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tdd.html#les-tests-d-approbation">Les tests d&#8217;approbation</a></li>
 <li class="toctree-l2"><a class="reference internal" href="tdd.html#le-cycle-du-developpement-dirige-par-les-tests">Le cycle du développement dirigé par les tests</a></li>
 <li class="toctree-l2"><a class="reference internal" href="tdd.html#gain-de-temps">Gain de temps?</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="projet1.html">Débuter un projet</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="projet1.html#elements-requis">Eléments requis</a></li>
-<li class="toctree-l2"><a class="reference internal" href="projet1.html#premier-test">Premier test</a></li>
+<li class="toctree-l1"><a class="reference internal" href="conclu.html">Conclusion</a></li>
+<li class="toctree-l1"><a class="reference internal" href="source.html">Sources</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="source.html#bibliographie">Bibliographie</a></li>
+<li class="toctree-l2"><a class="reference internal" href="source.html#webographie">Webographie</a></li>
 </ul>
 </li>
+<li class="toctree-l1"><a class="reference internal" href="annexes.html">Annexes</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="annexes.html#declaration-personnelle">Déclaration personnelle</a></li>
+<li class="toctree-l2"><a class="reference internal" href="annexes.html#remerciements">Remerciements</a></li>
+<li class="toctree-l2"><a class="reference internal" href="annexes.html#code-source">Code source</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="illu.html">Table des illustrations</a></li>
 </ul>
 </div>
 </div>
@@ -90,8 +103,8 @@
       <div class="sphinxsidebar">
         <div class="sphinxsidebarwrapper">
   <h4>Sujet suivant</h4>
-  <p class="topless"><a href="dashboard.html"
-                        title="Chapitre suivant">Fonctionnalités du dashboard</a></p>
+  <p class="topless"><a href="intro.html"
+                        title="Chapitre suivant">Introduction</a></p>
   <h3>Cette page</h3>
   <ul class="this-page-menu">
     <li><a href="_sources/index.txt"
@@ -121,9 +134,9 @@
           <a href="genindex.html" title="Index général"
              >index</a></li>
         <li class="right" >
-          <a href="dashboard.html" title="Fonctionnalités du dashboard"
+          <a href="intro.html" title="Introduction"
              >suivant</a> |</li>
-        <li><a href="#">documentation Développement dirigé par les tests 0.1</a> &raquo;</li> 
+        <li><a href="#">documentation Développement du tableau de bord professeur 0.1</a> &raquo;</li> 
       </ul>
     </div>
     <div class="footer">

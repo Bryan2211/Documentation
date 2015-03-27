@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2015.1.13)  23 MAR 2015 20:35
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2015.1.13)  27 MAR 2015 17:33
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -278,6 +278,9 @@ Package babel Info: Making ? an active character on input line 247.
 \labelwidthFB=\skip44
 \leftmarginFB=\skip45
 \parindentFFN=\dimen105
+)
+(/usr/share/texlive/texmf-dist/tex/generic/babel-french/frenchb.ldf
+Language: frenchb 2013/12/30 v2.6g French support from the babel system
 ))
 (/usr/share/texlive/texmf-dist/tex/latex/carlisle/scalefnt.sty)
 (/usr/share/texlive/texmf-dist/tex/latex/graphics/keyval.sty
@@ -916,7 +919,10 @@ LaTeX Font Info:    Font shape `T1/phv/bx/n' in size <17.28> not available
 ] (./tdd.toc
 LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <10> not available
 (Font)              Font shape `T1/ptm/b/n' tried instead on input line 2.
-)
+LaTeX Font Info:    Try loading font information for T1+pcr on input line 14.
+ (/usr/share/texlive/texmf-dist/tex/latex/psnfss/t1pcr.fd
+File: t1pcr.fd 2001/06/04 font definitions for T1/pcr.
+))
 \tf@toc=\write7
 \openout7 = `tdd.toc'.
 
@@ -926,184 +932,233 @@ LaTeX Font Info:    Font shape `T1/phv/bx/n' in size <10> not available
 (Font)              Font shape `T1/phv/b/n' tried instead on input line 122.
 [1
 
-] [2]
+] [2] [1
+
+] [2
+
+]
 Chapitre 1.
 LaTeX Font Info:    Font shape `T1/phv/bx/n' in size <14.4> not available
-(Font)              Font shape `T1/phv/b/n' tried instead on input line 127.
+(Font)              Font shape `T1/phv/b/n' tried instead on input line 129.
 LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <14.4> not available
-(Font)              Font shape `T1/ptm/b/n' tried instead on input line 127.
+(Font)              Font shape `T1/ptm/b/n' tried instead on input line 129.
 LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <24.88> not available
-(Font)              Font shape `T1/ptm/b/n' tried instead on input line 127.
-<Newclass.jpg, id=126, 1445.4pt x 903.375pt>
-File: Newclass.jpg Graphic file (type jpg)
- <use Newclass.jpg>
-Package pdftex.def Info: Newclass.jpg used on input line 143.
-(pdftex.def)             Requested size: 281.85587pt x 176.15053pt.
-LaTeX Font Info:    Font shape `T1/phv/bx/n' in size <12> not available
-(Font)              Font shape `T1/phv/b/n' tried instead on input line 157.
-
-<class.jpg, id=127, 1445.4pt x 903.375pt>
-File: class.jpg Graphic file (type jpg)
- <use class.jpg>
-Package pdftex.def Info: class.jpg used on input line 168.
-(pdftex.def)             Requested size: 281.85587pt x 176.15053pt.
- [1
-
-
- <./Newclass.jpg>]
-<classAjouterMembres.jpg, id=135, 1445.4pt x 903.375pt>
-File: classAjouterMembres.jpg Graphic file (type jpg)
-
-<use classAjouterMembres.jpg>
-Package pdftex.def Info: classAjouterMembres.jpg used on input line 177.
-(pdftex.def)             Requested size: 281.85587pt x 176.15053pt.
-
-<classAjouterMembresEchec.jpg, id=136, 1445.4pt x 903.375pt>
-File: classAjouterMembresEchec.jpg Graphic file (type jpg)
-
-<use classAjouterMembresEchec.jpg>
-Package pdftex.def Info: classAjouterMembresEchec.jpg used on input line 188.
-(pdftex.def)             Requested size: 281.85587pt x 176.15053pt.
-
-<classDevoir.jpg, id=137, 1445.4pt x 903.375pt>
-File: classDevoir.jpg Graphic file (type jpg)
- <use classDevoir.jpg>
-Package pdftex.def Info: classDevoir.jpg used on input line 208.
-(pdftex.def)             Requested size: 281.85587pt x 176.15053pt.
- [2 <./class.jpg> <./classAjouterMembres.jpg>]
-<exercices.jpg, id=145, 1445.4pt x 903.375pt>
-File: exercices.jpg Graphic file (type jpg)
- <use exercices.jpg>
-Package pdftex.def Info: exercices.jpg used on input line 225.
-(pdftex.def)             Requested size: 281.85587pt x 176.15053pt.
- [3 <./classAjouterMembresEchec.jpg> <./classDevoir.jpg>]
-<menuDeroulant.jpg, id=153, 1445.4pt x 903.375pt>
-File: menuDeroulant.jpg Graphic file (type jpg)
- <use menuDeroulant.jpg>
-Package pdftex.def Info: menuDeroulant.jpg used on input line 248.
-(pdftex.def)             Requested size: 281.85587pt x 176.15053pt.
-
-<passwordSuccess.jpg, id=154, 1445.4pt x 903.375pt>
-File: passwordSuccess.jpg Graphic file (type jpg)
- <use passwordSuccess.jpg>
-Package pdftex.def Info: passwordSuccess.jpg used on input line 260.
-(pdftex.def)             Requested size: 281.85587pt x 176.15053pt.
-
-<passwordFail.jpg, id=155, 1445.4pt x 903.375pt>
-File: passwordFail.jpg Graphic file (type jpg)
- <use passwordFail.jpg>
-Package pdftex.def Info: passwordFail.jpg used on input line 269.
-(pdftex.def)             Requested size: 281.85587pt x 176.15053pt.
-
-[4 <./exercices.jpg> <./menuDeroulant.jpg>] [5 <./passwordSuccess.jpg> <./passw
-ordFail.jpg>] [6
+(Font)              Font shape `T1/ptm/b/n' tried instead on input line 129.
+[3] [4
 
 ]
 Chapitre 2.
-LaTeX Font Info:    Try loading font information for T1+pcr on input line 279.
-(/usr/share/texlive/texmf-dist/tex/latex/psnfss/t1pcr.fd
-File: t1pcr.fd 2001/06/04 font definitions for T1/pcr.
-)
-LaTeX Font Info:    Font shape `T1/pcr/bx/n' in size <12> not available
-(Font)              Font shape `T1/pcr/b/n' tried instead on input line 279.
- [7]
-LaTeX Font Info:    Font shape `T1/pcr/bx/n' in size <9> not available
-(Font)              Font shape `T1/pcr/b/n' tried instead on input line 358.
-LaTeX Font Info:    Font shape `T1/pcr/m/it' in size <9> not available
-(Font)              Font shape `T1/pcr/m/sl' tried instead on input line 362.
-LaTeX Font Info:    Try loading font information for TS1+pcr on input line 396.
+<Newclass.jpg, id=206, 1445.4pt x 903.375pt>
+File: Newclass.jpg Graphic file (type jpg)
+ <use Newclass.jpg>
+Package pdftex.def Info: Newclass.jpg used on input line 196.
+(pdftex.def)             Requested size: 226.48393pt x 141.55174pt.
+LaTeX Font Info:    Font shape `T1/phv/bx/n' in size <12> not available
+(Font)              Font shape `T1/phv/b/n' tried instead on input line 211.
 
+<class.jpg, id=207, 1445.4pt x 903.375pt>
+File: class.jpg Graphic file (type jpg)
+ <use class.jpg>
+Package pdftex.def Info: class.jpg used on input line 222.
+(pdftex.def)             Requested size: 226.48393pt x 141.55174pt.
+ [5 <./Newclass.jpg>]
+<classAjouterMembres.jpg, id=214, 1445.4pt x 903.375pt>
+File: classAjouterMembres.jpg Graphic file (type jpg)
 
-(/usr/share/texlive/texmf-dist/tex/latex/psnfss/ts1pcr.fd
+<use classAjouterMembres.jpg>
+Package pdftex.def Info: classAjouterMembres.jpg used on input line 231.
+(pdftex.def)             Requested size: 226.48393pt x 141.55174pt.
+
+<classAjouterMembresEchec.jpg, id=215, 1445.4pt x 903.375pt>
+File: classAjouterMembresEchec.jpg Graphic file (type jpg)
+
+<use classAjouterMembresEchec.jpg>
+Package pdftex.def Info: classAjouterMembresEchec.jpg used on input line 242.
+(pdftex.def)             Requested size: 226.48393pt x 141.55174pt.
+ [6 <./class.jpg> <./classAjouterMembres.jpg> <./classAjouterMembresEchec.jpg>]
+
+<classDevoir.jpg, id=223, 1445.4pt x 903.375pt>
+File: classDevoir.jpg Graphic file (type jpg)
+ <use classDevoir.jpg>
+Package pdftex.def Info: classDevoir.jpg used on input line 262.
+(pdftex.def)             Requested size: 226.48393pt x 141.55174pt.
+
+<devoirErreur.jpg, id=224, 1445.4pt x 903.375pt>
+File: devoirErreur.jpg Graphic file (type jpg)
+ <use devoirErreur.jpg>
+Package pdftex.def Info: devoirErreur.jpg used on input line 271.
+(pdftex.def)             Requested size: 226.48393pt x 141.55174pt.
+
+<exercices.jpg, id=225, 1445.4pt x 903.375pt>
+File: exercices.jpg Graphic file (type jpg)
+ <use exercices.jpg>
+Package pdftex.def Info: exercices.jpg used on input line 285.
+(pdftex.def)             Requested size: 226.48393pt x 141.55174pt.
+
+<menuDeroulant.jpg, id=226, 1445.4pt x 903.375pt>
+File: menuDeroulant.jpg Graphic file (type jpg)
+ <use menuDeroulant.jpg>
+Package pdftex.def Info: menuDeroulant.jpg used on input line 308.
+(pdftex.def)             Requested size: 226.48393pt x 141.55174pt.
+
+[7 <./classDevoir.jpg> <./devoirErreur.jpg>]
+<passwordSuccess.jpg, id=234, 1445.4pt x 903.375pt>
+File: passwordSuccess.jpg Graphic file (type jpg)
+ <use passwordSuccess.jpg>
+Package pdftex.def Info: passwordSuccess.jpg used on input line 320.
+(pdftex.def)             Requested size: 226.48393pt x 141.55174pt.
+
+<passwordFail.jpg, id=235, 1445.4pt x 903.375pt>
+File: passwordFail.jpg Graphic file (type jpg)
+ <use passwordFail.jpg>
+Package pdftex.def Info: passwordFail.jpg used on input line 330.
+(pdftex.def)             Requested size: 226.48393pt x 141.55174pt.
+
+[8 <./exercices.jpg> <./menuDeroulant.jpg> <./passwordSuccess.jpg>] [9 <./passw
+ordFail.jpg>] [10
+
+]
+Chapitre 3.
+<Workspace.jpg, id=257, 1445.4pt x 903.375pt>
+File: Workspace.jpg Graphic file (type jpg)
+ <use Workspace.jpg>
+Package pdftex.def Info: Workspace.jpg used on input line 368.
+(pdftex.def)             Requested size: 271.78348pt x 169.86485pt.
+ [11 <./Workspace.jpg>]
+LaTeX Font Info:    Try loading font information for TS1+pcr on input line 388.
+
+ (/usr/share/texlive/texmf-dist/tex/latex/psnfss/ts1pcr.fd
 File: ts1pcr.fd 2001/06/04 font definitions for TS1/pcr.
 )
-LaTeX Font Info:    Font shape `TS1/pcr/m/it' in size <9> not available
-(Font)              Font shape `TS1/pcr/m/sl' tried instead on input line 396.
- [8]
-Underfull \vbox (badness 10000) detected at line 471
- []
-
-
-Underfull \vbox (badness 10000) detected at line 471
- []
-
-[9] [10]
-Underfull \vbox (badness 10000) detected at line 765
- []
-
-
-Underfull \vbox (badness 10000) detected at line 765
- []
-
-[11]
-Underfull \vbox (badness 10000) detected at line 765
- []
-
-
-Underfull \vbox (badness 10000) detected at line 765
- []
-
-[12]
-Underfull \vbox (badness 10000) detected at line 765
- []
-
-
-Underfull \vbox (badness 10000) detected at line 765
- []
-
-[13] [14] <navigation.jpg, id=218, 1003.75pt x 803.0pt>
+<navigation.jpg, id=265, 1003.75pt x 803.0pt>
 File: navigation.jpg Graphic file (type jpg)
  <use navigation.jpg>
-Package pdftex.def Info: navigation.jpg used on input line 870.
-(pdftex.def)             Requested size: 281.85587pt x 225.48787pt.
-LaTeX Font Info:    Font shape `T1/phv/bx/n' in size <9> not available
-(Font)              Font shape `T1/phv/b/n' tried instead on input line 876.
+Package pdftex.def Info: navigation.jpg used on input line 403.
+(pdftex.def)             Requested size: 271.78348pt x 217.42554pt.
 
-[15] [16 <./navigation.jpg>]
-Chapitre 3.
+<UseCases.jpg, id=266, 803.0pt x 602.25pt>
+File: UseCases.jpg Graphic file (type jpg)
+ <use UseCases.jpg>
+Package pdftex.def Info: UseCases.jpg used on input line 419.
+(pdftex.def)             Requested size: 271.78348pt x 203.84332pt.
+LaTeX Font Info:    Font shape `T1/pcr/bx/n' in size <14.4> not available
+(Font)              Font shape `T1/pcr/b/n' tried instead on input line 430.
+ [12 <./navigation.jpg>]
+File: class.jpg Graphic file (type jpg)
+ <use class.jpg>
+Package pdftex.def Info: class.jpg used on input line 461.
+(pdftex.def)             Requested size: 271.78348pt x 169.86485pt.
+ [13 <./UseCases.jpg>] [14]
+<UML.jpg, id=287, 803.0pt x 602.25pt>
+File: UML.jpg Graphic file (type jpg)
+ <use UML.jpg>
+Package pdftex.def Info: UML.jpg used on input line 643.
+(pdftex.def)             Requested size: 271.78348pt x 203.84332pt.
+ [15 <./UML.jpg>]
+LaTeX Font Info:    Font shape `T1/phv/bx/n' in size <9> not available
+(Font)              Font shape `T1/phv/b/n' tried instead on input line 741.
+ [16]
+Chapitre 4.
 [17
 
-] <TDD.png, id=234, 803.0pt x 602.25pt>
+] <TDD.png, id=312, 803.0pt x 602.25pt>
 File: TDD.png Graphic file (type png)
  <use TDD.png>
-Package pdftex.def Info: TDD.png used on input line 968.
-(pdftex.def)             Requested size: 234.8775pt x 176.1551pt.
+Package pdftex.def Info: TDD.png used on input line 847.
+(pdftex.def)             Requested size: 317.07613pt x 237.80803pt.
  [18 <./TDD.png (PNG copy)>]
-Chapitre 4.
+Chapitre 5.
 [19
 
-] (./tdd.ind)
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 1086.
- [20]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 1086.
+] [20
+
+]
+Chapitre 6.
+
+Underfull \hbox (badness 10000) in paragraph at lines 911--914
+[]\T1/ptm/m/n/10 ^^SConfiguration de Django 1.7 sous Cloud9^^T, consulté le 24.
+03.2015, [][]http://www.donner-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 915--918
+[]\T1/ptm/m/n/10 ^^SAcceptance Test Dri-ven De-ve-lop-ment (ATDD) : An Over-vie
+w^^T, consulté le 25.03.2015,
+ []
+
+[21] [22
+
+]
+Chapitre 7.
+LaTeX Font Info:    Font shape `T1/pcr/bx/n' in size <12> not available
+(Font)              Font shape `T1/pcr/b/n' tried instead on input line 996.
+[23]
+LaTeX Font Info:    Font shape `T1/pcr/bx/n' in size <9> not available
+(Font)              Font shape `T1/pcr/b/n' tried instead on input line 999.
+LaTeX Font Info:    Font shape `T1/pcr/m/it' in size <9> not available
+(Font)              Font shape `T1/pcr/m/sl' tried instead on input line 1003.
+LaTeX Font Info:    Font shape `TS1/pcr/m/it' in size <9> not available
+(Font)              Font shape `TS1/pcr/m/sl' tried instead on input line 1037.
+
+
+Overfull \vbox (0.73206pt too high) detected at line 1116
+ []
+
+[24] [25] [26]
+Underfull \vbox (badness 10000) detected at line 1349
+ []
+
+
+Underfull \vbox (badness 10000) detected at line 1349
+ []
+
+[27]
+Underfull \vbox (badness 10000) detected at line 1349
+ []
+
+
+Underfull \vbox (badness 10000) detected at line 1349
+ []
+
+[28] [29] [30]
+Chapitre 8.
+(./tdd.lof)
+\tf@lof=\write8
+\openout8 = `tdd.lof'.
+
+ (./tdd.ind)
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 1389.
+ [31
+
+]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 1389.
  (./tdd.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 1086.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 1086.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 1389.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 1389.
 
 Package rerunfilecheck Info: File `tdd.out' has not changed.
-(rerunfilecheck)             Checksum: 5C8695D244DD2F2E8F114BF541FE9184;1246.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 1086.
+(rerunfilecheck)             Checksum: 2B7001A8ED86A809F315759EE37D7BC8;1920.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 1389.
  ) 
 Here is how much of TeX's memory you used:
- 9728 strings out of 494999
- 136067 string characters out of 6180228
- 272464 words of memory out of 5000000
- 12585 multiletter control sequences out of 15000+600000
- 77488 words of font info for 80 fonts, out of 8000000 for 9000
+ 9816 strings out of 494999
+ 137315 string characters out of 6180228
+ 266528 words of memory out of 5000000
+ 12632 multiletter control sequences out of 15000+600000
+ 76973 words of font info for 81 fonts, out of 8000000 for 9000
  15 hyphenation exceptions out of 8191
- 36i,12n,45p,450b,464s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 36i,12n,45p,375b,464s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/share/texliv
 e/texmf-dist/fonts/type1/urw/courier/ucrb8a.pfb></usr/share/texlive/texmf-dist/
 fonts/type1/urw/courier/ucrr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/u
 rw/courier/ucrro8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/helvetic/
 uhvb8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/helvetic/uhvbo8a.pfb>
 </usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/share/tex
-live/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/share/texlive/texmf-dist
-/fonts/type1/urw/times/utmri8a.pfb>
-Output written on tdd.pdf (24 pages, 1136706 bytes).
+live/texmf-dist/fonts/type1/urw/times/utmr8a.pfb>
+Output written on tdd.pdf (35 pages, 1753738 bytes).
 PDF statistics:
- 307 PDF objects out of 1000 (max. 8388607)
- 254 compressed objects within 3 object streams
- 75 named destinations out of 1000 (max. 500000)
- 228 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 456 PDF objects out of 1000 (max. 8388607)
+ 388 compressed objects within 4 object streams
+ 106 named destinations out of 1000 (max. 500000)
+ 344 words of extra memory for PDF output out of 10000 (max. 10000000)
 

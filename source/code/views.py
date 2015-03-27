@@ -1,8 +1,10 @@
 from django.shortcuts import render, redirect
 from django.contrib.auth import authenticate, login, logout
-from dashboard.forms import NewGroupForm, NewStudentForm, NewTeacherForm, AddHomeworkForm, NewPasswordForm
+from dashboard.forms import NewGroupForm, NewStudentForm, NewTeacherForm,\
+                            AddHomeworkForm, NewPasswordForm
 from django.core.urlresolvers import reverse
-from common.models import Group, Teacher, GroupMembers, Student, AssignHomework, Exercise, Quiz, Course
+from common.models import Group, Teacher, GroupMembers, Student, \
+                            AssignHomework, Exercise, Quiz, Course
 from django.contrib.auth.models import User
 from django.http import HttpResponse
 
@@ -29,7 +31,8 @@ def newgroup(request):
             
             newGroup = Group.objects.create(name = group_name)
             newGroup.save()
-            teacherToGroup = GroupMembers(teacher = user, group = newGroup) #Lie le Teacher et le groupe à travers la table intermédiaire
+            #Lie le Teacher et le groupe à travers la table intermédiaire
+            teacherToGroup = GroupMembers(teacher = user, group = newGroup) 
             teacherToGroup.save()
             success = True #Pour retourner le message de confirmation
     else:
@@ -64,8 +67,8 @@ def group(request, group_id):
     studentList = group.student.all()
     teacherList = group.teacher.all()
     homeworkExList = group.homeworkExercise.all()#
-    homeworkQuList = group.homeworkQuiz.all()    # Pour avoir la liste des devoirs selon les genres d'activités
-    homeworkCoList = group.homeworkCourse.all()  #
+    homeworkQuList = group.homeworkQuiz.all()    # Pour avoir la liste des devoirs
+    homeworkCoList = group.homeworkCourse.all()  # selon les genres d'activités
 
     deleteConfirmation = False #Pour supprimer une classe
     

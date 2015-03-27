@@ -1,0 +1,269 @@
+{% load staticfiles %}
+<html lang="en">
+<head>
+    <!--
+        ===
+        This comment should NOT be removed.
+
+        Charisma v2.0.0
+
+        Copyright 2012-2014 Muhammad Usman
+        Licensed under the Apache License v2.0
+        http://www.apache.org/licenses/LICENSE-2.0
+
+        http://usman.it
+        http://twitter.com/halalit_usman
+        ===
+    -->
+    <meta charset="utf-8">
+    <title>Webmath</title>
+
+    <!-- Styles -->
+    <link type = "test/css" href="{% static 'dashboard/css/bootstrap-cerulean.min.css' %}" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="{% static 'dashboard/css/charisma-app.css' %}"/>
+    <link type="text/css" href="{% static 'dashboard/bower_components/bootstrap-tour/build/css/bootstrap-tour.min.css'%}" rel='stylesheet'>
+
+    <!-- jQuery -->
+    <script src="{% static 'dashboard/bower_components/jquery/jquery.min.js' %}"></script>
+
+</head>
+
+<body>
+    <!-- Début de la topbar -->
+    <div class="navbar navbar-default" role="navigation">
+
+        <div class="navbar-inner">
+            <button type="button" class="navbar-toggle pull-left animated flip">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand">
+                <span>Webmath</span></a>
+
+            <!-- Début du menu déroulant du compte -->
+            <div class="btn-group pull-right">
+                <button class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+                    <i class="glyphicon glyphicon-user"></i><span class="hidden-sm hidden-xs"> {{ request.user.username }}</span>
+                    <span class="caret"></span>
+                </button>
+                <ul class="dropdown-menu">
+                    <li><a href="/dashboard/home/">Dashboard</a></li>
+                    <li><a href="/dashboard/profil/">Profil</a></li>
+                    <li class="divider"></li>
+                    <li><a href="/common/logout/">Déconnexion</a></li>
+                </ul>
+            </div>
+            <!-- Fin du menu déroulant -->
+            <!-- Boutons redirigeants -->
+
+            <ul class="collapse navbar-collapse nav navbar-nav top-menu">
+               <li><a href="/dashboard/home/">Accueil</a></li>
+               <li><a href="#">Cours</a></li>
+               <li><a href="#">Exercices</a></li>
+               <li><a href="#">Quiz</a></li>
+            </ul>
+
+        </div>
+    </div>
+    <!-- Fin de la topbar -->
+<div class="ch-container">
+    <div class="row">
+        
+        <!-- Début du menu de gauche -->
+        <div class="col-sm-2 col-lg-2">
+            <div class="sidebar-nav">
+                <div class="nav-canvas">
+                    <div class="nav-sm nav nav-stacked">
+
+                    </div>
+                    <ul class="nav nav-pills nav-stacked main-menu">
+                        <li class="nav-header">Menu</li>
+                        <li><a class="ajax-link" href="/dashboard/home/"><i class="glyphicon glyphicon-home"></i><span> Dashboard</span></a>
+                        </li>
+                        <li><a class="ajax-link" href="/dashboard/exercices/"><i class="glyphicon glyphicon-eye-open"></i><span> Exercices</span></a>
+                        </li>
+                        <li class="nav-header hidden-md">Groupes</li>
+                        {% for group in user.group_set.all %}
+                        <li><a class="ajax-link" href="{% url 'group_view' group.id %}"><span> {{ group.name }}</span></a></li>
+                        {% endfor %}
+                        <li><a class="ajax-link" href="/dashboard/nouveau_groupe/"><i class="glyphicon glyphicon-plus"></i><span> Nouveau groupe</span></a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <!-- Fin du menu de gauche -->
+
+        <noscript>
+            <div class="alert alert-block col-md-12">
+                <h4 class="alert-heading">Attention!</h4>
+
+                <p>Vous avez besoin de <a href="http://fr.wikipedia.org/wiki/JavaScript" target="_blank">JavaScript</a>
+                    activé sur ce site.</p>
+            </div>
+        </noscript>
+        <div id="content" class="col-lg-10 col-sm-10">
+            <!-- Début du contenu -->
+            <div>
+</div>
+
+<div>
+    <div class="row">
+    <div class="box col-md-12">
+    <div class="box-inner">
+        <div class="box-inner">
+            <div class="box-header well" data-original-title="">
+                <h2><i class="glyphicon glyphicon-list"></i> Liste des exercices</h2>
+            </div>
+            <div class="box-content">
+                <table class="table table-striped table-bordered bootstrap-datatable datatable responsive">
+                    <thead>
+                    <tr>
+                        <th>Exercice</th>
+                        <th>Ajouté</th>
+                        <th>Numéro</th>
+                        <th>Actions</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    {% for exercise in user.exercise_set.all %}
+                    
+                    <tr>
+                        <a href="#"><td>{{exercise.title}}</td></a>
+                        <td class="center">{{exercise.created_on}}</td>
+                        <td class="center">{{exercise.id }}</td>
+                        <td class="center">
+                            <form class="deleteActivity" action = "{% url 'deleteActivity' exercise.id %}" method="post" action=".">
+                                {% csrf_token %}
+                                <input class="btn btn-danger" type="submit" name="deleteExercise" value="Supprimer">
+                            </form>
+                        </td>
+                    </tr>
+                    
+                    {% endfor %}
+                    <a class="btn btn-info" href="#">
+                        Créer un exercice
+                    </a>
+                    </tbody>
+                </table>
+                
+        </div>
+    </div>
+</div>
+
+
+<div>
+    <div class="row">
+    <div class="box col-md-12">
+    <div class="box-inner">
+        <div class="box-inner">
+            <div class="box-header well" data-original-title="">
+                <h2><i class="glyphicon glyphicon-list"></i> Liste des quiz</h2>
+            </div>
+            <div class="box-content">
+                <table class="table table-striped table-bordered bootstrap-datatable datatable responsive">
+                    <thead>
+                    <tr>
+                        <th>Quiz</th>
+                        <th>Ajouté</th>
+                        <th>Numéro</th>
+                        <th>Actions</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    {% for quiz in user.quiz_set.all %}
+                    
+                    <tr>
+                        <a href="#"><td>{{quiz.title}}</td></a>
+                        <td class="center">{{quiz.creation_date}}</td>
+                        <td class="center">{{quiz.id}}</td>
+                        <td class="center">
+                            <form class="deleteActivity" action = "{% url 'deleteActivity' quiz.id %}" method="post" action=".">
+                                {% csrf_token %}
+                                <input class="btn btn-danger" type="submit" name="deleteQuiz" value="Supprimer">
+                            </form>
+                        </td>
+                    </tr>
+                    
+                    {% endfor %}
+                    
+                    <a class="btn btn-info" href="#">
+                        Créer un chapitre
+                    </a>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+    <!-- Fin du contenu -->
+</div>
+
+
+
+<div>
+    <div class="row">
+    <div class="box col-md-12">
+    <div class="box-inner">
+        <div class="box-inner">
+            <div class="box-header well" data-original-title="">
+                <h2><i class="glyphicon glyphicon-list"></i> Liste des cours</h2>
+            </div>
+            <div class="box-content">
+                <table class="table table-striped table-bordered bootstrap-datatable datatable responsive">
+                    <thead>
+                    <tr>
+                        <th>Cours</th>
+                        <th>Ajouté</th>
+                        <th>Numéro</th>
+                        <th>Actions</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    {% for course in user.course_set.all %}
+                    
+                    <tr>
+                        <a href="#"><td>{{course.title}}</td></a>
+                        <td class="center">{{course.created_at}}</td>
+                        <td class="center">{{course.id}}</td>
+                        <td class="center">
+                            <form class = "deleteActivity" action = "{% url 'deleteActivity' course.id %}" method="post" action=".">
+                                {% csrf_token %}
+                                <input class="btn btn-danger" type="submit" name="deleteCourse" value="Supprimer">
+                            </form>
+                        </td>
+                    </tr>
+                    
+                    {% endfor %}
+                    
+                    <a class="btn btn-info" href="#">
+                        Créer un chapitre
+                    </a>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+    <!-- Fin du contenu -->
+</div>
+</div>
+    <hr>
+
+</div>
+
+<!-- Javascript -->
+
+<script type="text/javascript" src="{% static 'dashboard/bower_components/bootstrap/dist/js/bootstrap.min.js' %}"></script>
+
+<!-- Cookie -->
+<script type="text/javascript" src="{% static 'dashboard/js/jquery.cookie.js' %}"></script>
+<!-- tour plugin -->
+<script type="text/javascript" src="{% static 'dashboard/bower_components/bootstrap-tour/build/js/bootstrap-tour.min.js' %}"></script>
+<!-- application script for Charisma demo -->
+<script type="text/javascript" src="{% static 'dashboard/js/charisma.js' %}"></script>
+
+
+
+</body>
+</html>
+

@@ -6,7 +6,7 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-    <title>Partie pratique &mdash; Développement dirigé par les tests 0.1 documentation</title>
+    <title>Introduction &mdash; documentation Développement du tableau de bord professeur 0.1</title>
     
     <link rel="stylesheet" href="_static/nature.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
@@ -23,25 +23,26 @@
     <script type="text/javascript" src="_static/jquery.js"></script>
     <script type="text/javascript" src="_static/underscore.js"></script>
     <script type="text/javascript" src="_static/doctools.js"></script>
+    <script type="text/javascript" src="_static/translations.js"></script>
     <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
-    <link rel="top" title="Développement dirigé par les tests 0.1 documentation" href="index.html" />
-    <link rel="next" title="Développement dirigé par les tests" href="tdd.html" />
-    <link rel="prev" title="Documentation" href="documentation.html" /> 
+    <link rel="top" title="documentation Développement du tableau de bord professeur 0.1" href="index.html" />
+    <link rel="next" title="Fonctionnalités du tableau de bord" href="dashboard.html" />
+    <link rel="prev" title="Développement du tableau de bord professeur" href="index.html" /> 
   </head>
   <body>
     <div class="related">
       <h3>Navigation</h3>
       <ul>
         <li class="right" style="margin-right: 10px">
-          <a href="genindex.html" title="General Index"
+          <a href="genindex.html" title="Index général"
              accesskey="I">index</a></li>
         <li class="right" >
-          <a href="tdd.html" title="Développement dirigé par les tests"
-             accesskey="N">next</a> |</li>
+          <a href="dashboard.html" title="Fonctionnalités du tableau de bord"
+             accesskey="N">suivant</a> |</li>
         <li class="right" >
-          <a href="documentation.html" title="Documentation"
-             accesskey="P">previous</a> |</li>
-        <li><a href="index.html">Développement dirigé par les tests 0.1 documentation</a> &raquo;</li> 
+          <a href="index.html" title="Développement du tableau de bord professeur"
+             accesskey="P">précédent</a> |</li>
+        <li><a href="index.html">documentation Développement du tableau de bord professeur 0.1</a> &raquo;</li> 
       </ul>
     </div>  
 
@@ -50,20 +51,40 @@
         <div class="bodywrapper">
           <div class="body">
             
-  <div class="section" id="partie-pratique">
-<h1>Partie pratique<a class="headerlink" href="#partie-pratique" title="Permalink to this headline">¶</a></h1>
-<div class="section" id="application-au-projet">
-<h2>Application au projet<a class="headerlink" href="#application-au-projet" title="Permalink to this headline">¶</a></h2>
-</div>
-<div class="section" id="wireframes-ou-scenarios-du-site">
-<h2>Wireframes, ou &#8220;scénarios du site&#8221;<a class="headerlink" href="#wireframes-ou-scenarios-du-site" title="Permalink to this headline">¶</a></h2>
-</div>
-<div class="section" id="diagrammes-uml">
-<h2>Diagrammes UML<a class="headerlink" href="#diagrammes-uml" title="Permalink to this headline">¶</a></h2>
-</div>
-<div class="section" id="implementation-avec-le-reste-du-projet">
-<h2>Implémentation avec le reste du projet<a class="headerlink" href="#implementation-avec-le-reste-du-projet" title="Permalink to this headline">¶</a></h2>
-</div>
+  <div class="section" id="introduction">
+<h1>Introduction<a class="headerlink" href="#introduction" title="Lien permanent vers ce titre">¶</a></h1>
+<p>Ce document est la documentation du tableau de bord destiné à
+être utilisé par les professeurs pour un site web d&#8217;e-learning pour les
+mathématiques.</p>
+<p>La problématique de ce travail s&#8217;intitule: «Développement du tableau de bord
+professeur». Il a été nécessaire de faire attention à ne pas dépasser sur les
+applications des différents contribuateurs à ce projet étant donné que le
+tableau de bord sert de centre aux différentes applications du site.</p>
+<p>Le dessein de cette documentation sera tout d&#8217;abord d&#8217;expliquer les
+fonctionnalités de ce tableau de bord et de les illustrer. Cela permettra à un
+professeur néophyte au tableau de bord de bien comprendre comment le prendre en
+main.</p>
+<p>De plus, la documentation expliquera le côté programmation de l&#8217;application.
+En effet, cela comportera entre autre l&#8217;explication des différents fichiers, des
+schémas résumant certaines caractéristiques de l&#8217;application ainsi que les
+étapes à suivre pour démarrer un serveur Django depuis Cloud9.</p>
+<p>La dernière partie consistera en une approche au développement dirigé par les
+tests. Elle sera composée d&#8217;une explication des termes importants ainsi que de
+l&#8217;explication du cycle fondamental dudit développement</p>
+<p>Dans le projet final, qui consiste donc en un site web pour apprendre les
+mathématiques, le tableau de bord sera le centre de toute activité. En effet,
+c&#8217;est depuis cette application que les groupes seront créés, gérés et que les
+exercices, quiz et cours seront gérés. Sans cette application, il ne serait
+pas possible d&#8217;avoir une supervision des élèves ainsi qu&#8217;un cadre pour les aider
+à s&#8217;améliorer.</p>
+<p>Par exemple, pour aider différents élèves possédant les mêmes problèmes dans les
+mêmes sujets, le professeur pourra créer un groupe dédié à ces étudiants et
+pourra leur assigner des devoirs plus spécifiés pour les aider à progresser.
+Cette application s&#8217;avérera donc être une grande aide pour les professeurs afin
+qu&#8217;ils puissent mieux gérer les différents niveaux de leurs élèves.</p>
+<p>Dans l&#8217;enseignement, il est plus difficile d&#8217;aider chaque élève selon leurs
+difficultés et leurs aises. Cette application permettra donc un enseignement
+plus précis pour que chaque élève puisse trouver ce qu&#8217;il lui plaîse.</p>
 </div>
 
 
@@ -72,30 +93,19 @@
       </div>
       <div class="sphinxsidebar">
         <div class="sphinxsidebarwrapper">
-  <h3><a href="index.html">Table Of Contents</a></h3>
-  <ul>
-<li><a class="reference internal" href="#">Partie pratique</a><ul>
-<li><a class="reference internal" href="#application-au-projet">Application au projet</a></li>
-<li><a class="reference internal" href="#wireframes-ou-scenarios-du-site">Wireframes, ou &#8220;scénarios du site&#8221;</a></li>
-<li><a class="reference internal" href="#diagrammes-uml">Diagrammes UML</a></li>
-<li><a class="reference internal" href="#implementation-avec-le-reste-du-projet">Implémentation avec le reste du projet</a></li>
-</ul>
-</li>
-</ul>
-
-  <h4>Previous topic</h4>
-  <p class="topless"><a href="documentation.html"
-                        title="previous chapter">Documentation</a></p>
-  <h4>Next topic</h4>
-  <p class="topless"><a href="tdd.html"
-                        title="next chapter">Développement dirigé par les tests</a></p>
-  <h3>This Page</h3>
+  <h4>Sujet précédent</h4>
+  <p class="topless"><a href="index.html"
+                        title="Chapitre précédent">Développement du tableau de bord professeur</a></p>
+  <h4>Sujet suivant</h4>
+  <p class="topless"><a href="dashboard.html"
+                        title="Chapitre suivant">Fonctionnalités du tableau de bord</a></p>
+  <h3>Cette page</h3>
   <ul class="this-page-menu">
     <li><a href="_sources/intro.txt"
-           rel="nofollow">Show Source</a></li>
+           rel="nofollow">Montrer la source</a></li>
   </ul>
 <div id="searchbox" style="display: none">
-  <h3>Quick search</h3>
+  <h3>Recherche rapide</h3>
     <form class="search" action="search.html" method="get">
       <input type="text" name="q" />
       <input type="submit" value="Go" />
@@ -103,7 +113,7 @@
       <input type="hidden" name="area" value="default" />
     </form>
     <p class="searchtip" style="font-size: 90%">
-    Enter search terms or a module, class or function name.
+    Saisissez un mot clef ou un nom de module, classe ou fonction.
     </p>
 </div>
 <script type="text/javascript">$('#searchbox').show(0);</script>
@@ -115,20 +125,20 @@
       <h3>Navigation</h3>
       <ul>
         <li class="right" style="margin-right: 10px">
-          <a href="genindex.html" title="General Index"
+          <a href="genindex.html" title="Index général"
              >index</a></li>
         <li class="right" >
-          <a href="tdd.html" title="Développement dirigé par les tests"
-             >next</a> |</li>
+          <a href="dashboard.html" title="Fonctionnalités du tableau de bord"
+             >suivant</a> |</li>
         <li class="right" >
-          <a href="documentation.html" title="Documentation"
-             >previous</a> |</li>
-        <li><a href="index.html">Développement dirigé par les tests 0.1 documentation</a> &raquo;</li> 
+          <a href="index.html" title="Développement du tableau de bord professeur"
+             >précédent</a> |</li>
+        <li><a href="index.html">documentation Développement du tableau de bord professeur 0.1</a> &raquo;</li> 
       </ul>
     </div>
     <div class="footer">
         &copy; Copyright 2014, Bryan Oberson.
-      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.2.3.
+      Créé avec <a href="http://sphinx-doc.org/">Sphinx</a> 1.2.3.
     </div>
   </body>
 </html>

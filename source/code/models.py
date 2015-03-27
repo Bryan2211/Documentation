@@ -57,10 +57,10 @@ class Exercise(models.Model):
     owner = models.ForeignKey(Teacher)  # créateur de l'exercice   
     created_on = models.DateTimeField(auto_now_add=True) # Date de création
     updated_on = models.DateTimeField(auto_now=True)
-    title = models.CharField(max_length=30) # C'est le titre de l'exercice ( factorisation ou développement)
+    title = models.CharField(max_length=30) # C'est le titre de l'exercice
     equation = models.CharField(max_length=50) # C'est l'équation entrée par le professeur
     grade = models.CharField(max_length=60) # donnée une note de difficulté à l'exercice
-    correction = models.CharField(max_length = 200) # Ceci est le corrigé de l'exercice ( obligatoire )
+    correction = models.CharField(max_length = 200) # corrigé de l'exercice ( obligatoire )
     def __str__(self):
         return self.title
         
@@ -86,9 +86,12 @@ class Group(models.Model):
     name = models.CharField(max_length=30)
     teacher = models.ManyToManyField(Teacher, through='GroupMembers')
     student = models.ManyToManyField(Student, through = 'GroupMembers')
-    homeworkExercise = models.ManyToManyField(Exercise, through = 'AssignHomework') #uniquement les devoirs exercices
-    homeworkCourse = models.ManyToManyField(Course, through = 'AssignHomework') #uniquement les devoirs quiz
-    homeworkQuiz = models.ManyToManyField(Quiz, through = 'AssignHomework') #uniquement les devoirs cours
+    #uniquement les devoirs exercices
+    homeworkExercise = models.ManyToManyField(Exercise, through = 'AssignHomework')
+    #uniquement les devoirs quiz
+    homeworkCourse = models.ManyToManyField(Course, through = 'AssignHomework') 
+    #uniquement les devoirs cours
+    homeworkQuiz = models.ManyToManyField(Quiz, through = 'AssignHomework') 
     created_on = models.DateTimeField(auto_now=True)
     
     def __str__(self):
@@ -111,3 +114,4 @@ class AssignHomework(models.Model):
     quiz = models.ForeignKey(Quiz, null = True)
     course = models.ForeignKey(Course, null = True)
     assigned_on = models.DateTimeField(auto_now=True)
+    date = models.CharField(max_length = 20, default = "Demain")

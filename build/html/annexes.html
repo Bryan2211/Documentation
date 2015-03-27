@@ -1,0 +1,918 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Annexes &mdash; documentation Développement du tableau de bord professeur 0.1</title>
+    
+    <link rel="stylesheet" href="_static/nature.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '0.1',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <script type="text/javascript" src="_static/translations.js"></script>
+    <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <link rel="top" title="documentation Développement du tableau de bord professeur 0.1" href="index.html" />
+    <link rel="next" title="Table des illustrations" href="illu.html" />
+    <link rel="prev" title="Sources" href="source.html" /> 
+  </head>
+  <body>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="Index général"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="illu.html" title="Table des illustrations"
+             accesskey="N">suivant</a> |</li>
+        <li class="right" >
+          <a href="source.html" title="Sources"
+             accesskey="P">précédent</a> |</li>
+        <li><a href="index.html">documentation Développement du tableau de bord professeur 0.1</a> &raquo;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <div class="section" id="annexes">
+<h1>Annexes<a class="headerlink" href="#annexes" title="Lien permanent vers ce titre">¶</a></h1>
+<div class="section" id="declaration-personnelle">
+<h2>Déclaration personnelle<a class="headerlink" href="#declaration-personnelle" title="Lien permanent vers ce titre">¶</a></h2>
+<p>Nom: Oberson</p>
+<p>Prénom: Bryan</p>
+<p>Adresse: Route du Lac Lussy 3</p>
+<p>1. Je certifie que le travail
+<strong>Développement du tableau de bord professeur</strong>
+a été réalisé par moi conformément au Guide de travail des collèges et aux
+Lignes directrices de la DICS concernant la réalisation du Travail de maturité.</p>
+<p>2. Je prends connaissance que mon travail sera soumis à une vérification de la
+mention correcte et complète de ses sources, au moyen d’un logiciel de détection
+de plagiat. Pour assurer ma protection, ce logiciel sera également utilisé pour
+comparer mon travail avec des travaux écrits remis ultérieurement, afin d’éviter
+des copies et de protéger mon droit d’auteur. En cas de soupçon d’atteintes à
+mon droit d’auteur, je donne mon accord à la direction de l’école pour
+l’utilisation de mon travail comme moyen de preuve.</p>
+<ol class="arabic simple" start="3">
+<li>Je m&#8217;engage à ne pas rendre public mon travail avant l&#8217;évaluation finale.</li>
+</ol>
+<p>4. Je m’engage à respecter la Procédure d’archivage des travaux de
+maturité/travaux personnels/travaux de maturité spécialisée en vigueur dans mon
+école.</p>
+<p>5. J’autorise la consultation de mon travail par des tierces personnes à des
+fins pédagogiques et/ou d’information interne à l’école :</p>
+<ul class="simple">
+<li>oui</li>
+<li>non (car il contient des données personnelles et sensibles.)</li>
+</ul>
+<p>Lieu, date : ______________________________________________________</p>
+<p>Signature : ______________________________________________________</p>
+</div>
+<div class="section" id="remerciements">
+<h2>Remerciements<a class="headerlink" href="#remerciements" title="Lien permanent vers ce titre">¶</a></h2>
+<p>Je tiens à remercier M. Cédric Donner, superviseur du séminaire, pour sa
+disponibilité à tout moment, ses conseils quant au travail ainsi que son
+encouragement tout au long de ce travail.</p>
+<p>Je remercie Keran Kocher (3GY3), Benoît Léo Maillard (3GY1), Florian
+Genilloud (3GY2), Daniel Nunes Silva (3GY1) et Sébastien Chuat (3GY3), qui ont
+aussi travaillé sur ce projet, pour leurs réponses à mes questions et leur
+entraide dans les sujets difficiles.</p>
+<p>Je remercie aussi Léa Gobet (3GY3) pour m&#8217;avoir aidé quant à la mise en forme
+de mon travail.</p>
+<p>Merci encore à Alexandre Currat (3GY7) pour avoir essayé l&#8217;application et
+m&#8217;avoir prévenu de tous les bogues présents ainsi que les améliorations
+envisageables.</p>
+</div>
+<div class="section" id="code-source">
+<h2>Code source<a class="headerlink" href="#code-source" title="Lien permanent vers ce titre">¶</a></h2>
+<div class="section" id="models-py">
+<h3><tt class="docutils literal"><span class="pre">models.py</span></tt><a class="headerlink" href="#models-py" title="Lien permanent vers ce titre">¶</a></h3>
+<div class="highlight-python"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>  1
+  2
+  3
+  4
+  5
+  6
+  7
+  8
+  9
+ 10
+ 11
+ 12
+ 13
+ 14
+ 15
+ 16
+ 17
+ 18
+ 19
+ 20
+ 21
+ 22
+ 23
+ 24
+ 25
+ 26
+ 27
+ 28
+ 29
+ 30
+ 31
+ 32
+ 33
+ 34
+ 35
+ 36
+ 37
+ 38
+ 39
+ 40
+ 41
+ 42
+ 43
+ 44
+ 45
+ 46
+ 47
+ 48
+ 49
+ 50
+ 51
+ 52
+ 53
+ 54
+ 55
+ 56
+ 57
+ 58
+ 59
+ 60
+ 61
+ 62
+ 63
+ 64
+ 65
+ 66
+ 67
+ 68
+ 69
+ 70
+ 71
+ 72
+ 73
+ 74
+ 75
+ 76
+ 77
+ 78
+ 79
+ 80
+ 81
+ 82
+ 83
+ 84
+ 85
+ 86
+ 87
+ 88
+ 89
+ 90
+ 91
+ 92
+ 93
+ 94
+ 95
+ 96
+ 97
+ 98
+ 99
+100
+101
+102
+103
+104
+105
+106
+107
+108
+109
+110
+111
+112
+113
+114
+115
+116
+117</pre></div></td><td class="code"><div class="highlight"><pre><span class="kn">from</span> <span class="nn">django.db</span> <span class="kn">import</span> <span class="n">models</span>
+<span class="kn">from</span> <span class="nn">django.contrib.auth.models</span> <span class="kn">import</span> <span class="n">User</span>
+
+
+<span class="c">#Profile de base découlant de User</span>
+
+<span class="k">class</span> <span class="nc">BaseProfile</span><span class="p">(</span><span class="n">models</span><span class="o">.</span><span class="n">Model</span><span class="p">):</span>
+    <span class="n">user</span> <span class="o">=</span> <span class="n">models</span><span class="o">.</span><span class="n">OneToOneField</span><span class="p">(</span><span class="n">User</span><span class="p">)</span> <span class="c">#Donne les attributs de User à BaseProfile</span>
+    <span class="n">avatar</span> <span class="o">=</span> <span class="n">models</span><span class="o">.</span><span class="n">ImageField</span><span class="p">(</span><span class="n">null</span><span class="o">=</span><span class="bp">True</span><span class="p">,</span> <span class="n">blank</span><span class="o">=</span><span class="bp">True</span><span class="p">,</span> <span class="n">upload_to</span><span class="o">=</span><span class="s">&quot;avatars/&quot;</span><span class="p">)</span>
+        
+    <span class="k">class</span> <span class="nc">Meta</span><span class="p">:</span>
+        <span class="n">abstract</span> <span class="o">=</span> <span class="bp">True</span>
+
+
+<span class="c">#Les deux modèles héritent de BaseProfile et donc de User</span>
+
+<span class="k">class</span> <span class="nc">Teacher</span><span class="p">(</span><span class="n">BaseProfile</span><span class="p">):</span>
+
+    <span class="k">def</span> <span class="nf">__str__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="s">&quot;Professeur {0}&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">user</span><span class="o">.</span><span class="n">username</span><span class="p">)</span>
+
+<span class="k">class</span> <span class="nc">Student</span><span class="p">(</span><span class="n">BaseProfile</span><span class="p">):</span>
+
+    <span class="k">def</span> <span class="nf">__str__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="s">&quot;Etudiant {0}&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">user</span><span class="o">.</span><span class="n">username</span><span class="p">)</span>
+        
+
+<span class="c">#</span>
+<span class="c"># Modèle de Keran pour les cours</span>
+<span class="c">#</span>
+
+<span class="k">class</span> <span class="nc">Course</span><span class="p">(</span><span class="n">models</span><span class="o">.</span><span class="n">Model</span><span class="p">):</span>
+    <span class="n">title</span> <span class="o">=</span> <span class="n">models</span><span class="o">.</span><span class="n">CharField</span><span class="p">(</span><span class="n">max_length</span><span class="o">=</span><span class="mi">30</span><span class="p">,</span> <span class="n">unique</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>
+    <span class="n">description</span> <span class="o">=</span> <span class="n">models</span><span class="o">.</span><span class="n">TextField</span><span class="p">()</span>
+    <span class="n">difficulty</span> <span class="o">=</span> <span class="n">models</span><span class="o">.</span><span class="n">IntegerField</span><span class="p">()</span>
+    <span class="n">published</span> <span class="o">=</span> <span class="n">models</span><span class="o">.</span><span class="n">BooleanField</span><span class="p">(</span><span class="n">default</span><span class="o">=</span><span class="bp">False</span><span class="p">)</span>
+    
+    <span class="n">author</span> <span class="o">=</span> <span class="n">models</span><span class="o">.</span><span class="n">ForeignKey</span><span class="p">(</span><span class="n">Teacher</span><span class="p">)</span>
+    <span class="c">#chapter = models.ForeignKey(&#39;teachers.Chapter&#39;, related_name=&quot;courses&quot;)</span>
+    <span class="n">favorites</span> <span class="o">=</span> <span class="n">models</span><span class="o">.</span><span class="n">ManyToManyField</span><span class="p">(</span><span class="n">User</span><span class="p">,</span> <span class="n">related_name</span><span class="o">=</span><span class="s">&quot;favorite_courses&quot;</span><span class="p">,</span> <span class="n">blank</span><span class="o">=</span><span class="bp">True</span><span class="p">,</span> <span class="n">null</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>
+    <span class="c"># videos = models.ManyToManyField(Video)</span>
+    <span class="c"># images = models.ManyToManyField(Image)</span>
+    <span class="c"># definitions = models.ManyToManyField(Definition)</span>
+    
+    <span class="n">created_at</span> <span class="o">=</span> <span class="n">models</span><span class="o">.</span><span class="n">DateTimeField</span><span class="p">(</span><span class="n">auto_now_add</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>
+    <span class="n">updated_at</span> <span class="o">=</span> <span class="n">models</span><span class="o">.</span><span class="n">DateTimeField</span><span class="p">(</span><span class="n">auto_now</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">__str__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+      <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">title</span>
+      
+<span class="c">#</span>
+<span class="c"># Modèle de Florian pour les exercices</span>
+<span class="c">#</span>
+
+<span class="k">class</span> <span class="nc">Exercise</span><span class="p">(</span><span class="n">models</span><span class="o">.</span><span class="n">Model</span><span class="p">):</span>
+    
+    <span class="n">owner</span> <span class="o">=</span> <span class="n">models</span><span class="o">.</span><span class="n">ForeignKey</span><span class="p">(</span><span class="n">Teacher</span><span class="p">)</span>  <span class="c"># créateur de l&#39;exercice   </span>
+    <span class="n">created_on</span> <span class="o">=</span> <span class="n">models</span><span class="o">.</span><span class="n">DateTimeField</span><span class="p">(</span><span class="n">auto_now_add</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span> <span class="c"># Date de création</span>
+    <span class="n">updated_on</span> <span class="o">=</span> <span class="n">models</span><span class="o">.</span><span class="n">DateTimeField</span><span class="p">(</span><span class="n">auto_now</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>
+    <span class="n">title</span> <span class="o">=</span> <span class="n">models</span><span class="o">.</span><span class="n">CharField</span><span class="p">(</span><span class="n">max_length</span><span class="o">=</span><span class="mi">30</span><span class="p">)</span> <span class="c"># C&#39;est le titre de l&#39;exercice</span>
+    <span class="n">equation</span> <span class="o">=</span> <span class="n">models</span><span class="o">.</span><span class="n">CharField</span><span class="p">(</span><span class="n">max_length</span><span class="o">=</span><span class="mi">50</span><span class="p">)</span> <span class="c"># C&#39;est l&#39;équation entrée par le professeur</span>
+    <span class="n">grade</span> <span class="o">=</span> <span class="n">models</span><span class="o">.</span><span class="n">CharField</span><span class="p">(</span><span class="n">max_length</span><span class="o">=</span><span class="mi">60</span><span class="p">)</span> <span class="c"># donnée une note de difficulté à l&#39;exercice</span>
+    <span class="n">correction</span> <span class="o">=</span> <span class="n">models</span><span class="o">.</span><span class="n">CharField</span><span class="p">(</span><span class="n">max_length</span> <span class="o">=</span> <span class="mi">200</span><span class="p">)</span> <span class="c"># corrigé de l&#39;exercice ( obligatoire )</span>
+    <span class="k">def</span> <span class="nf">__str__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">title</span>
+        
+<span class="c">#</span>
+<span class="c"># Modèle de Benoit pour les quiz</span>
+<span class="c">#</span>
+
+<span class="k">class</span> <span class="nc">Quiz</span><span class="p">(</span><span class="n">models</span><span class="o">.</span><span class="n">Model</span><span class="p">):</span> <span class="c">#Infos générales sur le quiz</span>
+    <span class="n">title</span> <span class="o">=</span> <span class="n">models</span><span class="o">.</span><span class="n">CharField</span><span class="p">(</span><span class="n">max_length</span><span class="o">=</span><span class="mi">100</span><span class="p">)</span>
+    <span class="n">creation_date</span> <span class="o">=</span> <span class="n">models</span><span class="o">.</span><span class="n">DateTimeField</span><span class="p">(</span><span class="n">auto_now_add</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>
+    <span class="n">code</span> <span class="o">=</span> <span class="n">models</span><span class="o">.</span><span class="n">CharField</span><span class="p">(</span><span class="n">max_length</span><span class="o">=</span><span class="mi">1000</span><span class="p">)</span> <span class="c">#Format texte du quiz</span>
+    <span class="n">author</span> <span class="o">=</span> <span class="n">models</span><span class="o">.</span><span class="n">ForeignKey</span><span class="p">(</span><span class="n">Teacher</span><span class="p">)</span>
+    <span class="c">#id_chapter = models.ForeignKey(&#39;teachers.Chapter&#39;)</span>
+    
+    <span class="k">def</span> <span class="nf">__str__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">title</span>
+        
+        
+        
+
+<span class="c">#Modèle pour les groupes</span>
+<span class="k">class</span> <span class="nc">Group</span><span class="p">(</span><span class="n">models</span><span class="o">.</span><span class="n">Model</span><span class="p">):</span>
+    <span class="n">name</span> <span class="o">=</span> <span class="n">models</span><span class="o">.</span><span class="n">CharField</span><span class="p">(</span><span class="n">max_length</span><span class="o">=</span><span class="mi">30</span><span class="p">)</span>
+    <span class="n">teacher</span> <span class="o">=</span> <span class="n">models</span><span class="o">.</span><span class="n">ManyToManyField</span><span class="p">(</span><span class="n">Teacher</span><span class="p">,</span> <span class="n">through</span><span class="o">=</span><span class="s">&#39;GroupMembers&#39;</span><span class="p">)</span>
+    <span class="n">student</span> <span class="o">=</span> <span class="n">models</span><span class="o">.</span><span class="n">ManyToManyField</span><span class="p">(</span><span class="n">Student</span><span class="p">,</span> <span class="n">through</span> <span class="o">=</span> <span class="s">&#39;GroupMembers&#39;</span><span class="p">)</span>
+    <span class="c">#uniquement les devoirs exercices</span>
+    <span class="n">homeworkExercise</span> <span class="o">=</span> <span class="n">models</span><span class="o">.</span><span class="n">ManyToManyField</span><span class="p">(</span><span class="n">Exercise</span><span class="p">,</span> <span class="n">through</span> <span class="o">=</span> <span class="s">&#39;AssignHomework&#39;</span><span class="p">)</span>
+    <span class="c">#uniquement les devoirs quiz</span>
+    <span class="n">homeworkCourse</span> <span class="o">=</span> <span class="n">models</span><span class="o">.</span><span class="n">ManyToManyField</span><span class="p">(</span><span class="n">Course</span><span class="p">,</span> <span class="n">through</span> <span class="o">=</span> <span class="s">&#39;AssignHomework&#39;</span><span class="p">)</span> 
+    <span class="c">#uniquement les devoirs cours</span>
+    <span class="n">homeworkQuiz</span> <span class="o">=</span> <span class="n">models</span><span class="o">.</span><span class="n">ManyToManyField</span><span class="p">(</span><span class="n">Quiz</span><span class="p">,</span> <span class="n">through</span> <span class="o">=</span> <span class="s">&#39;AssignHomework&#39;</span><span class="p">)</span> 
+    <span class="n">created_on</span> <span class="o">=</span> <span class="n">models</span><span class="o">.</span><span class="n">DateTimeField</span><span class="p">(</span><span class="n">auto_now</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>
+    
+    <span class="k">def</span> <span class="nf">__str__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span><span class="s">&quot;Classe {0}&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">name</span><span class="p">)</span>
+
+
+<span class="c">#Table intermédiaire pour affecter un membre à un groupe</span>
+
+<span class="k">class</span> <span class="nc">GroupMembers</span><span class="p">(</span><span class="n">models</span><span class="o">.</span><span class="n">Model</span><span class="p">):</span>
+    <span class="n">teacher</span> <span class="o">=</span> <span class="n">models</span><span class="o">.</span><span class="n">ForeignKey</span><span class="p">(</span><span class="n">Teacher</span><span class="p">,</span> <span class="n">null</span> <span class="o">=</span> <span class="bp">True</span><span class="p">)</span>
+    <span class="n">student</span> <span class="o">=</span> <span class="n">models</span><span class="o">.</span><span class="n">ForeignKey</span><span class="p">(</span><span class="n">Student</span><span class="p">,</span> <span class="n">null</span> <span class="o">=</span> <span class="bp">True</span><span class="p">)</span>
+    <span class="n">group</span> <span class="o">=</span> <span class="n">models</span><span class="o">.</span><span class="n">ForeignKey</span><span class="p">(</span><span class="n">Group</span><span class="p">)</span>
+    <span class="n">added_on</span> <span class="o">=</span> <span class="n">models</span><span class="o">.</span><span class="n">DateTimeField</span><span class="p">(</span><span class="n">auto_now</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>
+    
+<span class="c">#Table intermédiaire pour assigner un devoir à un groupe    </span>
+    
+<span class="k">class</span> <span class="nc">AssignHomework</span><span class="p">(</span><span class="n">models</span><span class="o">.</span><span class="n">Model</span><span class="p">):</span>
+    <span class="n">group</span> <span class="o">=</span> <span class="n">models</span><span class="o">.</span><span class="n">ForeignKey</span><span class="p">(</span><span class="n">Group</span><span class="p">)</span>
+    <span class="n">exercise</span> <span class="o">=</span> <span class="n">models</span><span class="o">.</span><span class="n">ForeignKey</span><span class="p">(</span><span class="n">Exercise</span><span class="p">,</span> <span class="n">null</span> <span class="o">=</span> <span class="bp">True</span><span class="p">)</span>
+    <span class="n">quiz</span> <span class="o">=</span> <span class="n">models</span><span class="o">.</span><span class="n">ForeignKey</span><span class="p">(</span><span class="n">Quiz</span><span class="p">,</span> <span class="n">null</span> <span class="o">=</span> <span class="bp">True</span><span class="p">)</span>
+    <span class="n">course</span> <span class="o">=</span> <span class="n">models</span><span class="o">.</span><span class="n">ForeignKey</span><span class="p">(</span><span class="n">Course</span><span class="p">,</span> <span class="n">null</span> <span class="o">=</span> <span class="bp">True</span><span class="p">)</span>
+    <span class="n">assigned_on</span> <span class="o">=</span> <span class="n">models</span><span class="o">.</span><span class="n">DateTimeField</span><span class="p">(</span><span class="n">auto_now</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>
+    <span class="n">date</span> <span class="o">=</span> <span class="n">models</span><span class="o">.</span><span class="n">CharField</span><span class="p">(</span><span class="n">max_length</span> <span class="o">=</span> <span class="mi">20</span><span class="p">,</span> <span class="n">default</span> <span class="o">=</span> <span class="s">&quot;Demain&quot;</span><span class="p">)</span>
+</pre></div>
+</td></tr></table></div>
+</div>
+<div class="section" id="views-py">
+<h3><tt class="docutils literal"><span class="pre">views.py</span></tt><a class="headerlink" href="#views-py" title="Lien permanent vers ce titre">¶</a></h3>
+<div class="highlight-python"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>  1
+  2
+  3
+  4
+  5
+  6
+  7
+  8
+  9
+ 10
+ 11
+ 12
+ 13
+ 14
+ 15
+ 16
+ 17
+ 18
+ 19
+ 20
+ 21
+ 22
+ 23
+ 24
+ 25
+ 26
+ 27
+ 28
+ 29
+ 30
+ 31
+ 32
+ 33
+ 34
+ 35
+ 36
+ 37
+ 38
+ 39
+ 40
+ 41
+ 42
+ 43
+ 44
+ 45
+ 46
+ 47
+ 48
+ 49
+ 50
+ 51
+ 52
+ 53
+ 54
+ 55
+ 56
+ 57
+ 58
+ 59
+ 60
+ 61
+ 62
+ 63
+ 64
+ 65
+ 66
+ 67
+ 68
+ 69
+ 70
+ 71
+ 72
+ 73
+ 74
+ 75
+ 76
+ 77
+ 78
+ 79
+ 80
+ 81
+ 82
+ 83
+ 84
+ 85
+ 86
+ 87
+ 88
+ 89
+ 90
+ 91
+ 92
+ 93
+ 94
+ 95
+ 96
+ 97
+ 98
+ 99
+100
+101
+102
+103
+104
+105
+106
+107
+108
+109
+110
+111
+112
+113
+114
+115
+116
+117
+118
+119
+120
+121
+122
+123
+124
+125
+126
+127
+128
+129
+130
+131
+132
+133
+134
+135
+136
+137
+138
+139
+140
+141
+142
+143
+144
+145
+146
+147
+148
+149
+150
+151
+152
+153
+154
+155
+156
+157
+158
+159
+160
+161
+162
+163
+164
+165
+166
+167
+168
+169
+170
+171
+172
+173
+174
+175
+176
+177
+178
+179
+180
+181
+182
+183
+184
+185
+186
+187
+188
+189
+190
+191
+192
+193
+194
+195
+196
+197
+198
+199
+200
+201
+202
+203
+204
+205
+206
+207
+208
+209
+210
+211
+212
+213
+214
+215
+216
+217
+218
+219
+220
+221
+222
+223
+224
+225
+226
+227</pre></div></td><td class="code"><div class="highlight"><pre><span class="kn">from</span> <span class="nn">django.shortcuts</span> <span class="kn">import</span> <span class="n">render</span><span class="p">,</span> <span class="n">redirect</span>
+<span class="kn">from</span> <span class="nn">django.contrib.auth</span> <span class="kn">import</span> <span class="n">authenticate</span><span class="p">,</span> <span class="n">login</span><span class="p">,</span> <span class="n">logout</span>
+<span class="kn">from</span> <span class="nn">dashboard.forms</span> <span class="kn">import</span> <span class="n">NewGroupForm</span><span class="p">,</span> <span class="n">NewStudentForm</span><span class="p">,</span> <span class="n">NewTeacherForm</span><span class="p">,</span>\
+                            <span class="n">AddHomeworkForm</span><span class="p">,</span> <span class="n">NewPasswordForm</span>
+<span class="kn">from</span> <span class="nn">django.core.urlresolvers</span> <span class="kn">import</span> <span class="n">reverse</span>
+<span class="kn">from</span> <span class="nn">common.models</span> <span class="kn">import</span> <span class="n">Group</span><span class="p">,</span> <span class="n">Teacher</span><span class="p">,</span> <span class="n">GroupMembers</span><span class="p">,</span> <span class="n">Student</span><span class="p">,</span> \
+                            <span class="n">AssignHomework</span><span class="p">,</span> <span class="n">Exercise</span><span class="p">,</span> <span class="n">Quiz</span><span class="p">,</span> <span class="n">Course</span>
+<span class="kn">from</span> <span class="nn">django.contrib.auth.models</span> <span class="kn">import</span> <span class="n">User</span>
+<span class="kn">from</span> <span class="nn">django.http</span> <span class="kn">import</span> <span class="n">HttpResponse</span>
+
+<span class="c">#Accueil du dashboard</span>
+<span class="k">def</span> <span class="nf">home</span><span class="p">(</span><span class="n">request</span><span class="p">):</span>
+    <span class="n">voyelle</span> <span class="o">=</span> <span class="s">&#39;aeiouyàäâéèëêîïíìôöõòûüùúAEIOUY&#39;</span> <span class="c">#Pour déterminer si le template affiche De ou D&#39;</span>
+    <span class="n">user</span> <span class="o">=</span> <span class="n">Teacher</span><span class="o">.</span><span class="n">objects</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">user</span> <span class="o">=</span> <span class="n">request</span><span class="o">.</span><span class="n">user</span><span class="p">)</span>
+    <span class="n">firstLetter</span> <span class="o">=</span> <span class="n">request</span><span class="o">.</span><span class="n">user</span><span class="o">.</span><span class="n">username</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="c">#Idem</span>
+    <span class="k">return</span> <span class="n">render</span><span class="p">(</span><span class="n">request</span><span class="p">,</span> <span class="s">&#39;dashboard/templates/dashboard/index.html&#39;</span><span class="p">,</span> <span class="nb">locals</span><span class="p">())</span>
+
+<span class="c">#Exercices, quiz et cours</span>
+<span class="k">def</span> <span class="nf">exercises</span><span class="p">(</span><span class="n">request</span><span class="p">):</span>
+    <span class="n">user</span> <span class="o">=</span> <span class="n">Teacher</span><span class="o">.</span><span class="n">objects</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">user</span> <span class="o">=</span> <span class="n">request</span><span class="o">.</span><span class="n">user</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">render</span><span class="p">(</span><span class="n">request</span><span class="p">,</span> <span class="s">&#39;dashboard/templates/dashboard/exercises.html&#39;</span><span class="p">,</span> <span class="nb">locals</span><span class="p">())</span>
+
+<span class="c">#Création de groupe</span>
+<span class="k">def</span> <span class="nf">newgroup</span><span class="p">(</span><span class="n">request</span><span class="p">):</span>
+    <span class="n">success</span> <span class="o">=</span> <span class="bp">False</span>
+    <span class="n">user</span> <span class="o">=</span> <span class="n">Teacher</span><span class="o">.</span><span class="n">objects</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">user</span> <span class="o">=</span> <span class="n">request</span><span class="o">.</span><span class="n">user</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">request</span><span class="o">.</span><span class="n">method</span> <span class="o">==</span> <span class="s">&quot;POST&quot;</span><span class="p">:</span>
+        <span class="n">form</span> <span class="o">=</span> <span class="n">NewGroupForm</span><span class="p">(</span><span class="n">request</span><span class="o">.</span><span class="n">POST</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">form</span><span class="o">.</span><span class="n">is_valid</span><span class="p">():</span>
+            <span class="n">group_name</span> <span class="o">=</span> <span class="n">form</span><span class="o">.</span><span class="n">cleaned_data</span><span class="p">[</span><span class="s">&quot;group_name&quot;</span><span class="p">]</span>
+            
+            <span class="n">newGroup</span> <span class="o">=</span> <span class="n">Group</span><span class="o">.</span><span class="n">objects</span><span class="o">.</span><span class="n">create</span><span class="p">(</span><span class="n">name</span> <span class="o">=</span> <span class="n">group_name</span><span class="p">)</span>
+            <span class="n">newGroup</span><span class="o">.</span><span class="n">save</span><span class="p">()</span>
+            <span class="c">#Lie le Teacher et le groupe à travers la table intermédiaire</span>
+            <span class="n">teacherToGroup</span> <span class="o">=</span> <span class="n">GroupMembers</span><span class="p">(</span><span class="n">teacher</span> <span class="o">=</span> <span class="n">user</span><span class="p">,</span> <span class="n">group</span> <span class="o">=</span> <span class="n">newGroup</span><span class="p">)</span> 
+            <span class="n">teacherToGroup</span><span class="o">.</span><span class="n">save</span><span class="p">()</span>
+            <span class="n">success</span> <span class="o">=</span> <span class="bp">True</span> <span class="c">#Pour retourner le message de confirmation</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">form</span> <span class="o">=</span> <span class="n">NewGroupForm</span><span class="p">()</span>
+    <span class="k">return</span> <span class="n">render</span><span class="p">(</span><span class="n">request</span><span class="p">,</span> <span class="s">&quot;dashboard/templates/dashboard/newclass.html&quot;</span><span class="p">,</span> <span class="nb">locals</span><span class="p">())</span>
+
+<span class="c">#Changement de mot de passe</span>
+<span class="k">def</span> <span class="nf">profil</span><span class="p">(</span><span class="n">request</span><span class="p">):</span>
+    <span class="n">user</span> <span class="o">=</span> <span class="n">Teacher</span><span class="o">.</span><span class="n">objects</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">user</span> <span class="o">=</span> <span class="n">request</span><span class="o">.</span><span class="n">user</span><span class="p">)</span>
+    <span class="n">success</span> <span class="o">=</span> <span class="s">&#39;&#39;</span>
+    <span class="k">if</span> <span class="n">request</span><span class="o">.</span><span class="n">method</span> <span class="o">==</span> <span class="s">&quot;POST&quot;</span><span class="p">:</span>
+        <span class="n">userProfile</span> <span class="o">=</span> <span class="n">request</span><span class="o">.</span><span class="n">user</span>
+        <span class="n">form</span> <span class="o">=</span> <span class="n">NewPasswordForm</span><span class="p">(</span><span class="n">request</span><span class="o">.</span><span class="n">POST</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">form</span><span class="o">.</span><span class="n">is_valid</span><span class="p">():</span>
+            <span class="n">password</span> <span class="o">=</span> <span class="n">form</span><span class="o">.</span><span class="n">cleaned_data</span><span class="p">[</span><span class="s">&quot;password&quot;</span><span class="p">]</span>
+            <span class="n">passwordConfirm</span> <span class="o">=</span> <span class="n">form</span><span class="o">.</span><span class="n">cleaned_data</span><span class="p">[</span><span class="s">&quot;passwordConfirm&quot;</span><span class="p">]</span>
+            <span class="k">if</span> <span class="n">password</span> <span class="o">!=</span> <span class="n">passwordConfirm</span><span class="p">:</span>
+                <span class="n">success</span> <span class="o">=</span> <span class="bp">False</span> <span class="c">#Message d&#39;erreur</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="n">success</span> <span class="o">=</span> <span class="bp">True</span> <span class="c">#Message de confirmation</span>
+                <span class="n">u</span> <span class="o">=</span> <span class="n">request</span><span class="o">.</span><span class="n">user</span>
+                <span class="n">u</span><span class="o">.</span><span class="n">set_password</span><span class="p">(</span><span class="n">password</span><span class="p">)</span>
+                <span class="n">u</span><span class="o">.</span><span class="n">save</span><span class="p">()</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">form</span> <span class="o">=</span> <span class="n">NewPasswordForm</span><span class="p">()</span>
+    <span class="k">return</span> <span class="n">render</span><span class="p">(</span><span class="n">request</span><span class="p">,</span> <span class="s">&#39;dashboard/templates/dashboard/profile.html&#39;</span><span class="p">,</span> <span class="nb">locals</span><span class="p">())</span>
+    
+<span class="k">def</span> <span class="nf">group</span><span class="p">(</span><span class="n">request</span><span class="p">,</span> <span class="n">group_id</span><span class="p">):</span>
+    <span class="n">user</span> <span class="o">=</span> <span class="n">Teacher</span><span class="o">.</span><span class="n">objects</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">user</span> <span class="o">=</span> <span class="n">request</span><span class="o">.</span><span class="n">user</span><span class="p">)</span>
+    <span class="n">group</span> <span class="o">=</span> <span class="n">Group</span><span class="o">.</span><span class="n">objects</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="nb">id</span> <span class="o">=</span> <span class="n">group_id</span><span class="p">)</span>
+    
+    <span class="n">studentList</span> <span class="o">=</span> <span class="n">group</span><span class="o">.</span><span class="n">student</span><span class="o">.</span><span class="n">all</span><span class="p">()</span>
+    <span class="n">teacherList</span> <span class="o">=</span> <span class="n">group</span><span class="o">.</span><span class="n">teacher</span><span class="o">.</span><span class="n">all</span><span class="p">()</span>
+    <span class="n">homeworkExList</span> <span class="o">=</span> <span class="n">group</span><span class="o">.</span><span class="n">homeworkExercise</span><span class="o">.</span><span class="n">all</span><span class="p">()</span><span class="c">#</span>
+    <span class="n">homeworkQuList</span> <span class="o">=</span> <span class="n">group</span><span class="o">.</span><span class="n">homeworkQuiz</span><span class="o">.</span><span class="n">all</span><span class="p">()</span>    <span class="c"># Pour avoir la liste des devoirs</span>
+    <span class="n">homeworkCoList</span> <span class="o">=</span> <span class="n">group</span><span class="o">.</span><span class="n">homeworkCourse</span><span class="o">.</span><span class="n">all</span><span class="p">()</span>  <span class="c"># selon les genres d&#39;activités</span>
+
+    <span class="n">deleteConfirmation</span> <span class="o">=</span> <span class="bp">False</span> <span class="c">#Pour supprimer une classe</span>
+    
+    <span class="k">if</span> <span class="n">request</span><span class="o">.</span><span class="n">method</span> <span class="o">==</span> <span class="s">&quot;POST&quot;</span><span class="p">:</span>
+        
+        <span class="c">#Ajouter un professeur au groupe</span>
+        <span class="k">if</span> <span class="s">&#39;addTeacher&#39;</span> <span class="ow">in</span> <span class="n">request</span><span class="o">.</span><span class="n">POST</span><span class="p">:</span>
+            <span class="n">erreurTeacher</span> <span class="o">=</span> <span class="bp">False</span>
+            <span class="n">formTeacher</span> <span class="o">=</span> <span class="n">NewTeacherForm</span><span class="p">(</span><span class="n">request</span><span class="o">.</span><span class="n">POST</span><span class="p">)</span>
+            <span class="k">if</span> <span class="n">formTeacher</span><span class="o">.</span><span class="n">is_valid</span><span class="p">():</span>
+                <span class="n">newTeacher</span> <span class="o">=</span> <span class="n">formTeacher</span><span class="o">.</span><span class="n">cleaned_data</span><span class="p">[</span><span class="s">&quot;nickname&quot;</span><span class="p">]</span>
+                <span class="k">try</span><span class="p">:</span>
+                    <span class="k">try</span><span class="p">:</span>
+                        <span class="n">teacherUser</span> <span class="o">=</span> <span class="n">User</span><span class="o">.</span><span class="n">objects</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">username</span> <span class="o">=</span> <span class="n">newTeacher</span><span class="p">)</span>
+                        <span class="n">teacher</span> <span class="o">=</span> <span class="n">Teacher</span><span class="o">.</span><span class="n">objects</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">user</span> <span class="o">=</span> <span class="n">teacherUser</span><span class="p">)</span>
+                        <span class="n">newTeacherToGroup</span> <span class="o">=</span> <span class="n">GroupMembers</span><span class="p">(</span><span class="n">teacher</span> <span class="o">=</span> <span class="n">teacher</span><span class="p">,</span> <span class="n">group</span> <span class="o">=</span> <span class="n">group</span><span class="p">)</span>
+                        <span class="n">newTeacherToGroup</span><span class="o">.</span><span class="n">save</span><span class="p">()</span>
+                    <span class="k">except</span> <span class="n">User</span><span class="o">.</span><span class="n">DoesNotExist</span><span class="p">:</span>
+                        <span class="n">erreurTeacher</span> <span class="o">=</span> <span class="bp">True</span> <span class="c">#Message d&#39;erreur</span>
+                <span class="k">except</span> <span class="n">Teacher</span><span class="o">.</span><span class="n">DoesNotExist</span><span class="p">:</span>
+                    <span class="n">erreurTeacher</span> <span class="o">=</span> <span class="bp">True</span> <span class="c">#Idem</span>
+                    
+        <span class="c">#Ajouter un élève au groupe       </span>
+        <span class="k">elif</span> <span class="s">&#39;addStudent&#39;</span> <span class="ow">in</span> <span class="n">request</span><span class="o">.</span><span class="n">POST</span><span class="p">:</span>
+            <span class="n">formStudent</span> <span class="o">=</span> <span class="n">NewStudentForm</span><span class="p">(</span><span class="n">request</span><span class="o">.</span><span class="n">POST</span><span class="p">)</span>
+            <span class="n">erreurStudent</span> <span class="o">=</span> <span class="bp">False</span>
+            <span class="k">if</span> <span class="n">formStudent</span><span class="o">.</span><span class="n">is_valid</span><span class="p">():</span>
+                <span class="k">try</span><span class="p">:</span>
+                    <span class="k">try</span><span class="p">:</span>
+                        <span class="n">newStudent</span> <span class="o">=</span> <span class="n">formStudent</span><span class="o">.</span><span class="n">cleaned_data</span><span class="p">[</span><span class="s">&quot;nickname&quot;</span><span class="p">]</span>
+                        <span class="n">studentUser</span> <span class="o">=</span> <span class="n">User</span><span class="o">.</span><span class="n">objects</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">username</span> <span class="o">=</span> <span class="n">newStudent</span><span class="p">)</span>
+                        <span class="n">student</span> <span class="o">=</span> <span class="n">Student</span><span class="o">.</span><span class="n">objects</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">user</span> <span class="o">=</span> <span class="n">studentUser</span><span class="p">)</span>
+                        <span class="n">newStudentToGroup</span> <span class="o">=</span> <span class="n">GroupMembers</span><span class="p">(</span><span class="n">student</span> <span class="o">=</span> <span class="n">student</span><span class="p">,</span> <span class="n">group</span> <span class="o">=</span> <span class="n">group</span><span class="p">)</span>
+                        <span class="n">newStudentToGroup</span><span class="o">.</span><span class="n">save</span><span class="p">()</span>
+                    <span class="k">except</span> <span class="n">User</span><span class="o">.</span><span class="n">DoesNotExist</span><span class="p">:</span>
+                        <span class="n">erreurStudent</span> <span class="o">=</span> <span class="bp">True</span> <span class="c">#Message d&#39;erreur</span>
+                <span class="k">except</span> <span class="n">Student</span><span class="o">.</span><span class="n">DoesNotExist</span><span class="p">:</span>
+                    <span class="n">erreurStudent</span> <span class="o">=</span> <span class="bp">True</span> <span class="c">#Idem</span>
+                    
+                    
+        <span class="c">#Assigner un devoir</span>
+        <span class="k">elif</span> <span class="s">&#39;assignHomework&#39;</span> <span class="ow">in</span> <span class="n">request</span><span class="o">.</span><span class="n">POST</span><span class="p">:</span>
+            <span class="n">formHomework</span> <span class="o">=</span> <span class="n">AddHomeworkForm</span><span class="p">(</span><span class="n">request</span><span class="o">.</span><span class="n">POST</span><span class="p">)</span>
+            <span class="n">erreur</span> <span class="o">=</span> <span class="bp">False</span>
+            <span class="k">if</span> <span class="n">formHomework</span><span class="o">.</span><span class="n">is_valid</span><span class="p">():</span>
+                <span class="n">homeworkid</span> <span class="o">=</span> <span class="n">formHomework</span><span class="o">.</span><span class="n">cleaned_data</span><span class="p">[</span><span class="s">&quot;homeworkid&quot;</span><span class="p">]</span>
+                <span class="n">genre</span> <span class="o">=</span> <span class="n">formHomework</span><span class="o">.</span><span class="n">cleaned_data</span><span class="p">[</span><span class="s">&quot;genre&quot;</span><span class="p">]</span>
+                
+                <span class="c">#Cherche l&#39;activité selon le genre choisi</span>
+                <span class="k">if</span> <span class="n">genre</span> <span class="o">==</span> <span class="s">&quot;exercise&quot;</span><span class="p">:</span>
+                    <span class="k">try</span><span class="p">:</span>
+                        <span class="n">exercise</span> <span class="o">=</span> <span class="n">Exercise</span><span class="o">.</span><span class="n">objects</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="nb">id</span> <span class="o">=</span> <span class="n">homeworkid</span><span class="p">)</span>
+                        <span class="n">newHomework</span> <span class="o">=</span> <span class="n">AssignHomework</span><span class="p">(</span><span class="n">exercise</span> <span class="o">=</span> <span class="n">exercise</span><span class="p">,</span> <span class="n">group</span> <span class="o">=</span> <span class="n">group</span><span class="p">)</span>
+                        <span class="n">newHomework</span><span class="o">.</span><span class="n">save</span><span class="p">()</span>
+                    <span class="k">except</span> <span class="n">Exercise</span><span class="o">.</span><span class="n">DoesNotExist</span><span class="p">:</span>
+                        <span class="n">erreur</span> <span class="o">=</span> <span class="bp">True</span> <span class="c">#Message d&#39;erreur</span>
+                
+                <span class="k">if</span> <span class="n">genre</span> <span class="o">==</span> <span class="s">&quot;quiz&quot;</span><span class="p">:</span>
+                    <span class="k">try</span><span class="p">:</span>
+                        <span class="n">quiz</span> <span class="o">=</span> <span class="n">Quiz</span><span class="o">.</span><span class="n">objects</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="nb">id</span> <span class="o">=</span> <span class="n">homeworkid</span><span class="p">)</span>
+                        <span class="n">newHomework</span> <span class="o">=</span> <span class="n">AssignHomework</span><span class="p">(</span><span class="n">quiz</span> <span class="o">=</span> <span class="n">quiz</span><span class="p">,</span> <span class="n">group</span> <span class="o">=</span> <span class="n">group</span><span class="p">)</span>
+                        <span class="n">newHomework</span><span class="o">.</span><span class="n">save</span><span class="p">()</span>
+                    <span class="k">except</span> <span class="n">Quiz</span><span class="o">.</span><span class="n">DoesNotExist</span><span class="p">:</span>
+                        <span class="n">erreur</span> <span class="o">=</span> <span class="bp">True</span> <span class="c">#Idem</span>
+                
+                <span class="k">if</span> <span class="n">genre</span> <span class="o">==</span> <span class="s">&quot;course&quot;</span><span class="p">:</span>
+                    <span class="k">try</span><span class="p">:</span>
+                        <span class="n">cours</span> <span class="o">=</span> <span class="n">Course</span><span class="o">.</span><span class="n">objects</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="nb">id</span> <span class="o">=</span> <span class="n">homeworkid</span><span class="p">)</span>
+                        <span class="n">newHomework</span> <span class="o">=</span> <span class="n">AssignHomework</span><span class="p">(</span><span class="n">course</span> <span class="o">=</span> <span class="n">cours</span><span class="p">,</span> <span class="n">group</span> <span class="o">=</span> <span class="n">group</span><span class="p">)</span>
+                        <span class="n">newHomework</span><span class="o">.</span><span class="n">save</span><span class="p">()</span>
+                    <span class="k">except</span> <span class="n">Course</span><span class="o">.</span><span class="n">DoesNotExist</span><span class="p">:</span>
+                        <span class="n">erreur</span> <span class="o">=</span> <span class="bp">True</span> <span class="c">#Idem</span>
+        <span class="k">elif</span> <span class="s">&#39;deleteClass&#39;</span> <span class="ow">in</span> <span class="n">request</span><span class="o">.</span><span class="n">POST</span><span class="p">:</span>
+            <span class="n">deleteConfirmation</span> <span class="o">=</span> <span class="bp">True</span> <span class="c">#Fait apparaître le deuxième bouton de confirmation</span>
+        
+        <span class="c">#Supprime la classe</span>
+        <span class="k">elif</span> <span class="s">&#39;deleteClassConfirm&#39;</span> <span class="ow">in</span> <span class="n">request</span><span class="o">.</span><span class="n">POST</span><span class="p">:</span>
+            <span class="n">group</span> <span class="o">=</span> <span class="n">Group</span><span class="o">.</span><span class="n">objects</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="nb">id</span> <span class="o">=</span> <span class="n">group_id</span><span class="p">)</span>
+            <span class="n">group</span><span class="o">.</span><span class="n">delete</span><span class="p">()</span>
+            <span class="k">return</span> <span class="n">redirect</span><span class="p">(</span><span class="s">&#39;home&#39;</span><span class="p">)</span>
+            
+        
+        <span class="n">formStudent</span> <span class="o">=</span> <span class="n">NewStudentForm</span><span class="p">()</span>
+        <span class="n">formTeacher</span> <span class="o">=</span> <span class="n">NewTeacherForm</span><span class="p">()</span>
+        <span class="n">formHomework</span> <span class="o">=</span> <span class="n">AddHomeworkForm</span><span class="p">()</span>
+                    
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">formStudent</span> <span class="o">=</span> <span class="n">NewStudentForm</span><span class="p">()</span>
+        <span class="n">formTeacher</span> <span class="o">=</span> <span class="n">NewTeacherForm</span><span class="p">()</span>
+        <span class="n">formHomework</span> <span class="o">=</span> <span class="n">AddHomeworkForm</span><span class="p">()</span>
+    <span class="k">return</span> <span class="n">render</span><span class="p">(</span><span class="n">request</span><span class="p">,</span> <span class="s">&#39;dashboard/templates/dashboard/classe.html&#39;</span><span class="p">,</span> <span class="nb">locals</span><span class="p">())</span>
+
+<span class="c">#Retirer d&#39;un groupe</span>
+<span class="k">def</span> <span class="nf">deleteFromGroup</span><span class="p">(</span><span class="n">request</span><span class="p">,</span> <span class="n">member_id</span><span class="p">,</span> <span class="n">group_id</span><span class="p">):</span>
+    <span class="k">if</span> <span class="n">request</span><span class="o">.</span><span class="n">method</span> <span class="o">==</span> <span class="s">&quot;POST&quot;</span><span class="p">:</span>
+        
+        <span class="c">#Selon élève ou professeur</span>
+        <span class="k">if</span> <span class="s">&#39;deleteStudent&#39;</span> <span class="ow">in</span> <span class="n">request</span><span class="o">.</span><span class="n">POST</span><span class="p">:</span>
+        
+            <span class="n">student</span> <span class="o">=</span> <span class="n">Student</span><span class="o">.</span><span class="n">objects</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="nb">id</span> <span class="o">=</span> <span class="n">member_id</span><span class="p">)</span>
+            <span class="n">group</span> <span class="o">=</span> <span class="n">Group</span><span class="o">.</span><span class="n">objects</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="nb">id</span> <span class="o">=</span> <span class="n">group_id</span><span class="p">)</span>
+            <span class="n">studentToGroup</span> <span class="o">=</span> <span class="n">GroupMembers</span><span class="o">.</span><span class="n">objects</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">student</span> <span class="o">=</span> <span class="n">student</span><span class="p">,</span> <span class="n">group</span> <span class="o">=</span> <span class="n">group</span><span class="p">)</span>
+            <span class="n">studentToGroup</span><span class="o">.</span><span class="n">delete</span><span class="p">()</span>
+            
+
+        <span class="k">elif</span> <span class="s">&#39;deleteTeacher&#39;</span> <span class="ow">in</span> <span class="n">request</span><span class="o">.</span><span class="n">POST</span><span class="p">:</span>
+            <span class="n">teacher</span> <span class="o">=</span> <span class="n">Teacher</span><span class="o">.</span><span class="n">objects</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="nb">id</span> <span class="o">=</span> <span class="n">member_id</span><span class="p">)</span>
+            <span class="n">group</span> <span class="o">=</span> <span class="n">Group</span><span class="o">.</span><span class="n">objects</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="nb">id</span> <span class="o">=</span> <span class="n">group_id</span><span class="p">)</span>
+            <span class="n">teacherToGroup</span> <span class="o">=</span> <span class="n">GroupMembers</span><span class="o">.</span><span class="n">objects</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">teacher</span> <span class="o">=</span> <span class="n">teacher</span><span class="p">,</span> <span class="n">group</span> <span class="o">=</span> <span class="n">group</span><span class="p">)</span>
+            <span class="n">teacherToGroup</span><span class="o">.</span><span class="n">delete</span><span class="p">()</span>
+            
+    <span class="k">return</span> <span class="n">redirect</span><span class="p">(</span><span class="s">&#39;group_view&#39;</span><span class="p">,</span> <span class="n">group_id</span> <span class="o">=</span> <span class="n">group_id</span><span class="p">)</span>
+
+<span class="c">#Supprimer une activité</span>
+<span class="k">def</span> <span class="nf">deleteActivity</span><span class="p">(</span><span class="n">request</span><span class="p">,</span> <span class="n">activity_id</span><span class="p">):</span>
+    <span class="k">if</span> <span class="n">request</span><span class="o">.</span><span class="n">method</span> <span class="o">==</span> <span class="s">&quot;POST&quot;</span><span class="p">:</span>
+        
+        <span class="c">#Selon exercice, quiz ou cours</span>
+        <span class="k">if</span> <span class="s">&#39;deleteExercise&#39;</span> <span class="ow">in</span> <span class="n">request</span><span class="o">.</span><span class="n">POST</span><span class="p">:</span>
+            <span class="n">exercise</span> <span class="o">=</span> <span class="n">Exercise</span><span class="o">.</span><span class="n">objects</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="nb">id</span> <span class="o">=</span> <span class="n">activity_id</span><span class="p">)</span>
+            <span class="n">exercise</span><span class="o">.</span><span class="n">delete</span><span class="p">()</span>
+        <span class="k">if</span> <span class="s">&#39;deleteQuiz&#39;</span> <span class="ow">in</span> <span class="n">request</span><span class="o">.</span><span class="n">POST</span><span class="p">:</span>
+            <span class="n">quiz</span> <span class="o">=</span> <span class="n">Quiz</span><span class="o">.</span><span class="n">objects</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="nb">id</span> <span class="o">=</span> <span class="n">activity_id</span><span class="p">)</span>
+            <span class="n">quiz</span><span class="o">.</span><span class="n">delete</span><span class="p">()</span>
+        <span class="k">if</span> <span class="s">&#39;deleteCourse&#39;</span> <span class="ow">in</span> <span class="n">request</span><span class="o">.</span><span class="n">POST</span><span class="p">:</span>
+            <span class="n">course</span> <span class="o">=</span> <span class="n">Course</span><span class="o">.</span><span class="n">objects</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="nb">id</span> <span class="o">=</span> <span class="n">activity_id</span><span class="p">)</span>
+            <span class="n">course</span><span class="o">.</span><span class="n">delete</span><span class="p">()</span>
+    <span class="k">return</span> <span class="n">redirect</span><span class="p">(</span><span class="s">&#39;exercises&#39;</span><span class="p">)</span>
+
+<span class="c">#Retirer un devoir   </span>
+<span class="k">def</span> <span class="nf">deleteHomework</span><span class="p">(</span><span class="n">request</span><span class="p">,</span> <span class="n">group_id</span><span class="p">,</span> <span class="n">homework_id</span><span class="p">):</span>
+    <span class="k">if</span> <span class="n">request</span><span class="o">.</span><span class="n">method</span> <span class="o">==</span> <span class="s">&quot;POST&quot;</span><span class="p">:</span>
+        
+        <span class="c">#Selon exercice, quiz ou cours</span>
+        <span class="k">if</span> <span class="s">&#39;deleteHomeworkEx&#39;</span> <span class="ow">in</span> <span class="n">request</span><span class="o">.</span><span class="n">POST</span><span class="p">:</span>
+            <span class="n">exercise</span> <span class="o">=</span> <span class="n">Exercise</span><span class="o">.</span><span class="n">objects</span><span class="o">.</span><span class="n">filter</span><span class="p">(</span><span class="nb">id</span> <span class="o">=</span> <span class="n">homework_id</span><span class="p">)</span>
+            <span class="n">exercise</span> <span class="o">=</span> <span class="n">exercise</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+            <span class="n">group</span> <span class="o">=</span> <span class="n">Group</span><span class="o">.</span><span class="n">objects</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="nb">id</span> <span class="o">=</span> <span class="n">group_id</span><span class="p">)</span>
+            <span class="n">assignedHomework</span> <span class="o">=</span> <span class="n">AssignHomework</span><span class="o">.</span><span class="n">objects</span><span class="o">.</span><span class="n">filter</span><span class="p">(</span><span class="n">group</span> <span class="o">=</span> <span class="n">group</span><span class="p">,</span> <span class="n">exercise</span> <span class="o">=</span> <span class="n">exercise</span><span class="p">)</span>
+            <span class="n">assignedHomework</span> <span class="o">=</span> <span class="n">assignedHomework</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+            <span class="n">assignedHomework</span><span class="o">.</span><span class="n">delete</span><span class="p">()</span>
+        <span class="k">if</span> <span class="s">&#39;deleteHomeworkQu&#39;</span> <span class="ow">in</span> <span class="n">request</span><span class="o">.</span><span class="n">POST</span><span class="p">:</span>
+            <span class="n">quiz</span> <span class="o">=</span> <span class="n">Quiz</span><span class="o">.</span><span class="n">objects</span><span class="o">.</span><span class="n">filter</span><span class="p">(</span><span class="nb">id</span> <span class="o">=</span> <span class="n">homework_id</span><span class="p">)</span>
+            <span class="n">quiz</span> <span class="o">=</span> <span class="n">quiz</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+            <span class="n">group</span> <span class="o">=</span> <span class="n">Group</span><span class="o">.</span><span class="n">objects</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="nb">id</span> <span class="o">=</span> <span class="n">group_id</span><span class="p">)</span>
+            <span class="n">assignedHomework</span> <span class="o">=</span> <span class="n">AssignHomework</span><span class="o">.</span><span class="n">objects</span><span class="o">.</span><span class="n">filter</span><span class="p">(</span><span class="n">group</span> <span class="o">=</span> <span class="n">group</span><span class="p">,</span> <span class="n">quiz</span> <span class="o">=</span> <span class="n">quiz</span><span class="p">)</span>
+            <span class="n">assignedHomework</span> <span class="o">=</span> <span class="n">assignedHomework</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+            <span class="n">assignedHomework</span><span class="o">.</span><span class="n">delete</span><span class="p">()</span>
+        <span class="k">if</span> <span class="s">&#39;deleteHomeworkCo&#39;</span> <span class="ow">in</span> <span class="n">request</span><span class="o">.</span><span class="n">POST</span><span class="p">:</span>
+            <span class="n">course</span> <span class="o">=</span> <span class="n">Course</span><span class="o">.</span><span class="n">objects</span><span class="o">.</span><span class="n">filter</span><span class="p">(</span><span class="nb">id</span> <span class="o">=</span> <span class="n">homework_id</span><span class="p">)</span>
+            <span class="n">course</span> <span class="o">=</span> <span class="n">course</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+            <span class="n">group</span> <span class="o">=</span> <span class="n">Group</span><span class="o">.</span><span class="n">objects</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="nb">id</span> <span class="o">=</span> <span class="n">group_id</span><span class="p">)</span>
+            <span class="n">assignedHomework</span> <span class="o">=</span> <span class="n">AssignHomework</span><span class="o">.</span><span class="n">objects</span><span class="o">.</span><span class="n">filter</span><span class="p">(</span><span class="n">group</span> <span class="o">=</span> <span class="n">group</span><span class="p">,</span> <span class="n">course</span> <span class="o">=</span> <span class="n">course</span><span class="p">)</span>
+            <span class="n">assignedHomework</span> <span class="o">=</span> <span class="n">assignedHomework</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+            <span class="n">assignedHomework</span><span class="o">.</span><span class="n">delete</span><span class="p">()</span>
+    <span class="k">return</span> <span class="n">redirect</span><span class="p">(</span><span class="s">&#39;group_view&#39;</span><span class="p">,</span> <span class="n">group_id</span> <span class="o">=</span> <span class="n">group_id</span><span class="p">)</span>
+</pre></div>
+</td></tr></table></div>
+</div>
+<div class="section" id="urls-py">
+<h3><tt class="docutils literal"><span class="pre">urls.py</span></tt><a class="headerlink" href="#urls-py" title="Lien permanent vers ce titre">¶</a></h3>
+<div class="highlight-python"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21</pre></div></td><td class="code"><div class="highlight"><pre><span class="kn">from</span> <span class="nn">django.conf.urls</span> <span class="kn">import</span> <span class="n">patterns</span><span class="p">,</span> <span class="n">include</span><span class="p">,</span> <span class="n">url</span>
+<span class="kn">from</span> <span class="nn">django.contrib</span> <span class="kn">import</span> <span class="n">admin</span>
+<span class="kn">from</span> <span class="nn">dashboard.views</span> <span class="kn">import</span> <span class="o">*</span>
+
+
+<span class="n">urlpatterns</span> <span class="o">=</span> <span class="n">patterns</span><span class="p">(</span><span class="s">&#39;teachers.views&#39;</span><span class="p">,</span>
+    <span class="n">url</span><span class="p">(</span><span class="s">r&#39;^home/$&#39;</span><span class="p">,</span> <span class="n">home</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="s">&#39;home&#39;</span><span class="p">),</span>
+    <span class="n">url</span><span class="p">(</span><span class="s">r&#39;^classe/(?P&lt;group_id&gt;\d+)/$&#39;</span><span class="p">,</span> <span class="n">group</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="s">&#39;group_view&#39;</span><span class="p">),</span>
+    <span class="n">url</span><span class="p">(</span><span class="s">r&#39;^exercices/$&#39;</span><span class="p">,</span> <span class="n">exercises</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="s">&#39;exercises&#39;</span><span class="p">),</span>
+    <span class="n">url</span><span class="p">(</span><span class="s">r&#39;^nouveau_groupe/$&#39;</span><span class="p">,</span> <span class="n">newgroup</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="s">&#39;newgroup&#39;</span><span class="p">),</span>
+    <span class="n">url</span><span class="p">(</span><span class="s">r&#39;^profil/$&#39;</span><span class="p">,</span> <span class="n">profil</span><span class="p">,</span> <span class="n">name</span> <span class="o">=</span> <span class="s">&#39;profil&#39;</span><span class="p">),</span>
+    <span class="c">#Pour retirer d&#39;un groupe</span>
+    <span class="n">url</span><span class="p">(</span><span class="s">r&#39;^enlever_groupe/(?P&lt;group_id&gt;\d+)/(?P&lt;member_id&gt;\d+)/$&#39;</span><span class="p">,</span>
+        <span class="n">deleteFromGroup</span><span class="p">,</span> <span class="n">name</span> <span class="o">=</span> <span class="s">&quot;deleteFromGroup&quot;</span><span class="p">),</span>
+    <span class="c">#Pour supprimer une activité</span>
+    <span class="n">url</span><span class="p">(</span><span class="s">r&#39;^enlever_activité/(?P&lt;activity_id&gt;\d+)/$&#39;</span><span class="p">,</span> 
+        <span class="n">deleteActivity</span><span class="p">,</span> <span class="n">name</span> <span class="o">=</span> <span class="s">&quot;deleteActivity&quot;</span><span class="p">),</span>
+    <span class="c">#Pour retirer un devoir</span>
+    <span class="n">url</span><span class="p">(</span><span class="s">r&#39;^enlever_devoir/(?P&lt;group_id&gt;\d+)/(?P&lt;homework_id&gt;\d+)/$&#39;</span><span class="p">,</span>
+        <span class="n">deleteHomework</span><span class="p">,</span> <span class="n">name</span> <span class="o">=</span> <span class="s">&quot;deleteHomework&quot;</span><span class="p">),</span>
+<span class="p">)</span>
+</pre></div>
+</td></tr></table></div>
+</div>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="index.html">Table des Matières</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">Annexes</a><ul>
+<li><a class="reference internal" href="#declaration-personnelle">Déclaration personnelle</a></li>
+<li><a class="reference internal" href="#remerciements">Remerciements</a></li>
+<li><a class="reference internal" href="#code-source">Code source</a><ul>
+<li><a class="reference internal" href="#models-py"><tt class="docutils literal"><span class="pre">models.py</span></tt></a></li>
+<li><a class="reference internal" href="#views-py"><tt class="docutils literal"><span class="pre">views.py</span></tt></a></li>
+<li><a class="reference internal" href="#urls-py"><tt class="docutils literal"><span class="pre">urls.py</span></tt></a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+  <h4>Sujet précédent</h4>
+  <p class="topless"><a href="source.html"
+                        title="Chapitre précédent">Sources</a></p>
+  <h4>Sujet suivant</h4>
+  <p class="topless"><a href="illu.html"
+                        title="Chapitre suivant">Table des illustrations</a></p>
+  <h3>Cette page</h3>
+  <ul class="this-page-menu">
+    <li><a href="_sources/annexes.txt"
+           rel="nofollow">Montrer la source</a></li>
+  </ul>
+<div id="searchbox" style="display: none">
+  <h3>Recherche rapide</h3>
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Saisissez un mot clef ou un nom de module, classe ou fonction.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="Index général"
+             >index</a></li>
+        <li class="right" >
+          <a href="illu.html" title="Table des illustrations"
+             >suivant</a> |</li>
+        <li class="right" >
+          <a href="source.html" title="Sources"
+             >précédent</a> |</li>
+        <li><a href="index.html">documentation Développement du tableau de bord professeur 0.1</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer">
+        &copy; Copyright 2014, Bryan Oberson.
+      Créé avec <a href="http://sphinx-doc.org/">Sphinx</a> 1.2.3.
+    </div>
+  </body>
+</html>

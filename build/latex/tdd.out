@@ -1,19 +1,31 @@
-\BOOKMARK [0][-]{chapter.1}{Fonctionnalit\351s du dashboard}{}% 1
-\BOOKMARK [1][-]{section.1.1}{Ajouter un groupe}{chapter.1}% 2
-\BOOKMARK [1][-]{section.1.2}{G\351rer un groupe}{chapter.1}% 3
-\BOOKMARK [1][-]{section.1.3}{Voir ses exercices}{chapter.1}% 4
-\BOOKMARK [1][-]{section.1.4}{Changer de mot de passe}{chapter.1}% 5
-\BOOKMARK [0][-]{chapter.2}{Guide du d\351veloppeur}{}% 6
-\BOOKMARK [1][-]{section.2.1}{Utilit\351 des diff\351rents fichiers de mon projet}{chapter.2}% 7
-\BOOKMARK [1][-]{section.2.2}{Mod\350les}{chapter.2}% 8
-\BOOKMARK [1][-]{section.2.3}{Vues}{chapter.2}% 9
-\BOOKMARK [1][-]{section.2.4}{Urls}{chapter.2}% 10
-\BOOKMARK [1][-]{section.2.5}{Navigation}{chapter.2}% 11
-\BOOKMARK [0][-]{chapter.3}{D\351veloppement dirig\351 par les tests}{}% 12
-\BOOKMARK [1][-]{section.3.1}{Les tests fonctionnels}{chapter.3}% 13
-\BOOKMARK [1][-]{section.3.2}{Les tests unitaires}{chapter.3}% 14
-\BOOKMARK [1][-]{section.3.3}{Le cycle du d\351veloppement dirig\351 par les tests}{chapter.3}% 15
-\BOOKMARK [1][-]{section.3.4}{Gain de temps?}{chapter.3}% 16
-\BOOKMARK [0][-]{chapter.4}{D\351buter un projet}{}% 17
-\BOOKMARK [1][-]{section.4.1}{El\351ments requis}{chapter.4}% 18
-\BOOKMARK [1][-]{section.4.2}{Premier test}{chapter.4}% 19
+\BOOKMARK [0][-]{chapter.1}{Introduction}{}% 1
+\BOOKMARK [0][-]{chapter.2}{Fonctionnalit\351s du tableau de bord}{}% 2
+\BOOKMARK [1][-]{section.2.1}{Ajouter un groupe}{chapter.2}% 3
+\BOOKMARK [1][-]{section.2.2}{G\351rer un groupe}{chapter.2}% 4
+\BOOKMARK [1][-]{section.2.3}{Voir ses exercices}{chapter.2}% 5
+\BOOKMARK [1][-]{section.2.4}{Changer de mot de passe}{chapter.2}% 6
+\BOOKMARK [0][-]{chapter.3}{Guide du d\351veloppeur}{}% 7
+\BOOKMARK [1][-]{section.3.1}{D\351marrer Django dans un workspace Cloud9}{chapter.3}% 8
+\BOOKMARK [1][-]{section.3.2}{Navigation}{chapter.3}% 9
+\BOOKMARK [1][-]{section.3.3}{Use Cases}{chapter.3}% 10
+\BOOKMARK [1][-]{section.3.4}{Dossier static}{chapter.3}% 11
+\BOOKMARK [1][-]{section.3.5}{Gabarits}{chapter.3}% 12
+\BOOKMARK [1][-]{section.3.6}{Fichiers importants}{chapter.3}% 13
+\BOOKMARK [1][-]{section.3.7}{Mod\350les}{chapter.3}% 14
+\BOOKMARK [1][-]{section.3.8}{Vues}{chapter.3}% 15
+\BOOKMARK [1][-]{section.3.9}{Urls}{chapter.3}% 16
+\BOOKMARK [0][-]{chapter.4}{D\351veloppement dirig\351 par les tests}{}% 17
+\BOOKMARK [1][-]{section.4.1}{Les tests fonctionnels}{chapter.4}% 18
+\BOOKMARK [1][-]{section.4.2}{Les tests unitaires}{chapter.4}% 19
+\BOOKMARK [1][-]{section.4.3}{Les tests d'approbation}{chapter.4}% 20
+\BOOKMARK [1][-]{section.4.4}{Le cycle du d\351veloppement dirig\351 par les tests}{chapter.4}% 21
+\BOOKMARK [1][-]{section.4.5}{Gain de temps?}{chapter.4}% 22
+\BOOKMARK [0][-]{chapter.5}{Conclusion}{}% 23
+\BOOKMARK [0][-]{chapter.6}{Sources}{}% 24
+\BOOKMARK [1][-]{section.6.1}{Bibliographie}{chapter.6}% 25
+\BOOKMARK [1][-]{section.6.2}{Webographie}{chapter.6}% 26
+\BOOKMARK [0][-]{chapter.7}{Annexes}{}% 27
+\BOOKMARK [1][-]{section.7.1}{D\351claration personnelle}{chapter.7}% 28
+\BOOKMARK [1][-]{section.7.2}{Remerciements}{chapter.7}% 29
+\BOOKMARK [1][-]{section.7.3}{Code source}{chapter.7}% 30
+\BOOKMARK [0][-]{chapter.8}{Table des illustrations}{}% 31
