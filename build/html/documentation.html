@@ -6,7 +6,7 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-    <title>Documentation &mdash; documentation Développement dirigé par les tests 0.1</title>
+    <title>Guide du développeur &mdash; documentation Développement du tableau de bord professeur 0.1</title>
     
     <link rel="stylesheet" href="_static/nature.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
@@ -25,9 +25,9 @@
     <script type="text/javascript" src="_static/doctools.js"></script>
     <script type="text/javascript" src="_static/translations.js"></script>
     <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
-    <link rel="top" title="documentation Développement dirigé par les tests 0.1" href="index.html" />
+    <link rel="top" title="documentation Développement du tableau de bord professeur 0.1" href="index.html" />
     <link rel="next" title="Développement dirigé par les tests" href="tdd.html" />
-    <link rel="prev" title="Fonctionnalités du dashboard" href="dashboard.html" /> 
+    <link rel="prev" title="Fonctionnalités du tableau de bord" href="dashboard.html" /> 
   </head>
   <body>
     <div class="related">
@@ -40,9 +40,9 @@
           <a href="tdd.html" title="Développement dirigé par les tests"
              accesskey="N">suivant</a> |</li>
         <li class="right" >
-          <a href="dashboard.html" title="Fonctionnalités du dashboard"
+          <a href="dashboard.html" title="Fonctionnalités du tableau de bord"
              accesskey="P">précédent</a> |</li>
-        <li><a href="index.html">documentation Développement dirigé par les tests 0.1</a> &raquo;</li> 
+        <li><a href="index.html">documentation Développement du tableau de bord professeur 0.1</a> &raquo;</li> 
       </ul>
     </div>  
 
@@ -51,131 +51,315 @@
         <div class="bodywrapper">
           <div class="body">
             
-  <div class="section" id="documentation">
-<h1>Documentation<a class="headerlink" href="#documentation" title="Lien permanent vers ce titre">¶</a></h1>
-<div class="section" id="differentes-technologies">
-<h2>Différentes technologies<a class="headerlink" href="#differentes-technologies" title="Lien permanent vers ce titre">¶</a></h2>
-<p>Pour créer mon application ( dashboard professeur ), j&#8217;ai fait recourt aux
-technologies suivantes.</p>
-<div class="section" id="html5-hypertext-markup-language">
-<h3>HTML5 (Hypertext Markup Language)<a class="headerlink" href="#html5-hypertext-markup-language" title="Lien permanent vers ce titre">¶</a></h3>
-<p>HTML est la base de toute page web. En effet, c&#8217;est ce qui nous permet
-d&#8217;afficher du texte, des images. Il est principalement utilisé avec CSS (pour la
-mise en page) et JavaScript (pour l&#8217;interactivité des pages).</p>
-<p>J&#8217;ai utilisé HTML5 pour faire le frontal ( plus connu sous le nom front-end ).
-Le frontal correspond à ce que l&#8217;utilisateur voit. Il est opposé au back-end,
-qui est la partie qui travaille derrière mais que l&#8217;utilisateur ne voit pas.</p>
+  <div class="section" id="guide-du-developpeur">
+<h1>Guide du développeur<a class="headerlink" href="#guide-du-developpeur" title="Lien permanent vers ce titre">¶</a></h1>
+<p>La deuxième partie de cette documentation consiste en une explication du
+fonctionnement de l&#8217;application du côté du développeur.</p>
+<p>Il est donc expliqué comment les vues, modèles ou urls de cette application
+fonctionnent et l&#8217;utilité de certains fichiers. Il y a aussi des schémas
+permettant de mieux comprendre le fonctionnement du tableau de bord.</p>
+<div class="section" id="demarrer-django-dans-un-workspace-cloud9">
+<h2>Démarrer Django dans un workspace Cloud9<a class="headerlink" href="#demarrer-django-dans-un-workspace-cloud9" title="Lien permanent vers ce titre">¶</a></h2>
+<p>Cloud9 est un éditeur de code en ligne permettant de programmer depuis n&#8217;importe
+où. Cette plateforme a été utilisé pour le développement de l&#8217;application.</p>
+<p>Voici les quelques étapes à suivre pour démarrer Django dans Cloud9 <a class="footnote-reference" href="#f2" id="id1">[2]</a>
+<a class="footnote-reference" href="#f3" id="id2">[3]</a>.</p>
+<p>Il faut tout d&#8217;abord créer un workspace.</p>
+<p><strong>Attention, si on souhaite utiliser Python3 il est conseillé de créer un
+workspace de type Custom, comme sur la photo suivante:</strong></p>
+<div class="figure align-center">
+<a class="reference internal image-reference" href="_images/Workspace.jpg"><img alt="_images/Workspace.jpg" src="_images/Workspace.jpg" style="width: 60%;" /></a>
+<p class="caption">Créer un workspace de type Custom</p>
 </div>
-<div class="section" id="css3-cascading-style-sheets">
-<h3>CSS3 (Cascading Style Sheets)<a class="headerlink" href="#css3-cascading-style-sheets" title="Lien permanent vers ce titre">¶</a></h3>
-<p>CSS3 a été utilisé pour mettre en page mon code HTML. Cela a donc aussi
-contribué à la partie front-end de mon application. C&#8217;est CSS qui permet de
-modifier la police du texte, modifier la taille des images, ou encore
-de modifier la couleur du font. CSS permet donc de rendre une page potable
-pour l&#8217;oeil.</p>
+<p>Une fois sur le dépot, il faut tout d&#8217;abord installer Django avec
+la commande suivante:</p>
+<div class="highlight-python"><div class="highlight"><pre>sudo pip3 install django==1.7
+</pre></div>
 </div>
-<div class="section" id="bootstrap">
-<h3>Bootstrap<a class="headerlink" href="#bootstrap" title="Lien permanent vers ce titre">¶</a></h3>
-<p>Bootstrap est un framework qui contient du code HTML et CSS. J&#8217;ai utilisé
-Bootstrap comme base pour mon dashboard en utilisant le modèle <em>Charisma</em>
-<a class="footnote-reference" href="#f1" id="id1">[1]</a>. L&#8217;avantage de Bootstrap est qu&#8217;il offre des
-design adaptatifs, qui signifie que la mise en page va s&#8217;adapter à la taille de
-l&#8217;écran.</p>
-<p>Voici un exemple d&#8217;adaptation:</p>
-<img alt="_images/fullscreen.png" src="_images/fullscreen.png" />
-<p>Voici à quoi ressemble le dashboard sur un écran d&#8217;ordinateur.</p>
-<img alt="_images/smallscreen.png" src="_images/smallscreen.png" />
-<p>Et voici ce que la page devient si l&#8217;on zoome ou si l&#8217;on réduit la taille de la
-fenêtre.</p>
+<p>Django installé, il faut démarrer un projet avec la commande suivante:</p>
+<div class="highlight-python"><div class="highlight"><pre>django-admin startproject nom-pour-le-projet
+</pre></div>
 </div>
-<div class="section" id="django">
-<h3>Django<a class="headerlink" href="#django" title="Lien permanent vers ce titre">¶</a></h3>
-<p>Django est un framework spécialisé dans Python. C&#8217;est un des framework les plus
-utilisés. Nous avons choisi Django pour le projet car, travaillant sous Python,
-il est le plus documenté et le plus connu.</p>
-<p>Grâce à Django, nous avons pu gérer des classes et des héritages, des vues et
-des urls.</p>
+<p>Maintenant que le projet existe, il est possible de créer autant d&#8217;applications
+que souhaité avec la commande:</p>
+<div class="highlight-python"><div class="highlight"><pre>python3 manage.py startapp nom-pour-l&#39;application
+</pre></div>
 </div>
-<div class="section" id="git-et-github">
-<h3>Git et Github<a class="headerlink" href="#git-et-github" title="Lien permanent vers ce titre">¶</a></h3>
-<p>J&#8217;ai utilisé Git et Github pour garder une trace de l&#8217;avancement de mon travail
-et pouvoir rattraper toute erreur qui, dans le passé, m&#8217;aurait échappé et
-referait surface plus tard.</p>
-<p>Grâce à Git, j&#8217;ai donc pu créer des commit, qui sont
-des entrées permettant au développeur de faire des sauvegardes et de voir à quel
-moment il a modifié certains éléments selon la légende qu&#8217;il a mit au commit.
-J&#8217;ai aussi pu aller chercher et remettre des informations sur le répositoire
-sur le site Github. En effet, il garde les copies des fichiers, ce qui permet
-de pouvoir les récupérer depuis n&#8217;importe quelle machine.</p>
-</div>
-<div class="section" id="cloud9">
-<h3>Cloud9<a class="headerlink" href="#cloud9" title="Lien permanent vers ce titre">¶</a></h3>
-<p>Enfin, j&#8217;ai utilisé Cloud9, un site qui permet de programmer sur un serveur
-se trouvant autre part, et de pouvoir y accéder depuis n&#8217;importe quelle machine.</p>
-<p>La raison pour laquelle j&#8217;ai finalement favorisé la programmation sur Cloud9
-plutôt que la programmation locale est le fait que, étant donné que je profite
-de programmer quand j&#8217;ai du temps et que je n&#8217;ai pas forcément une de mes
-machines, je peux le faire depuis l&#8217;ordinateur de quelque d&#8217;autre sans devoir
-télécharger multiples fichiers.</p>
+<p>Pour lancer le serveur, il est nécessaire de taper cette commande:</p>
+<div class="highlight-python"><div class="highlight"><pre>python3 manage.py runserver $IP:$PORT
+</pre></div>
 </div>
 </div>
-<div class="section" id="application-au-projet">
-<h2>Application au projet<a class="headerlink" href="#application-au-projet" title="Lien permanent vers ce titre">¶</a></h2>
-<p>Dans le projet final, qui, rappelons-le, consistera en un site d&#8217;e-learning pour
-les mathématiques, ma partie pratique sera le dashboard professeur, donc
-l&#8217;endroit ou les professeurs pourront gérer leurs exercices, leurs classes et
-leurs élèves. La raison pour laquelle cette partie du site est si importante
-est que sans un dashboard parfaitement opérationnel, il deviendrait chaotique
-pour les professeurs de gérer leurs différentes responsabilités.</p>
-<p>Toutes les fonctionnalités ayant déjà été expliquées auparavant, je ne vais pas
-repasser dessus.</p>
+<div class="section" id="navigation">
+<h2>Navigation<a class="headerlink" href="#navigation" title="Lien permanent vers ce titre">¶</a></h2>
+<div class="figure align-center">
+<a class="reference internal image-reference" href="_images/navigation.jpg"><img alt="_images/navigation.jpg" src="_images/navigation.jpg" style="width: 60%;" /></a>
+<p class="caption">Schéma de navigation du site</p>
 </div>
-<div class="section" id="wireframes-ou-scenarios-du-site">
-<h2>Wireframes, ou &#8220;scénarios du site&#8221;<a class="headerlink" href="#wireframes-ou-scenarios-du-site" title="Lien permanent vers ce titre">¶</a></h2>
-<img alt="_images/wf.jpg" src="_images/wf.jpg" />
+<p>Ce schéma explique les relations qui existent entre les différentes pages. Plus
+précisément, comment accéder une page depuis une autre.</p>
+<p>Il est important de noter que le menu déroulant ainsi que les pages Exercices,
+Nouveau groupe et la page d&#8217;une classe peuvent être atteintes depuis n&#8217;importe
+quelle page du tableau de bord.</p>
 </div>
-<div class="section" id="modeles-et-diagrammes-uml">
-<h2>Modèles et diagrammes UML<a class="headerlink" href="#modeles-et-diagrammes-uml" title="Lien permanent vers ce titre">¶</a></h2>
-<div class="section" id="modeles-utilises">
-<h3>Modèles utilisés<a class="headerlink" href="#modeles-utilises" title="Lien permanent vers ce titre">¶</a></h3>
-<p>Il y a tout d&#8217;abord notre classe Teacher, qui constitue bien évidemment le
-point central de notre application. La classe Teacher possède les propriétés
-suivantes: prénom, nom, adresse e-mail et l&#8217;école dans laquelle il enseigne.
-Il n&#8217;y a pas réellement d&#8217;autres propriétés à lui rajouter.</p>
-<p>Pour qu&#8217;il y ait des professeurs, il faut aussi des élèves, c&#8217;est pourquoi
-j&#8217;ai une classe dénommée Student. Les propriétés ressemblent beaucoup à celles
-de Teacher étant donné que les deux classes correspondent à des classes
-d&#8217;utilisateur. Ces propriétés sont: prénom, nom, adresse e-mail, école et
-compétences de l&#8217;élève, établies par rapport à certains thèmes accomplis.</p>
-<p>Finalement, ces deux classes sont réunies dans une classe nommée Group, qui
-pourrait s&#8217;apparenter à une classe d&#8217;école. En effet, la classe Group possède
-1 à plusieurs professeurs, 1 à plusieurs élèves, un nom, des devoirs, des
-taux de réussites par rapport aux exercices réalisés en général, et une date
-de création.</p>
+<div class="section" id="use-cases">
+<h2>Use Cases<a class="headerlink" href="#use-cases" title="Lien permanent vers ce titre">¶</a></h2>
+<div class="figure align-center">
+<a class="reference internal image-reference" href="_images/UseCases.jpg"><img alt="_images/UseCases.jpg" src="_images/UseCases.jpg" style="width: 60%;" /></a>
+<p class="caption">Schéma résumant les actions qui se déroulent selon les utilisations du
+professeur</p>
+</div>
+<p>Ce schéma explique les différentes actions qui se passent lorsque le professeur
+veut utiliser une des fonctionnalités du tableau de bord.</p>
+<p>Par exemple, s&#8217;il veut ajouter un élève dans un de ses groupes, il n&#8217;a qu&#8217;à
+entrer son nom, le serveur ira le chercher et l&#8217;ajoutera dans le groupe.</p>
+</div>
+<div class="section" id="dossier-static">
+<h2>Dossier <tt class="docutils literal"><span class="pre">static</span></tt><a class="headerlink" href="#dossier-static" title="Lien permanent vers ce titre">¶</a></h2>
+<p>Le dossier static est utilisé pour garder tous les fichiers tel que
+les fichiers CSS ou les fichiers Javascript.
+Dans cette application, il contient les dossiers suivants:</p>
+<ul class="simple">
+<li><tt class="docutils literal"><span class="pre">bower_components</span></tt>: ce dossier contient tous les éléments du front-end
+qui possèdent des dépendances, comme les fichiers <tt class="docutils literal"><span class="pre">bootstrap</span></tt> ou des
+fichiers de base pour <tt class="docutils literal"><span class="pre">jquery</span></tt>. Le dossier <tt class="docutils literal"><span class="pre">bower_components</span></tt> contient
+les fichiers relatifs au thème Bootstrap utilisé. Plus précisément, il
+contient le <tt class="docutils literal"><span class="pre">css</span></tt> et le <tt class="docutils literal"><span class="pre">javascript</span></tt>.</li>
+<li><tt class="docutils literal"><span class="pre">css</span></tt>: dans ce dossier se trouvent tous les fichiers <tt class="docutils literal"><span class="pre">css</span></tt> qui sont
+nécessaires pour le design du site. La différence entre les fichiers qui
+se trouvent dans ce dossier et les fichiers <tt class="docutils literal"><span class="pre">css</span></tt> du dossier
+<tt class="docutils literal"><span class="pre">bower_components</span></tt> est que les premiers servent de base et ne sont pas
+adaptatifs alors que les derniers permettent les changements de place et
+de taille que nous offre l&#8217;adaptivité de Bootstrap.</li>
+<li><tt class="docutils literal"><span class="pre">fonts</span></tt>: le dossier <tt class="docutils literal"><span class="pre">fonts</span></tt> de l&#8217;application tableau de bord contient toutes
+les informations relatives aux petits signes (<tt class="docutils literal"><span class="pre">glyphicons</span></tt>) qui sont
+utilisés dans le tableau de bord, comme le + devant «Nouveau groupe».</li>
+</ul>
+<div class="figure align-center">
+<a class="reference internal image-reference" href="_images/class.jpg"><img alt="_images/class.jpg" src="_images/class.jpg" style="width: 60%;" /></a>
+<p class="caption">Exemples de <tt class="docutils literal"><span class="pre">glyphicons</span></tt> dans le menu de gauche: l&#8217;oeil ou la maison</p>
+</div>
+</div>
+<div class="section" id="gabarits">
+<h2>Gabarits<a class="headerlink" href="#gabarits" title="Lien permanent vers ce titre">¶</a></h2>
+<p>Dans le dossier <tt class="docutils literal"><span class="pre">templates</span></tt> se trouvent tous les fichiers <tt class="docutils literal"><span class="pre">html</span></tt> servant
+de gabarits à l&#8217;application:</p>
+<ul>
+<li><p class="first">Le gabarit <tt class="docutils literal"><span class="pre">classe.html</span></tt> contient le gabarit utilisé pour l&#8217;affichage
+des groupes. Il affiche tout d&#8217;abord le nom du groupe ainsi que la date de
+sa création, puis chaque élève et professeur ainsi qu&#8217;un bouton pour
+les retirer du groupe. Dans les tableaux affichant les élèves et professeur
+est aussi affiché un bouton pour rajouter des membres. S&#8217;il est impossible
+d&#8217;ajouter le membre dont le nom a été rentré, le gabarit retourne un
+message d&#8217;erreur.</p>
+<p>Il affiche enfin les devoirs par type d&#8217;activité (exercice, quiz, cours) et
+un bouton pour les retirer. Il y a aussi un bouton pour assigner des
+devoirs. De nouveau, si aucune activité n&#8217;a été trouvée, le gabarit
+retourne un message d&#8217;erreur.</p>
+</li>
+<li><p class="first">Le gabarit <tt class="docutils literal"><span class="pre">newclass.html</span></tt>, lui, sert à créer un nouveau groupe qui pourra
+ensuite être supervisé. Il ne fait qu&#8217;afficher un champ pour le nom et un
+bouton de confirmation. Une fois le groupe créé, un message de confirmation
+est retourné.</p>
+</li>
+<li><p class="first">Le gabarit <tt class="docutils literal"><span class="pre">index.html</span></tt> ne contient pour le moment que le nom
+d&#8217;utilisateur du professeur actuellement connecté. Il contiendra plus tard
+des statistiques quant aux groupes ou aux activités du professeur.</p>
+</li>
+<li><p class="first">Le gabarit <tt class="docutils literal"><span class="pre">exercises.html</span></tt> affiche les exercices, les quiz et les cours
+qui ont été créés par le professeur. Ces activités sont supprimables depuis
+cette page et le professeur a la possibilité d&#8217;accéder aux formulaires de
+création d&#8217;activité. Il peut aussi voir quand ces activités ont été créées.</p>
+</li>
+<li><p class="first">Le gabarit <tt class="docutils literal"><span class="pre">profile.html</span></tt> sert au changement de mot de passe. Il affiche
+deux champ qui doivent être remplis de façon identique. Si le changement
+de mot de passe a bien pu avoir lieu, un message de confirmation est
+retourné. Dans le cas contraire, un message d&#8217;erreur s&#8217;affiche.</p>
+</li>
+</ul>
+<p>Ces 5 gabarits ont tous la même structure de base:</p>
+<ul>
+<li><p class="first">Une bande au sommet de la page qui, une fois les applications ensemble,
+amènera l&#8217;utilisateur à ces applications.</p>
+<p>Il y a aussi un menu déroulant permettant d&#8217;accéder au tableau de bord,
+au changement de mot de passe et permettant aussi à l&#8217;utilisateur de se
+déconnecter.</p>
+</li>
+<li><p class="first">Un menu à gauche de la page permettant d&#8217;accéder aux exercices, aux
+différents groupes qui sont tous ajoutés en liste et à l&#8217;option de création
+de groupe.</p>
+</li>
+</ul>
+</div>
+<div class="section" id="fichiers-importants">
+<h2>Fichiers importants<a class="headerlink" href="#fichiers-importants" title="Lien permanent vers ce titre">¶</a></h2>
+<p>Les applications Django possèdent les fichiers de base suivants:</p>
+<ul class="simple">
+<li><tt class="docutils literal"><span class="pre">models.py</span></tt> qui est utilisé pour créer les différents modèles et leur
+attribuer des champs.</li>
+<li><tt class="docutils literal"><span class="pre">admin.py</span></tt> est utilisé pour signaler à Django quels sont les modèles qui
+doivent apparaître dans l&#8217;application admin. Une fois qu&#8217;ils y apparaissent,
+il est possible de créer, modifier ou supprimer n&#8217;importe quel objet depuis
+cette application.</li>
+<li>Le fichier <tt class="docutils literal"><span class="pre">forms.py</span></tt> est celui dans lequel on peut entrer les différents
+formulaires dont l&#8217;on a besoin pour l&#8217;application.</li>
+<li>C&#8217;est dans <tt class="docutils literal"><span class="pre">views.py</span></tt> que l&#8217;on peut stocker des variables nécessaires
+dans certains gabarits, mais aussi réaliser certaines actions comme la
+suppression d&#8217;un objet. A la fin d&#8217;une vue, on retourne souvent un fichiers
+<tt class="docutils literal"><span class="pre">html</span></tt> ou on redirige vers une autre vue.</li>
+<li>Le fichier <tt class="docutils literal"><span class="pre">urls.py</span></tt> contient les informations concernant les différentes
+urls accessibles par l&#8217;utilisateur et quelles vues sont censées être
+utilisées.</li>
+</ul>
+<div class="section" id="fichiers-uniques-de-django">
+<h3>Fichiers uniques de Django<a class="headerlink" href="#fichiers-uniques-de-django" title="Lien permanent vers ce titre">¶</a></h3>
+<p>On peut modifier le fichier <tt class="docutils literal"><span class="pre">settings.py</span></tt> afin de définir la zone temporelle
+dans laquelle on se trouve, mais aussi les applications qu&#8217;un projet doit
+gérer ou encore l&#8217;emplacement du fichier <tt class="docutils literal"><span class="pre">static</span></tt>. Il sert donc de
+configuration de base pour un projet.</p>
+<p>Il y a aussi un autre fichiers <tt class="docutils literal"><span class="pre">urls.py</span></tt> qui, lui, est très utile si l&#8217;on doit
+s&#8217;occuper de plusieurs applications à la fois. En effet, on peut définir le
+début de l&#8217;url et rediriger vers un autre fichier <tt class="docutils literal"><span class="pre">urls.py</span></tt>.</p>
+</div>
+</div>
+<div class="section" id="modeles">
+<h2>Modèles<a class="headerlink" href="#modeles" title="Lien permanent vers ce titre">¶</a></h2>
+<div class="section" id="modeles-utilises-pour-le-tableau-de-bord">
+<h3>Modèles utilisés pour le tableau de bord<a class="headerlink" href="#modeles-utilises-pour-le-tableau-de-bord" title="Lien permanent vers ce titre">¶</a></h3>
+<p>Il y a tout d&#8217;abord le modèle <tt class="docutils literal"><span class="pre">BaseProfile</span></tt> qui découle de <tt class="docutils literal"><span class="pre">User</span></tt> et qui,
+comme son nom l&#8217;indique, va servir de profil de base pour le modèle <tt class="docutils literal"><span class="pre">Teacher</span></tt>
+et <tt class="docutils literal"><span class="pre">Student</span></tt>.</p>
+<p>L&#8217;utilisateur Django possède de base les caractéristiques suivantes <a class="footnote-reference" href="#f1" id="id3">[1]</a>:</p>
+<ul class="simple">
+<li><tt class="docutils literal"><span class="pre">username</span></tt>: nom d&#8217;utilisateur</li>
+<li><tt class="docutils literal"><span class="pre">first_name</span></tt>: prénom</li>
+<li><tt class="docutils literal"><span class="pre">last_name</span></tt>: nom</li>
+<li><tt class="docutils literal"><span class="pre">email</span></tt>: adresse courriel</li>
+<li><tt class="docutils literal"><span class="pre">password</span></tt>: mot de passe</li>
+<li><tt class="docutils literal"><span class="pre">group</span></tt>: les relations avec le modèle <tt class="docutils literal"><span class="pre">Group</span></tt> de Django</li>
+<li><tt class="docutils literal"><span class="pre">user_permissions</span></tt>: les relations avec le modèle <tt class="docutils literal"><span class="pre">Permission</span></tt> de Django</li>
+<li><tt class="docutils literal"><span class="pre">is_staff</span></tt>: si l&#8217;utilisateur peut accéder à l&#8217;application admin</li>
+<li><tt class="docutils literal"><span class="pre">is_active</span></tt>: définit si l&#8217;utilisateur doit être considéré comme actif ou
+non</li>
+<li><tt class="docutils literal"><span class="pre">is_superuser</span></tt>: définit si l&#8217;utilisateur a tous les droits</li>
+<li><tt class="docutils literal"><span class="pre">last_login</span></tt>: dernière connexion de l&#8217;utilisateur</li>
+<li><tt class="docutils literal"><span class="pre">date_joined</span></tt>: date de création de l&#8217;utilisateur</li>
+</ul>
+<p>Car un professeur a besoin de voir ses exercices, quiz et cours, et pourra les
+assigner en tant que devoirs à un groupe, les modèles Exercise, Quiz et Course
+ont tous les trois été apportés.</p>
+<p>Il y a ensuite le modèle <tt class="docutils literal"><span class="pre">Group</span></tt>, qui n&#8217;est pas le même que celui implémenté
+de base avec Django, car c&#8217;est celui qui a été utilisé pour les groupes d&#8217;un
+professeur. Les membres sont ajoutés par le biais du modèle <tt class="docutils literal"><span class="pre">Groupmembers</span></tt>
+qui sert de table intermédiaire entre <tt class="docutils literal"><span class="pre">Student</span></tt> ainsi que <tt class="docutils literal"><span class="pre">Teacher</span></tt> et
+<tt class="docutils literal"><span class="pre">Group</span></tt>. Le modèle <tt class="docutils literal"><span class="pre">AssignHomework</span></tt>, qui est aussi une table intermédiaire,
+sert à l&#8217;affectation de devoirs entre <tt class="docutils literal"><span class="pre">Exercise</span></tt>, <tt class="docutils literal"><span class="pre">Quiz</span></tt>, <tt class="docutils literal"><span class="pre">Course</span></tt> et
+<tt class="docutils literal"><span class="pre">Group</span></tt>.</p>
 </div>
 <div class="section" id="diagramme-uml">
 <h3>Diagramme UML<a class="headerlink" href="#diagramme-uml" title="Lien permanent vers ce titre">¶</a></h3>
-<img alt="_images/uml.jpg" src="_images/uml.jpg" />
-<p>Ce diagramme UML explique donc les relations entre les différentes pages de mon
-application, comment y accéder, que font les boutons, etc.</p>
+<div class="figure align-center">
+<a class="reference internal image-reference" href="_images/UML.jpg"><img alt="_images/UML.jpg" src="_images/UML.jpg" style="width: 60%;" /></a>
+<p class="caption">Schéma résumant les relations entre les différents modèles</p>
+</div>
+<p>Sur ce schéma, les types de lien existant entre les différents modèles sont plus
+visibles:</p>
+<ul class="simple">
+<li><tt class="docutils literal"><span class="pre">0..*</span></tt> signifie qu&#8217;un objet peut possèder entre zéro et l&#8217;infini objets
+appartenant à l&#8217;autre modèle</li>
+<li><tt class="docutils literal"><span class="pre">1</span></tt> signifie qu&#8217;il ne peut en posséder qu&#8217;un seul</li>
+</ul>
+<p>Il est aussi facile à voir la place que prennent les tables intermédiaires
+<tt class="docutils literal"><span class="pre">AssignHomework</span></tt> et <tt class="docutils literal"><span class="pre">GroupMembers</span></tt>: elles servent de ponts entre deux
+modèles.</p>
 </div>
 </div>
-<div class="section" id="implementation-avec-le-reste-du-projet">
-<h2>Implémentation avec le reste du projet<a class="headerlink" href="#implementation-avec-le-reste-du-projet" title="Lien permanent vers ce titre">¶</a></h2>
-<p>Comme déjà expliqué, ma partie, le dashboard professeur, servira de lieu de
-référence pour le professeur qui utiliserait le site. En effet, c&#8217;est seulement
-depuis cette partie qu&#8217;il pourra gérer tout ce qui le concerne.</p>
-<p>Certaines fonctionnalités, tel que la création d&#8217;exercices ou de chapitres,
-feront appel aux applications de mes compagnons. En effet, le bouton devra aller
-chercher les formulaires correspondant.</p>
-<p>Les problèmes que nous pourrions rencontrer lors de la mise en commun de nos
-différentes applications seraient des conflits, mais qui pourraient facilement
-être gérables si on y fait attention en cherchant les erreurs.</p>
+<div class="section" id="vues">
+<h2>Vues<a class="headerlink" href="#vues" title="Lien permanent vers ce titre">¶</a></h2>
+<p>Toutes les vues vont devoir chercher le professeur correspondant à
+l&#8217;utilisateur actuellement connecté. Cela permettra à chaque fois d&#8217;aller
+chercher les données correspondantes comme le nom d&#8217;utilisateur toujours
+affiché sur le menu déroulant en haut à droite de la page.</p>
+<p>La vue <tt class="docutils literal"><span class="pre">home</span></tt> sert uniquement à distinguer la première lettre du nom
+d&#8217;utilisateur pour qu&#8217;apparaisse dans le gabarit «de» ou «d&#8217;».</p>
+<p>La vue <tt class="docutils literal"><span class="pre">exercises</span></tt>, elle, ne cherche rien de plus. L&#8217;utilisateur nous
+permettra d&#8217;accéder aux exercices, quiz et cours qui lui sont associés mais
+tout ceci est directement recherché dans le gabarit.</p>
+<p>C&#8217;est grâce à la vue <tt class="docutils literal"><span class="pre">newgroup</span></tt> qu&#8217;un professeur peut créer un groupe. S&#8217;il
+veut créer un groupe, la vue se contentera de créer un groupe associé au nom
+et de créer un lien entre le professeur et le groupe grâce à la table
+intermédiaire <tt class="docutils literal"><span class="pre">GroupMembers</span></tt>. La variable <tt class="docutils literal"><span class="pre">success</span></tt> a pour utilité
+d&#8217;afficher un message de confirmation dans le gabarit <tt class="docutils literal"><span class="pre">newclass.html</span></tt> une
+fois le groupe correctement créé.</p>
+<p>La vue <tt class="docutils literal"><span class="pre">profil</span></tt> est celle utilisée pour le changement de mot de passe. Elle
+compare les deux mots de passe entrés. Si les deux mots de passe correspondent,
+le mot de passe est attribué à l&#8217;utilisateur et, grâce au gabarit
+<tt class="docutils literal"><span class="pre">profile.html</span></tt> et à la variable <tt class="docutils literal"><span class="pre">success</span></tt>, un message est retourné pour
+confirmer le changement. Dans le cas contraire, un message d&#8217;erreur est
+retourné.</p>
+<p>La vue <tt class="docutils literal"><span class="pre">groupe</span></tt>, elle, est composée de plusieurs actions qui dépendent de la
+forme qui a été remplie.</p>
+<ul class="simple">
+<li>Il y a tout d&#8217;abord <tt class="docutils literal"><span class="pre">addTeacher</span></tt> qui, quand l&#8217;utilisateur entre le nom
+d&#8217;utilisateur d&#8217;un autre professeur pour l&#8217;ajouter dans un groupe existant,
+va créer un object <tt class="docutils literal"><span class="pre">GroupMembers</span></tt> entre ce professeur et le groupe actuel
+pour qu&#8217;il fasse parti de ce groupe. Il se passe la même chose pour
+<tt class="docutils literal"><span class="pre">addStudent</span></tt> si le même utilisateur décide d&#8217;ajouter un élève.</li>
+<li>Pour assigner un devoir à un groupe, la vue va utiliser <tt class="docutils literal"><span class="pre">assignHomework</span></tt>
+qui, selon le genre d&#8217;activité et le numéro qui ont été sélectionnés par
+l&#8217;utilisateur, va chercher l&#8217;activité et créer un objet <tt class="docutils literal"><span class="pre">AssignHomework</span></tt>
+qui va lier l&#8217;exercice, le quiz ou le cours au groupe.</li>
+<li>Pour supprimer un groupe, il y a d&#8217;abord l&#8217;utilisation de <tt class="docutils literal"><span class="pre">deleteClass</span></tt>
+qui va uniquement servir à l&#8217;apparition d&#8217;un deuxième bouton qui activera
+<tt class="docutils literal"><span class="pre">deleteClassConfirm</span></tt>, qui supprimera le groupe et donc tous les objets
+<tt class="docutils literal"><span class="pre">AssignHomework</span></tt> et <tt class="docutils literal"><span class="pre">GroupMembers</span></tt> avec lesquels il était associé.</li>
+</ul>
+<p>Cette vue va par la suite retourner le gabarit <tt class="docutils literal"><span class="pre">classe.html</span></tt> avec les
+variables définies au début qui apparaîtront sur la page.</p>
+<p>Finalement, quelques vues ont été réalisées pour des actions plus complexes.
+Par exemple, <tt class="docutils literal"><span class="pre">deleteFromGroup</span></tt> avait besoin de deux variables, <tt class="docutils literal"><span class="pre">member_id</span></tt>
+et <tt class="docutils literal"><span class="pre">group_id</span></tt>. Cette vue a donc été liée à une url nécessitant ces deux
+variables. La vue <tt class="docutils literal"><span class="pre">deleteFromGroup</span></tt>, composée de <tt class="docutils literal"><span class="pre">deleteStudent</span></tt> et
+<tt class="docutils literal"><span class="pre">deleteTeacher</span></tt>, servent à retirer les membres d&#8217;un groupe en supprimant
+l&#8217;objet <tt class="docutils literal"><span class="pre">GroupMembers</span></tt> qui les liait. La vue <tt class="docutils literal"><span class="pre">deleteActivity</span></tt>, qui elle est
+composée de <tt class="docutils literal"><span class="pre">deleteExercise</span></tt>, <tt class="docutils literal"><span class="pre">deleteQuiz</span></tt> et <tt class="docutils literal"><span class="pre">deleteCourse</span></tt> sert à
+supprimer une activité depuis son tableau de bord. Enfin, <tt class="docutils literal"><span class="pre">deleteHomework</span></tt> permet
+au professeur de retirer un devoir précédemment assigné selon le type d&#8217;activité
+auquel il correspond.</p>
+</div>
+<div class="section" id="urls">
+<h2>Urls<a class="headerlink" href="#urls" title="Lien permanent vers ce titre">¶</a></h2>
+<p>Les urls <tt class="docutils literal"><span class="pre">home</span></tt>, <tt class="docutils literal"><span class="pre">group_view</span></tt>, <tt class="docutils literal"><span class="pre">exercises</span></tt>, <tt class="docutils literal"><span class="pre">newgroup</span></tt> et <tt class="docutils literal"><span class="pre">profil</span></tt>
+redirigent simplement aux vues du même nom.</p>
+<p>Les urls <tt class="docutils literal"><span class="pre">deleteFromGroup</span></tt>, <tt class="docutils literal"><span class="pre">deleteActivity</span></tt> et <tt class="docutils literal"><span class="pre">deleteHomework</span></tt>, elles,
+sont reliées aux vues du même nom qui permettent certaines actions dépendantes
+de variables très précises. Pour réaliser ceci, des formes ont été créées dans
+les gabarits redirigeant à ces urls et possédant les variables nécessaires afin
+que le programme puisse aller chercher les objets souhaités et permettre, par
+exemple, la suppression d&#8217;une activité.</p>
 <p class="rubric">Note de bas de page</p>
 <table class="docutils footnote" frame="void" id="f1" rules="none">
 <colgroup><col class="label" /><col /></colgroup>
 <tbody valign="top">
-<tr><td class="label"><a class="fn-backref" href="#id1">[1]</a></td><td><a class="reference external" href="http://usman.it/free-responsive-admin-template/">http://usman.it/free-responsive-admin-template/</a></td></tr>
+<tr><td class="label"><a class="fn-backref" href="#id3">[1]</a></td><td>«django.contrib.auth»,
+consulté le 23.03.2015,
+<a class="reference external" href="https://docs.djangoproject.com/en/1.7/ref/contrib/auth/">https://docs.djangoproject.com/en/1.7/ref/contrib/auth/</a></td></tr>
+</tbody>
+</table>
+<table class="docutils footnote" frame="void" id="f2" rules="none">
+<colgroup><col class="label" /><col /></colgroup>
+<tbody valign="top">
+<tr><td class="label"><a class="fn-backref" href="#id1">[2]</a></td><td>«Cloud9 - Your development environment, in the cloud»,
+consulté le 29.03.2015,
+<a class="reference external" href="https://c9.io/">https://c9.io/</a></td></tr>
+</tbody>
+</table>
+<table class="docutils footnote" frame="void" id="f3" rules="none">
+<colgroup><col class="label" /><col /></colgroup>
+<tbody valign="top">
+<tr><td class="label"><a class="fn-backref" href="#id2">[3]</a></td><td>«Configuration de Django 1.7 sous Cloud9»,
+consulté le 24.03.2015,
+<a class="reference external" href="http://www.donner-online.ch/webtutos/django/c9config.html">http://www.donner-online.ch/webtutos/django/c9config.html</a></td></tr>
 </tbody>
 </table>
 </div>
@@ -189,31 +373,30 @@ différentes applications seraient des conflits, mais qui pourraient facilement
         <div class="sphinxsidebarwrapper">
   <h3><a href="index.html">Table des Matières</a></h3>
   <ul>
-<li><a class="reference internal" href="#">Documentation</a><ul>
-<li><a class="reference internal" href="#differentes-technologies">Différentes technologies</a><ul>
-<li><a class="reference internal" href="#html5-hypertext-markup-language">HTML5 (Hypertext Markup Language)</a></li>
-<li><a class="reference internal" href="#css3-cascading-style-sheets">CSS3 (Cascading Style Sheets)</a></li>
-<li><a class="reference internal" href="#bootstrap">Bootstrap</a></li>
-<li><a class="reference internal" href="#django">Django</a></li>
-<li><a class="reference internal" href="#git-et-github">Git et Github</a></li>
-<li><a class="reference internal" href="#cloud9">Cloud9</a></li>
+<li><a class="reference internal" href="#">Guide du développeur</a><ul>
+<li><a class="reference internal" href="#demarrer-django-dans-un-workspace-cloud9">Démarrer Django dans un workspace Cloud9</a></li>
+<li><a class="reference internal" href="#navigation">Navigation</a></li>
+<li><a class="reference internal" href="#use-cases">Use Cases</a></li>
+<li><a class="reference internal" href="#dossier-static">Dossier <tt class="docutils literal"><span class="pre">static</span></tt></a></li>
+<li><a class="reference internal" href="#gabarits">Gabarits</a></li>
+<li><a class="reference internal" href="#fichiers-importants">Fichiers importants</a><ul>
+<li><a class="reference internal" href="#fichiers-uniques-de-django">Fichiers uniques de Django</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#application-au-projet">Application au projet</a></li>
-<li><a class="reference internal" href="#wireframes-ou-scenarios-du-site">Wireframes, ou &#8220;scénarios du site&#8221;</a></li>
-<li><a class="reference internal" href="#modeles-et-diagrammes-uml">Modèles et diagrammes UML</a><ul>
-<li><a class="reference internal" href="#modeles-utilises">Modèles utilisés</a></li>
+<li><a class="reference internal" href="#modeles">Modèles</a><ul>
+<li><a class="reference internal" href="#modeles-utilises-pour-le-tableau-de-bord">Modèles utilisés pour le tableau de bord</a></li>
 <li><a class="reference internal" href="#diagramme-uml">Diagramme UML</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#implementation-avec-le-reste-du-projet">Implémentation avec le reste du projet</a></li>
+<li><a class="reference internal" href="#vues">Vues</a></li>
+<li><a class="reference internal" href="#urls">Urls</a></li>
 </ul>
 </li>
 </ul>
 
   <h4>Sujet précédent</h4>
   <p class="topless"><a href="dashboard.html"
-                        title="Chapitre précédent">Fonctionnalités du dashboard</a></p>
+                        title="Chapitre précédent">Fonctionnalités du tableau de bord</a></p>
   <h4>Sujet suivant</h4>
   <p class="topless"><a href="tdd.html"
                         title="Chapitre suivant">Développement dirigé par les tests</a></p>
@@ -249,9 +432,9 @@ différentes applications seraient des conflits, mais qui pourraient facilement
           <a href="tdd.html" title="Développement dirigé par les tests"
              >suivant</a> |</li>
         <li class="right" >
-          <a href="dashboard.html" title="Fonctionnalités du dashboard"
+          <a href="dashboard.html" title="Fonctionnalités du tableau de bord"
              >précédent</a> |</li>
-        <li><a href="index.html">documentation Développement dirigé par les tests 0.1</a> &raquo;</li> 
+        <li><a href="index.html">documentation Développement du tableau de bord professeur 0.1</a> &raquo;</li> 
       </ul>
     </div>
     <div class="footer">

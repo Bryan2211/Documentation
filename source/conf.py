@@ -51,7 +51,7 @@ source_suffix = '.rst'
 master_doc = 'index'
 
 # General information about the project.
-project = u'Développement dirigé par les tests'
+project = u'Développement du tableau de bord professeur'
 copyright = u'2014, Bryan Oberson'
 
 # The version info for the project you're documenting, acts as replacement for
@@ -190,6 +190,14 @@ htmlhelp_basename = 'tdddoc'
 # -- Options for LaTeX output ---------------------------------------------
 
 latex_elements = {
+    'papersize': 'a4paper',
+    'author': 'Bryan Oberson',
+    'date': '30 mars 2015',
+    'release': u'Collège du Sud',
+    'releasename': u'Travail de maturité, ',
+    'title': u'Développement du tableau de bord professeur',
+    'babel': u'\\usepackage[francais]{babel}',
+}
 # The paper size ('letterpaper' or 'a4paper').
 #'papersize': 'letterpaper',
 
@@ -198,13 +206,13 @@ latex_elements = {
 
 # Additional stuff for the LaTeX preamble.
 #'preamble': '',
-}
+
 
 # Grouping the document tree into LaTeX files. List of tuples
 # (source start file, target name, title,
 #  author, documentclass [howto, manual, or own class]).
 latex_documents = [
-  ('index', 'tdd.tex', u'Documentation: dashboard professeur et développement dirigé par les tests',
+  ('index', 'tdd.tex', u'Développement du tableau de bord professeur',
    u'Bryan Oberson', 'manual'),
 ]
 
@@ -234,7 +242,7 @@ latex_documents = [
 # One entry per manual page. List of tuples
 # (source start file, name, description, authors, manual section).
 man_pages = [
-    ('index', 'tdd', u'Documentation: dashboard professeur et développement dirigé par les tests',
+    ('index', 'tdd', u'Développement du tableau de bord professeur',
      [u'Bryan Oberson'], 1)
 ]
 
@@ -248,7 +256,7 @@ man_pages = [
 # (source start file, target name, title, author,
 #  dir menu entry, description, category)
 texinfo_documents = [
-  ('index', 'tdd', u'Documentation: dashboard professeur et développement dirigé par les tests',
+  ('index', 'tdd', u'Développement du tableau de bord professeur',
    u'Bryan Oberson', 'tdd', 'One line description of project.',
    'Miscellaneous'),
 ]

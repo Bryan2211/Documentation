@@ -83,4 +83,5 @@ un** *False* **à la fin est donc un bon signe: notre test marche!**
 
 .. rubric:: Note de bas de page
 
-..  [#f1] Inspiré de Test Driven Development With Python de Harry J.W. Percival
+..  [#f1] PERCIVAL, Harry J.W., «Test Driven Development With Python», publié
+    le 19 juin 2014
