@@ -57,7 +57,7 @@ Le cycle du développement dirigé par les tests
 ===============================================
 
 Quand on veut programmer à l'aide du développement dirigé par les tests, on 
-tente de suivre un certain cycle:
+tente de suivre un certain cycle [#f4]_:
 
 1.  Tout d'abord, il est **impératif** d'écrire un test avant même d'écrire
     n'importe quelle ligne de code. En effet, l'idée du développement dirigé par

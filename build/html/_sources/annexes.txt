@@ -9,7 +9,7 @@ Nom: Oberson
 
 Prénom: Bryan
 
-Adresse: Route du Lac Lussy 3
+Adresse: Route du Lac Lussy 3, 1618 Châtel-St-Denis
 
 1. Je certifie que le travail
 **Développement du tableau de bord professeur**
